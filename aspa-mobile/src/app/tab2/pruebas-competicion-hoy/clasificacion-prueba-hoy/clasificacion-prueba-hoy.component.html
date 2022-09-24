@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Clasificación</ion-title>
+    <ion-buttons>
+      <ion-back-button
+        [routerLink]="'/fga/directo/' + idcompeticion"
+        text="Atrás"
+        color="danger"
+      ></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-list-header>{{ nombreTipoPrueba }}</ion-list-header>
+    <ion-item *ngFor="let i of rowItems" (click)="verMarcas(i.idinscripcion)">
+      <ion-note>{{ i.pos }}</ion-note>
+      <ion-label>&nbsp; {{ i.name }}</ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>

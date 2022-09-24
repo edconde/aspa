@@ -1,0 +1,15 @@
+<aspa-atletas-list
+  [atletas]="atletas"
+  *ngIf="atletas"
+  (atletaDeleted)="onAtletaDeleted()"
+></aspa-atletas-list>
+<aspa-empty-state
+  *ngIf="error"
+  [message]="errorMessage"
+  [retryButton]="true"
+  (retry)="onRetry()"
+></aspa-empty-state>
+<aspa-spinner
+  *ngIf="!atletas && !error"
+  [message]="loadingMessage"
+></aspa-spinner>

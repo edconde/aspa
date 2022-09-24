@@ -1,0 +1,91 @@
+<form [formGroup]="clubForm" autocomplete="off" (ngSubmit)="onSubmit()">
+  <h1 mat-dialog-title>{{ action }} club</h1>
+  <div mat-dialog-content>
+    <ul class="fields-list">
+      <li class="field">
+        <mat-form-field class="field-item">
+          <input
+            matInput
+            placeholder="Licencia"
+            type="text"
+            formControlName="licencia"
+            autocomplete="off"
+          />
+          <mat-icon matPrefix>ballot</mat-icon>
+          <mat-error *ngIf="clubForm.get('licencia').hasError('required')"
+            >Rellena este campo</mat-error
+          >
+        </mat-form-field>
+      </li>
+      <li class="field">
+        <mat-form-field class="field-item">
+          <input
+            matInput
+            placeholder="Nombre"
+            type="text"
+            formControlName="nombre"
+          />
+          <mat-icon matPrefix>person</mat-icon>
+          <mat-error *ngIf="clubForm.get('nombre').hasError('required')"
+            >Rellena este campo</mat-error
+          >
+        </mat-form-field>
+      </li>
+      <li class="field">
+        <mat-form-field class="field-item">
+          <input
+            matInput
+            placeholder="Dirección"
+            type="text"
+            formControlName="direccion"
+          />
+          <mat-icon matPrefix>account_balance</mat-icon>
+          <mat-error *ngIf="clubForm.get('direccion').hasError('required')"
+            >Rellena este campo</mat-error
+          >
+        </mat-form-field>
+      </li>
+      <li class="field">
+        <mat-form-field class="field-item">
+          <input
+            matInput
+            placeholder="Email"
+            type="text"
+            formControlName="email"
+          />
+          <mat-icon matPrefix>email</mat-icon>
+          <mat-error *ngIf="clubForm.get('email').hasError('required')"
+            >Rellena este campo</mat-error
+          >
+        </mat-form-field>
+      </li>
+      <li class="field">
+        <mat-form-field class="field-item">
+          <input
+            matInput
+            placeholder="Teléfono"
+            type="text"
+            formControlName="telefono"
+          />
+          <mat-icon matPrefix>phone</mat-icon>
+          <mat-error *ngIf="clubForm.get('telefono').hasError('required')"
+            >Rellena este campo</mat-error
+          >
+        </mat-form-field>
+      </li>
+    </ul>
+  </div>
+  <div mat-dialog-actions>
+    <button
+      mat-raised-button
+      color="primary"
+      type="submit"
+      [disabled]="!clubForm.valid"
+    >
+      GUARDAR
+    </button>
+    <button mat-button type="button" color="primary" (click)="goBack()">
+      CERRAR
+    </button>
+  </div>
+</form>

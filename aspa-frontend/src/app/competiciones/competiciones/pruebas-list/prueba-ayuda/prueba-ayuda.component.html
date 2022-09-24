@@ -1,0 +1,71 @@
+<mat-tab-group>
+  <mat-tab label="Marcas">
+    <mat-list class="marcas">
+      <mat-list-item><button mat-fab color="primary"></button>
+        <p>Intento sin cubrir</p>
+      </mat-list-item>
+      <mat-list-item><button mat-fab class="valido">O</button>
+        <p>Intento válido</p>
+      </mat-list-item>
+      <mat-list-item><button mat-fab class="pasa">-</button>
+        <p>El atleta pasa</p>
+      </mat-list-item>
+      <mat-list-item><button mat-fab class="nulo">X</button>
+        <p>Intento nulo</p>
+      </mat-list-item>
+    </mat-list>
+  </mat-tab>
+  <mat-tab label="Acciones">
+    <mat-accordion>
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            <mat-icon color="primary">edit</mat-icon>&nbsp; Anotar intento
+          </mat-panel-title>
+          <mat-panel-description>
+            Click/pulsar sobre intento
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+        <p>Al añadir o editar un intento, tendrás que seleccionar uno de los 3 resultados posibles: Válido, Nulo o Pasa.
+        </p>
+        <p *ngIf="isSv">Si marcas un intento como Válido, deberás introducir también la marca.</p>
+      </mat-expansion-panel>
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            <mat-icon color="primary">delete</mat-icon>&nbsp; Eliminar intento
+          </mat-panel-title>
+          <mat-panel-description>
+            Click derecho/mantener pulsado
+            sobre intento ya cubierto
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+        <p>Se te pedirá confirmación cuando trates de eliminar un intento anotado. Si confirmas, se borrará de la base
+          de datos.</p>
+      </mat-expansion-panel>
+      <mat-expansion-panel *ngIf="isSv">
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            <mat-icon color="primary">edit</mat-icon>&nbsp; Editar altura
+          </mat-panel-title>
+          <mat-panel-description>
+            Click/pulsar sobre altura
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+        <p>Haz click sobre una altura (el título de las columnas de intentos) para poder editarla o eliminarla.</p>
+        <p>Se te pedirá confirmación ya que implica editar/eliminar también las marcas asociadas a esa altura.</p>
+      </mat-expansion-panel>
+      <mat-expansion-panel *ngIf="isSv">
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            <mat-icon color="primary">add</mat-icon>&nbsp; Añadir alturas
+          </mat-panel-title>
+          <mat-panel-description>
+            Click/pulsar botón "Añadir alturas"
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+        <p>Pulsa "Añadir alturas" para añadir una o más alturas nuevas.</p>
+      </mat-expansion-panel>
+    </mat-accordion>
+  </mat-tab>
+</mat-tab-group>

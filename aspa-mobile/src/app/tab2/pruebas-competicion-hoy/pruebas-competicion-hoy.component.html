@@ -1,0 +1,58 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons>
+      <ion-back-button
+        [routerLink]="'/fga/directo'"
+        text="Atrás"
+        color="danger"
+      ></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+  <ion-grid>
+    <ion-row>
+      <ion-chip outline="true" color="primary" (click)="showAdvancedPicker()">
+        <ion-label>Categoría: {{ getCategoria() }}</ion-label>
+        <ion-icon
+          *ngIf="selectedCategoriaIndex !== 0"
+          name="close-circle"
+          (click)="removeCategoria($event)"
+        ></ion-icon>
+      </ion-chip>
+      <ion-chip outline="true" color="primary" (click)="showAdvancedPicker()">
+        <ion-label>Disciplina: {{ getDisciplina() }}</ion-label>
+        <ion-icon
+          *ngIf="selectedDisciplinaIndex !== 0"
+          name="close-circle"
+          (click)="removeDisciplina($event)"
+        ></ion-icon>
+      </ion-chip>
+    </ion-row>
+  </ion-grid>
+</ion-header>
+<ion-content>
+  <ion-list *ngIf="getPruebasFiltradas().length > 0">
+    <ion-list-header>{{ competicion.nombre }} - PRUEBAS</ion-list-header>
+    <ion-item
+      *ngFor="let p of getPruebasFiltradas()"
+      (click)="chooseAction(p)"
+      routerDirection="forward"
+    >
+      <ion-icon color="primary" [name]="getIconName(p)"></ion-icon>
+      <ion-label class="ion-text-wrap"
+        >&nbsp;{{ getLabel(p.tipo_prueba) }}</ion-label
+      >
+    </ion-item>
+  </ion-list>
+  <ion-list *ngIf="competicion && getPruebasFiltradas().length === 0">
+    <ion-list-header>{{ competicion.nombre }} - PRUEBAS</ion-list-header>
+    <ion-item>
+      <ion-label *ngIf="competicion.pruebas.length > 0" class="ion-text-wrap"
+        >No existen pruebas para la categoría y disciplina
+        seleccionadas.</ion-label
+      >
+      <ion-label *ngIf="competicion.pruebas.length === 0" class="ion-text-wrap"
+        >Todavía no existen pruebas en esta competición.</ion-label
+      >
+    </ion-item>
+  </ion-list>
+</ion-content>

@@ -1,0 +1,155 @@
+<mat-card class="card">
+  <mat-card-header>
+    <mat-card-title>{{ title }}</mat-card-title>
+  </mat-card-header>
+  <form [formGroup]="atletaForm" autocomplete="off" (ngSubmit)="onSubmit()">
+    <ul class="fields-list">
+      <li class="field">
+        <mat-form-field class="field-item">
+          <input
+            matInput
+            placeholder="Licencia"
+            type="text"
+            formControlName="licencia"
+          />
+          <mat-icon matPrefix>ballot</mat-icon>
+          <mat-error *ngIf="atletaForm.get('licencia').hasError('required')"
+            >Rellena este campo</mat-error
+          >
+        </mat-form-field>
+      </li>
+      <li class="field">
+        <mat-form-field class="field-item">
+          <input
+            matInput
+            placeholder="Email"
+            type="text"
+            formControlName="email"
+          />
+          <mat-icon matPrefix>vpn_key</mat-icon>
+          <mat-error *ngIf="atletaForm.get('email').hasError('required')"
+            >Rellena este campo</mat-error
+          >
+        </mat-form-field>
+      </li>
+      <li class="field">
+        <mat-form-field class="field-item">
+          <input
+            matInput
+            placeholder="Nombre"
+            type="text"
+            formControlName="nombre"
+          />
+          <mat-icon matPrefix>person</mat-icon>
+          <mat-error *ngIf="atletaForm.get('nombre').hasError('required')"
+            >Rellena este campo</mat-error
+          >
+        </mat-form-field>
+      </li>
+      <li class="field">
+        <mat-form-field class="field-item">
+          <input
+            matInput
+            placeholder="Apellidos"
+            type="text"
+            formControlName="apellidos"
+          />
+          <mat-icon matPrefix>group</mat-icon>
+          <mat-error *ngIf="atletaForm.get('apellidos').hasError('required')"
+            >Rellena este campo</mat-error
+          >
+        </mat-form-field>
+      </li>
+      <li class="field">
+        <mat-form-field class="field-item">
+          <input
+            matInput
+            [matDatepicker]="fecha"
+            placeholder="Fecha nacimiento"
+            readonly
+            formControlName="fechaNacimiento"
+          />
+          <mat-datepicker-toggle matPrefix [for]="fecha">
+            <mat-icon matDatepickerToggleIcon>today</mat-icon>
+          </mat-datepicker-toggle>
+          <mat-datepicker #fecha touchUi></mat-datepicker>
+          <mat-error
+            *ngIf="atletaForm.get('fechaNacimiento').hasError('required')"
+            >Selecciona una fecha</mat-error
+          >
+        </mat-form-field>
+      </li>
+      <li class="field">
+        <mat-form-field class="field-item">
+          <mat-select placeholder="Sexo" formControlName="sexo">
+            <mat-option [value]="false">Hombre</mat-option>
+            <mat-option [value]="true">Mujer</mat-option>
+          </mat-select>
+          <mat-icon matPrefix>wc</mat-icon>
+          <mat-error *ngIf="atletaForm.get('sexo').hasError('required')"
+            >Selecciona un sexo</mat-error
+          >
+        </mat-form-field>
+      </li>
+      <li class="field">
+        <mat-form-field class="field-item">
+          <input
+            matInput
+            placeholder="DNI"
+            type="text"
+            formControlName="dni"
+            autocomplete="off"
+          />
+          <mat-icon matPrefix>call_to_action</mat-icon>
+          <mat-error *ngIf="atletaForm.get('dni').hasError('required')"
+            >Rellena este campo</mat-error
+          >
+        </mat-form-field>
+      </li>
+      <li class="field">
+        <mat-form-field class="field-item">
+          <input
+            matInput
+            placeholder="Teléfono"
+            type="tel"
+            formControlName="telefono"
+            autocomplete="off"
+          />
+          <mat-icon matPrefix>phone</mat-icon>
+          <mat-error *ngIf="atletaForm.get('telefono').hasError('required')"
+            >Rellena este campo</mat-error
+          >
+        </mat-form-field>
+      </li>
+      <li class="field">
+        <mat-form-field class="field-item">
+          <mat-select placeholder="Club" formControlName="idclub">
+            <mat-option *ngFor="let c of clubes" [value]="c.idclub">{{
+              c.nombre
+            }}</mat-option>
+          </mat-select>
+          <mat-icon matPrefix>domain</mat-icon>
+          <mat-error *ngIf="atletaForm.get('idclub').hasError('required')"
+            >Selecciona un club</mat-error
+          >
+        </mat-form-field>
+      </li>
+    </ul>
+    <mat-card-actions class="actions">
+      <button
+        mat-raised-button
+        color="primary"
+        type="submit"
+        [disabled]="!atletaForm.valid"
+      >
+        GUARDAR
+      </button>
+    </mat-card-actions>
+  </form>
+</mat-card>
+
+<aspa-actions-footer>
+  <button mat-icon-button color="primary" (click)="goBack()">
+    <mat-icon>keyboard_backspace</mat-icon>
+  </button>
+</aspa-actions-footer>

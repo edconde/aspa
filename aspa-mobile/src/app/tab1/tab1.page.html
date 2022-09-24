@@ -1,0 +1,64 @@
+<ion-header>
+  <ion-toolbar color="primary"
+    ><ion-title>Competiciones FGA</ion-title></ion-toolbar
+  >
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-searchbar
+          debounce="500"
+          showCancelButton="never"
+          placeholder="Nombre de la competición"
+          search-icon="search"
+          (ionClear)="removeName()"
+          (ionChange)="onCompeticionFilterChange($event)"
+        ></ion-searchbar>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-chip
+        outline="true"
+        color="primary"
+        *ngIf="selectedAnoIndex !== null"
+        (click)="showAdvancedPicker()"
+      >
+        <ion-label>{{ getAno() }}</ion-label>
+        <ion-icon
+          *ngIf="getAno() !== '2019'"
+          name="close-circle"
+          (click)="removeAno($event)"
+        ></ion-icon>
+      </ion-chip>
+      <ion-chip
+        outline="true"
+        color="primary"
+        *ngIf="selectedMesIndex"
+        (click)="showAdvancedPicker()"
+      >
+        <ion-label>{{ getMes() }}</ion-label>
+        <ion-icon name="close-circle" (click)="removeMes($event)"></ion-icon>
+      </ion-chip>
+    </ion-row>
+  </ion-grid>
+</ion-header>
+
+<ion-content>
+  <ion-list *ngIf="getCompeticionesFiltradas().length > 0">
+    <ion-item
+      *ngFor="let c of getCompeticionesFiltradas()"
+      [routerLink]="'/fga/resultados/' + c.idcompeticion"
+      routerDirection="forward"
+    >
+      <ion-note>{{ getDiaMes(c.fecha) }}</ion-note>
+      <ion-label class="ion-text-wrap">&nbsp;{{ c.nombre }}</ion-label>
+    </ion-item>
+  </ion-list>
+  <ion-item *ngIf="getCompeticionesFiltradas().length === 0">
+    <ion-label *ngIf="competiciones.length > 0" class="ion-text-wrap"
+      >No existen competiciones que cumplan el filtro.</ion-label
+    >
+    <ion-label *ngIf="competiciones.length === 0" class="ion-text-wrap"
+      >No existen competiciones para el año y mes seleccionados.</ion-label
+    >
+  </ion-item>
+</ion-content>

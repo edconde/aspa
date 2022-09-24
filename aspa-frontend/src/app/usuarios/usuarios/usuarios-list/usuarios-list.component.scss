@@ -1,0 +1,17 @@
+.list-container {
+  width: 100%;
+  overflow-x: auto;
+  .table-container {
+    width: 98%;
+    margin: 1%;
+    .table {
+      width: 100%;
+    }
+  }
+}
+.filter {
+  font-size: 14px;
+  width: 240px;
+  height: 42px;
+  color: #f44336;
+}

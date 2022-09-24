@@ -1,0 +1,10 @@
+::ng-deep {
+        aspa-tipos-prueba {
+            width: 100%;
+            height: calc(100% - 30px);
+            overflow-y: auto;
+        }
+      }
+::ng-deep .mat-tab-label {
+        width: 50%;
+}

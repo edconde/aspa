@@ -1,0 +1,823 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>aspa documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">aspa documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content interface">
+                   <div class="content-data">
+
+
+
+
+
+
+
+
+
+
+
+
+<ol class="breadcrumb">
+  <li>Interfaces</li>
+  <li>MejorMarca</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info">
+        <p class="comment">
+            <h3>File</h3>
+        </p>
+        <p class="comment">
+            <code>src/app/competiciones/competiciones/pruebas-list/hoja-de-campo-no-sv/hoja-de-campo-no-sv.component.ts</code>
+        </p>
+
+
+
+        <section>
+            <h3 id="index">Index</h3>
+            <table class="table table-sm table-bordered index-table">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <h6><b>Properties</b></h6>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <ul class="index-list">
+                                <li>
+                                        <a href="#atleta">atleta</a>
+                                </li>
+                                <li>
+                                        <a href="#marca">marca</a>
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+
+
+            <section>
+                <h3 id="inputs">Properties</h3>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <a name="atleta"></a>
+                                        <span class="name"><b>atleta</b><a href="#atleta"><span class="icon ion-ios-link"></span></a></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <code>atleta:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+</code>
+                                    </td>
+                                </tr>
+
+
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                                        </td>
+                                    </tr>
+
+
+
+
+
+                        </tbody>
+                    </table>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <a name="marca"></a>
+                                        <span class="name"><b>marca</b><a href="#marca"><span class="icon ion-ios-link"></span></a></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <code>marca:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+</code>
+                                    </td>
+                                </tr>
+
+
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                                        </td>
+                                    </tr>
+
+
+
+
+
+                        </tbody>
+                    </table>
+            </section>
+    </div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit, ViewChild } from &#x27;@angular/core&#x27;;
+import { ActivatedRoute, Router } from &#x27;@angular/router&#x27;;
+import { PruebaService } from &#x27;src/app/shared/services/prueba.service&#x27;;
+import { Prueba } from &#x27;src/app/shared/models/Prueba&#x27;;
+import { Inscripcion } from &#x27;src/app/shared/models/Inscripcion&#x27;;
+import { InscripcionService } from &#x27;src/app/shared/services/inscripcion.service&#x27;;
+import { forkJoin } from &#x27;rxjs&#x27;;
+import {
+  MatTableDataSource,
+  MatBottomSheet,
+  MatSnackBar,
+  MatDialog,
+  MatPaginator,
+} from &#x27;@angular/material&#x27;;
+import { MarcaNsService } from &#x27;src/app/shared/services/marca-ns.service&#x27;;
+import { MarcaNs } from &#x27;src/app/shared/models/Marca&#x27;;
+import { RESULTADO } from &#x27;src/app/shared/models/enums/Resultado&#x27;;
+import { ResultadoIntentoNoSvComponent } from &#x27;./resultado-intento-no-sv/resultado-intento-no-sv.component&#x27;;
+import { Column } from &#x27;src/app/shared/models/helpers/Column&#x27;;
+import { HttpErrorResponse } from &#x27;@angular/common/http&#x27;;
+import { Clasificacion } from &#x27;src/app/shared/models/Clasificacion&#x27;;
+import { SessionService } from &#x27;src/app/core/session/session.service&#x27;;
+import { ClasificacionService } from &#x27;src/app/shared/services/clasificacion.service&#x27;;
+import { ConfirmacionPopupComponent } from &#x27;src/app/shared/components/confirmacion-popup/confirmacion-popup.component&#x27;;
+import { PruebaAyudaComponent } from &#x27;../prueba-ayuda/prueba-ayuda.component&#x27;;
+import { DISCIPLINAS } from &#x27;src/app/shared/models/Disciplina&#x27;;
+import { TipoPrueba } from &#x27;src/app/shared/models/TipoPrueba&#x27;;
+import { CATEGORIAS } from &#x27;src/app/shared/models/Categoria&#x27;;
+import { SEXOS } from &#x27;src/app/shared/models/Sexo&#x27;;
+
+export interface MejorMarca {
+  atleta: number;
+  marca: number;
+}
+
+@Component({
+  selector: &#x27;aspa-hoja-de-campo-no-sv&#x27;,
+  templateUrl: &#x27;./hoja-de-campo-no-sv.component.html&#x27;,
+  styleUrls: [&#x27;./hoja-de-campo-no-sv.component.scss&#x27;],
+})
+export class HojaDeCampoNoSvComponent implements OnInit {
+  @ViewChild(MatPaginator) paginator: MatPaginator;
+  public dataSource: MatTableDataSource&lt;Inscripcion&gt;;
+  private idcompeticion: number;
+  private idprueba: number;
+  private prueba: Prueba;
+  public nombrePrueba: string;
+  private inscripciones: Array&lt;Inscripcion&gt;;
+  private marcas: Array&lt;MarcaNs&gt;;
+  private columns: Array&lt;Column&gt;;
+  public displayedColumns: Array&lt;string&gt;;
+  private mejoresMarcas: Array&lt;MejorMarca&gt;;
+
+  constructor(
+    private route: ActivatedRoute,
+    private bottomSheet: MatBottomSheet,
+    private session: SessionService,
+    private pruebaService: PruebaService,
+    private inscripcionService: InscripcionService,
+    private clasificacionService: ClasificacionService,
+    private marcaService: MarcaNsService,
+    private snackBar: MatSnackBar,
+    private router: Router,
+    private dialog: MatDialog
+  ) {}
+
+  ngOnInit() {
+    this.route.params.subscribe(params &#x3D;&gt; {
+      this.idcompeticion &#x3D; params[&#x27;idcompeticion&#x27;];
+      this.idprueba &#x3D; params[&#x27;idprueba&#x27;];
+      this.getAllInfo();
+    });
+  }
+
+  private getAllInfo() {
+    const prueba &#x3D; this.pruebaService.get(this.idcompeticion, this.idprueba);
+    const inscripciones &#x3D; this.inscripcionService.getAllPresentedByPrueba(
+      this.idprueba
+    );
+    forkJoin([prueba, inscripciones]).subscribe(responseList &#x3D;&gt; {
+      this.prueba &#x3D; responseList[0];
+      this.nombrePrueba &#x3D; this.buildNombrePrueba(responseList[0].tipo_prueba);
+      this.inscripciones &#x3D; responseList[1];
+      this.getMarcas();
+    });
+  }
+
+  private getMarcas() {
+    this.marcaService
+      .getAllByPrueba(this.prueba.idprueba)
+      .subscribe((marcas: Array&lt;MarcaNs&gt;) &#x3D;&gt; {
+        this.marcas &#x3D; marcas; // Estas son las marcas que existen en bd
+        this.fillMarcas(); // Añadimos marcas que aun no existen en bd en los intentos que no tienen marca
+        this.createColumns();
+      });
+  }
+
+  private fillMarcas() {
+    this.mejoresMarcas &#x3D; [];
+    this.inscripciones.forEach(inscripcion &#x3D;&gt; {
+      const atleta &#x3D; inscripcion.atleta.idatleta;
+      for (let i &#x3D; 1; i &lt;&#x3D; this.prueba.num_intentos; i++) {
+        if (!this.existMarca(atleta, i)) {
+          this.marcas.push(this.createMarca(atleta, i));
+        }
+      }
+      for (let i &#x3D; 1; i &lt;&#x3D; this.prueba.num_intentos_mejora; i++) {
+        if (!this.existMarca(atleta, i + this.prueba.num_intentos)) {
+          this.marcas.push(
+            this.createMarca(atleta, i + this.prueba.num_intentos)
+          );
+        }
+      }
+      this.mejoresMarcas.push({
+        atleta: atleta,
+        marca: this.calculateHighestMark(atleta),
+      });
+    });
+  }
+
+  private calculateHighestMark(atleta: number): number {
+    const highestMark &#x3D; Math.max.apply(
+      Math,
+      this.marcas
+        .filter(m &#x3D;&gt; m.atleta &#x3D;&#x3D;&#x3D; atleta)
+        .map(function(m) {
+          return m.marca ? parseFloat(m.marca) : null;
+        })
+    );
+    return highestMark &gt; 0 ? highestMark : null;
+  }
+
+  private getHighestMark(atleta: number): number {
+    const highestMark &#x3D; this.mejoresMarcas.find(m &#x3D;&gt; m.atleta &#x3D;&#x3D;&#x3D; atleta).marca;
+    return highestMark &gt; 0 ? highestMark : null;
+  }
+
+  private getPosition(atleta: number) {
+    const athleteBestMark: number &#x3D; this.mejoresMarcas.find(
+      m &#x3D;&gt; m.atleta &#x3D;&#x3D;&#x3D; atleta
+    ).marca;
+    if (athleteBestMark &gt; 0) {
+      let positionsAbove: number &#x3D; this.mejoresMarcas.filter(
+        m &#x3D;&gt; m.marca &gt; athleteBestMark
+      ).length;
+      const draws &#x3D; this.mejoresMarcas.filter(
+        m &#x3D;&gt; m.marca &#x3D;&#x3D;&#x3D; athleteBestMark &amp;&amp; m.atleta !&#x3D;&#x3D; atleta
+      );
+      if (draws.length &gt; 0) {
+        draws.forEach(d &#x3D;&gt; {
+          let currentAthleteHighestMark &#x3D; athleteBestMark;
+          let dAthleteHighestMark &#x3D; athleteBestMark;
+          const currentAthleteMarks &#x3D; this.marcas
+            .filter(m &#x3D;&gt; m.atleta &#x3D;&#x3D;&#x3D; atleta)
+            .map(m &#x3D;&gt; (m.marca ? parseFloat(m.marca) : null));
+          const dAthleteMarks &#x3D; this.marcas
+            .filter(m &#x3D;&gt; m.atleta &#x3D;&#x3D;&#x3D; d.atleta)
+            .map(m &#x3D;&gt; (m.marca ? parseFloat(m.marca) : null));
+          while (
+            currentAthleteHighestMark &amp;&amp;
+            currentAthleteHighestMark &#x3D;&#x3D;&#x3D; dAthleteHighestMark
+          ) {
+            currentAthleteMarks.splice(
+              currentAthleteMarks.indexOf(currentAthleteHighestMark),
+              1
+            ); // remove max from the array
+            dAthleteMarks.splice(dAthleteMarks.indexOf(dAthleteHighestMark), 1); // remove max from the array
+            currentAthleteHighestMark &#x3D; Math.max.apply(
+              Math,
+              currentAthleteMarks
+            ); // get the max of the array
+            dAthleteHighestMark &#x3D; Math.max.apply(Math, dAthleteMarks); // get the max of the array
+          }
+          if (
+            dAthleteHighestMark &amp;&amp;
+            (!currentAthleteHighestMark ||
+              dAthleteHighestMark &gt; currentAthleteHighestMark)
+          ) {
+            positionsAbove++;
+          }
+        });
+      }
+      return positionsAbove + 1;
+    } else {
+      return &#x27;-&#x27;;
+    }
+  }
+
+  private createColumns() {
+    this.columns &#x3D; [
+      {
+        columnDef: &#x27;atleta&#x27;,
+        header: &#x27;Atleta&#x27;,
+        isAttempt: false,
+        sticky: true,
+        stickyEnd: false,
+        class: &#x27;&#x27;,
+        marca: null,
+        cell: (inscripcion: Inscripcion) &#x3D;&gt;
+          &#x60;${inscripcion.atleta.nombre} ${inscripcion.atleta.apellidos}&#x60;,
+        enabled: (inscripcion: Inscripcion) &#x3D;&gt; true,
+      },
+    ];
+    for (let i &#x3D; 1; i &lt;&#x3D; this.prueba.num_intentos; i++) {
+      this.columns.push({
+        columnDef: &#x60;intento${i}&#x60;,
+        header: &#x60;Intento ${i}&#x60;,
+        isAttempt: true,
+        sticky: false,
+        stickyEnd: false,
+        marca: (inscripcion: Inscripcion) &#x3D;&gt;
+          this.getMarca(inscripcion.atleta.idatleta, i),
+        class: (inscripcion: Inscripcion) &#x3D;&gt;
+          this.getCellClass(inscripcion.atleta.idatleta, i).toLowerCase(),
+        cell: (inscripcion: Inscripcion) &#x3D;&gt;
+          this.getCellValue(inscripcion.atleta.idatleta, i),
+        enabled: (inscripcion: Inscripcion) &#x3D;&gt; true,
+      });
+    }
+    for (let i &#x3D; 1; i &lt;&#x3D; this.prueba.num_intentos_mejora; i++) {
+      this.columns.push({
+        columnDef: &#x60;intentoMejora${i}&#x60;,
+        header: &#x60;Intento mejora ${i}&#x60;,
+        isAttempt: true,
+        sticky: false,
+        stickyEnd: false,
+        marca: (inscripcion: Inscripcion) &#x3D;&gt;
+          this.getMarca(
+            inscripcion.atleta.idatleta,
+            i + this.prueba.num_intentos
+          ),
+        class: (inscripcion: Inscripcion) &#x3D;&gt;
+          this.getCellClass(
+            inscripcion.atleta.idatleta,
+            i + this.prueba.num_intentos
+          ).toLowerCase(),
+        cell: (inscripcion: Inscripcion) &#x3D;&gt;
+          this.getCellValue(
+            inscripcion.atleta.idatleta,
+            i + this.prueba.num_intentos
+          ),
+        enabled: (inscripcion: Inscripcion) &#x3D;&gt;
+          this.isQualified(inscripcion.atleta.idatleta),
+      });
+    }
+    this.columns.push({
+      columnDef: &#x27;mejorMarca&#x27;,
+      header: &#x27;Mejor marca&#x27;,
+      isAttempt: false,
+      sticky: false,
+      stickyEnd: true,
+      class: &#x27;&#x27;,
+      marca: null,
+      cell: (inscripcion: Inscripcion) &#x3D;&gt;
+        this.getPositionCellValue(inscripcion.atleta.idatleta),
+      enabled: (inscripcion: Inscripcion) &#x3D;&gt; true,
+    });
+    this.updateDatasource();
+  }
+
+  private isQualified(atleta: number): boolean {
+    const position &#x3D; this.getPosition(atleta);
+    return position !&#x3D;&#x3D; &#x27;-&#x27; &amp;&amp; position &lt;&#x3D; this.prueba.num_atletas_mejora;
+  }
+
+  private existMarca(atleta: number, intento: number) {
+    return (
+      this.marcas.find(m &#x3D;&gt; m.atleta &#x3D;&#x3D;&#x3D; atleta &amp;&amp; m.intento &#x3D;&#x3D;&#x3D; intento) !&#x3D;&#x3D;
+      undefined
+    );
+  }
+
+  private getMarca(atleta: number, intento: number): MarcaNs {
+    let marca: MarcaNs &#x3D; this.marcas.find(
+      m &#x3D;&gt; m.atleta &#x3D;&#x3D;&#x3D; atleta &amp;&amp; m.intento &#x3D;&#x3D;&#x3D; intento
+    );
+    if (typeof marca &#x3D;&#x3D;&#x3D; &#x27;undefined&#x27;) {
+      marca &#x3D; {
+        atleta,
+        intento,
+        resultado: null,
+        marca: null,
+      };
+    }
+    return marca;
+  }
+
+  private createMarca(idatleta: number, intento: number): MarcaNs {
+    return {
+      atleta: idatleta,
+      intento: intento,
+      resultado: null,
+      marca: null,
+    };
+  }
+
+  private getCellClass(idatleta: number, intento: number): string {
+    const marca &#x3D; this.marcas.find(
+      m &#x3D;&gt; m.atleta &#x3D;&#x3D;&#x3D; idatleta &amp;&amp; m.intento &#x3D;&#x3D;&#x3D; intento
+    );
+    return marca ? marca.resultado || &#x27;&#x27; : &#x27;&#x27;;
+  }
+
+  private getCellValue(idatleta: number, intento: number): string {
+    const marca &#x3D; this.marcas.find(
+      m &#x3D;&gt; m.atleta &#x3D;&#x3D;&#x3D; idatleta &amp;&amp; m.intento &#x3D;&#x3D;&#x3D; intento
+    );
+    if (marca) {
+      if (marca.resultado &#x3D;&#x3D;&#x3D; &#x27;VALIDO&#x27;) {
+        return marca.marca ? &#x60;${marca.marca}m&#x60; : &#x27;&#x27;;
+      } else {
+        return RESULTADO[marca.resultado];
+      }
+    } else {
+      return &#x27;&#x27;;
+    }
+  }
+
+  private getPositionCellValue(idatleta: number): { mark: any; pos: any } {
+    return {
+      mark: this.getHighestMark(idatleta),
+      pos: this.getPosition(idatleta),
+    };
+  }
+
+  private updateDatasource() {
+    this.displayedColumns &#x3D; this.columns.map(c &#x3D;&gt; c.columnDef);
+    this.dataSource &#x3D; new MatTableDataSource(this.inscripciones);
+    setTimeout(() &#x3D;&gt; (this.dataSource.paginator &#x3D; this.paginator));
+  }
+
+  private refreshTable() {
+    this.getMarcas();
+  }
+
+  private hasEmptyMarksBefore(marca: MarcaNs): boolean {
+    // Miramos si hay algún intento (no de mejora) sin marca
+    if (marca.intento &lt;&#x3D; this.prueba.num_intentos + 1) {
+      const emptyMarksBefore &#x3D; this.marcas.find(
+        m &#x3D;&gt;
+          m.intento &lt; marca.intento &amp;&amp; m.resultado &#x3D;&#x3D;&#x3D; null &amp;&amp; m.marca &#x3D;&#x3D;&#x3D; null
+      );
+      return emptyMarksBefore !&#x3D;&#x3D; undefined;
+    } else {
+      // Miramos si hay algún intento de mejora sin marca
+      const emptyMarksBefore &#x3D; this.marcas.find(
+        m &#x3D;&gt;
+          (m.intento &lt;&#x3D; this.prueba.num_intentos ||
+            (m.intento &lt; marca.intento &amp;&amp;
+              this.getPosition(m.atleta) &lt;&#x3D; this.prueba.num_atletas_mejora)) &amp;&amp;
+          m.resultado &#x3D;&#x3D;&#x3D; null &amp;&amp;
+          m.marca &#x3D;&#x3D;&#x3D; null
+      );
+      return emptyMarksBefore !&#x3D;&#x3D; undefined;
+    }
+  }
+
+  public openBottomSheet(marca: MarcaNs): void {
+    if (this.hasEmptyMarksBefore(marca)) {
+      this.openSnackBar(&#x27;Hay intentos anteriores sin cubrir&#x27;, &#x27;Cerrar&#x27;);
+      return;
+    }
+    const marcaBackup: MarcaNs &#x3D; Object.assign({}, marca);
+    const bottomSheetRef &#x3D; this.bottomSheet.open(
+      ResultadoIntentoNoSvComponent,
+      {
+        data: {
+          marca: marca,
+        },
+      }
+    );
+    bottomSheetRef.afterDismissed().subscribe((newMarca: MarcaNs) &#x3D;&gt; {
+      if (newMarca) {
+        this.marcaService.edit(this.idprueba, newMarca).subscribe(
+          response &#x3D;&gt; {
+            Object.assign(marca, newMarca);
+            const currentAthleteHighestMark &#x3D; this.mejoresMarcas.find(
+              m &#x3D;&gt; m.atleta &#x3D;&#x3D;&#x3D; marca.atleta
+            );
+            currentAthleteHighestMark.marca &#x3D; this.calculateHighestMark(
+              marca.atleta
+            );
+          },
+          (error: HttpErrorResponse) &#x3D;&gt; {
+            Object.assign(marca, marcaBackup);
+            if (error.status &#x3D;&#x3D;&#x3D; 403) {
+              this.openSnackBar(
+                &#x27;No tienes permisos para editar las marcas&#x27;,
+                &#x27;cerrar&#x27;
+              );
+            } else {
+              this.openSnackBar(&#x27;Error en el servidor&#x27;, &#x27;cerrar&#x27;);
+            }
+          }
+        );
+      } else {
+        Object.assign(marca, marcaBackup);
+      }
+    });
+  }
+
+  public confirmFinalize() {
+    const dialogref &#x3D; this.dialog.open(ConfirmacionPopupComponent, {
+      data: {
+        title: &#x27;¿Finalizar prueba?&#x27;,
+        detailedMessage:
+          &#x27;Se guardará la clasificación y se anotará la prueba como finalizada.&#x27;,
+      },
+    });
+    dialogref.afterClosed().subscribe(result &#x3D;&gt; {
+      if (result &amp;&amp; result &#x3D;&#x3D;&#x3D; true) {
+        const emptyAttempts &#x3D; this.getEmptyAttempts();
+        if (emptyAttempts.length &gt; 0) {
+          this.askIfMarkAsSkipped(emptyAttempts);
+        } else {
+          this.cleanMarks();
+        }
+      }
+    });
+  }
+
+  private getEmptyAttempts(): Array&lt;MarcaNs&gt; {
+    const emptyAttempts: Array&lt;MarcaNs&gt; &#x3D; [];
+    this.inscripciones.forEach(inscripcion &#x3D;&gt; {
+      const atleta &#x3D; inscripcion.atleta.idatleta;
+      let numberOfAttempts: number &#x3D; this.prueba.num_intentos;
+      if (this.isQualified(atleta)) {
+        numberOfAttempts +&#x3D; this.prueba.num_intentos_mejora;
+      }
+      const athleteEmptyAttempts: Array&lt;MarcaNs&gt; &#x3D; this.marcas.filter(
+        m &#x3D;&gt;
+          m.atleta &#x3D;&#x3D;&#x3D; atleta &amp;&amp;
+          m.intento &lt;&#x3D; numberOfAttempts &amp;&amp;
+          m.resultado &#x3D;&#x3D;&#x3D; null
+      );
+      athleteEmptyAttempts.forEach(a &#x3D;&gt; emptyAttempts.push(a));
+      // emptyAttempts.push(...athleteEmptyAttempts);
+    });
+    return emptyAttempts;
+  }
+
+  private askIfMarkAsSkipped(emptyAttempts: Array&lt;MarcaNs&gt;) {
+    const dialogref &#x3D; this.dialog.open(ConfirmacionPopupComponent, {
+      data: {
+        title: &#x27;¿Rellenar intentos sin resultado?&#x27;,
+        detailedMessage:
+          &#x27;Los intentos sin resultado se marcarán con un &quot;PASA&quot;. Haz click en &quot;NO&quot; si quieres cubrirlos por tí mismo.&#x27;,
+      },
+    });
+    dialogref.afterClosed().subscribe(result &#x3D;&gt; {
+      if (result &amp;&amp; result &#x3D;&#x3D;&#x3D; true) {
+        this.markEmptyAttempsAsSkipped(emptyAttempts);
+      }
+    });
+  }
+
+  private markEmptyAttempsAsSkipped(emptyAttempts: Array&lt;MarcaNs&gt;) {
+    emptyAttempts.forEach(attempt &#x3D;&gt; {
+      attempt.resultado &#x3D; &#x27;PASA&#x27;;
+    });
+    this.marcaService.createSkipped(this.idprueba, emptyAttempts).subscribe(
+      response &#x3D;&gt; {
+        this.cleanMarks();
+      },
+      (error: HttpErrorResponse) &#x3D;&gt; {
+        this.openSnackBar(
+          &#x27;Ha ocurrido un error al rellenar los intentos vacíos&#x27;,
+          &#x27;Cerrar&#x27;
+        );
+      }
+    );
+  }
+
+  /**
+   * Eliminar marcas que se introdujeron (por error del usuario) en intentos de mejora para un atleta que no se clasifica para la mejora.
+   */
+  private cleanMarks() {
+    const notQualifiedAthletes: Array&lt;number&gt; &#x3D; this.inscripciones
+      .filter(i &#x3D;&gt; !this.isQualified(i.atleta.idatleta))
+      .map(i &#x3D;&gt; i.atleta.idatleta);
+    const marksToDelete: Array&lt;MarcaNs&gt; &#x3D; this.marcas.filter(
+      m &#x3D;&gt;
+        notQualifiedAthletes.includes(m.atleta) &amp;&amp;
+        m.intento &gt; this.prueba.num_intentos &amp;&amp;
+        m.resultado !&#x3D;&#x3D; null
+    );
+    if (marksToDelete.length &gt; 0) {
+      this.marcaService.delete(this.idprueba, marksToDelete).subscribe(
+        response &#x3D;&gt; {
+          this.saveClassification();
+        },
+        (error: HttpErrorResponse) &#x3D;&gt; {
+          this.openSnackBar(
+            &#x27;Ha ocurrido un error eliminando marcas sobrantes.&#x27;,
+            &#x27;Cerrar&#x27;
+          );
+        }
+      );
+    } else {
+      this.saveClassification();
+    }
+  }
+
+  private saveClassification() {
+    const clasificaciones &#x3D; this.crearClasificacion();
+    this.clasificacionService
+      .editFullClassification(this.idprueba, clasificaciones)
+      .subscribe(
+        response &#x3D;&gt; {
+          this.openSnackBar(&#x27;Clasificación actualizada&#x27;, &#x27;cerrar&#x27;);
+          this.prueba.finalizada &#x3D; true;
+          this.pruebaService.edit(this.idcompeticion, this.prueba).subscribe(
+            (data: any) &#x3D;&gt; {
+              this.openSnackBar(&#x27;Prueba finalizada&#x27;, &#x27;cerrar&#x27;);
+              this.goBack();
+            },
+            (error: HttpErrorResponse) &#x3D;&gt; {
+              if (error.status &#x3D;&#x3D;&#x3D; 404) {
+                this.openSnackBar(&#x27;No existe la prueba a editar&#x27;, &#x27;cerrar&#x27;);
+              } else {
+                this.openSnackBar(&#x27;Error en el servidor&#x27;, &#x27;cerrar&#x27;);
+              }
+            }
+          );
+        },
+        (error: any) &#x3D;&gt; {
+          this.openSnackBar(&#x27;Error actualizando la clasificación&#x27;, &#x27;cerrar&#x27;);
+        }
+      );
+  }
+
+  public onRightClick(e: MouseEvent, marca: MarcaNs) {
+    e.preventDefault();
+    const dialogRef &#x3D; this.dialog.open(ConfirmacionPopupComponent, {
+      data: {
+        title: &#x27;¿Borrar marca?&#x27;,
+        detailedMessage: &#x27;Se eliminará la marca asociada a este intento.&#x27;,
+      },
+    });
+    dialogRef.afterClosed().subscribe(result &#x3D;&gt; {
+      if (result &amp;&amp; result &#x3D;&#x3D;&#x3D; true) {
+        this.eliminarMarca(marca);
+      }
+    });
+  }
+
+  private eliminarMarca(marca: MarcaNs) {
+    this.marcaService.delete(this.idprueba, [marca]).subscribe(
+      response &#x3D;&gt; {
+        marca.marca &#x3D; null;
+        marca.resultado &#x3D; null;
+      },
+      (error: HttpErrorResponse) &#x3D;&gt; {
+        this.openSnackBar(&#x27;No se ha podido eliminar la marca&#x27;, &#x27;Cerrar&#x27;);
+      }
+    );
+  }
+
+  private crearClasificacion(): Array&lt;Clasificacion&gt; {
+    const clasificaciones &#x3D; new Array&lt;Clasificacion&gt;();
+    this.inscripciones.forEach(i &#x3D;&gt; {
+      const posicion &#x3D; this.getPosition(i.atleta.idatleta);
+      clasificaciones.push({
+        id: {
+          idprueba: this.prueba.idprueba,
+          atleta: i.atleta.idatleta,
+        },
+        posicion: posicion !&#x3D;&#x3D; &#x27;-&#x27; ? posicion : null,
+      });
+    });
+    return clasificaciones;
+  }
+
+  public openHelp() {
+    this.bottomSheet.open(PruebaAyudaComponent, {
+      data: {
+        isSv: false,
+      },
+    });
+  }
+
+  private buildNombrePrueba(t: TipoPrueba): string {
+    return &#x60;${DISCIPLINAS[t.disciplina]} - ${CATEGORIAS[t.categoria]}, ${
+      SEXOS[t.sexo]
+    }&#x60;;
+  }
+
+  private openSnackBar(message: string, action: string) {
+    this.snackBar.open(message, action, {
+      duration: 2000,
+    });
+  }
+
+  get canEditSheet() {
+    return (
+      this.session.getUserid() &#x3D;&#x3D;&#x3D; parseInt(this.prueba.usuario.idusuario, 10)
+    );
+  }
+
+  public goBack() {
+    this.router.navigate([&#x27;/competiciones&#x27;, this.idcompeticion, &#x27;pruebas&#x27;]);
+  }
+}
+</code></pre>
+    </div>
+</div>
+
+
+                   
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'interface';
+            var COMPODOC_CURRENT_PAGE_URL = 'MejorMarca.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

@@ -1,0 +1,47 @@
+[
+  {
+    "_id": "60c9917d-a5c4-43c6-ae37-467ac14fa818",
+    "colId": "6084a6ef-5fcb-4cbe-bb5a-64088107e3e3",
+    "containerId": "",
+    "name": "login",
+    "url": "http://localhost:8443/api/token/usuarios",
+    "method": "POST",
+    "sortNum": 10000,
+    "created": "2022-07-22T23:43:13.333Z",
+    "modified": "2022-07-23T20:25:52.285Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "formdata",
+      "raw": "",
+      "form": [
+        {
+          "name": "email",
+          "value": "admin@fga.com"
+        },
+        {
+          "name": "password",
+          "value": "admin000"
+        }
+      ]
+    },
+    "tests": []
+  },
+  {
+    "_id": "b8eea90e-9ceb-402e-9e4b-d69ff66cc412",
+    "colId": "6084a6ef-5fcb-4cbe-bb5a-64088107e3e3",
+    "containerId": "",
+    "name": "competiciones",
+    "url": "http://localhost:8443/api/competiciones",
+    "method": "GET",
+    "sortNum": 20000,
+    "created": "2022-07-23T15:36:39.454Z",
+    "modified": "2022-07-23T20:24:21.154Z",
+    "headers": [],
+    "params": [],
+    "auth": {
+      "type": "bearer"
+    },
+    "tests": []
+  }
+]

@@ -1,0 +1,35 @@
+.emptyState {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  border-radius: 4px;
+  .emptyState-content {
+    max-width: 500px;
+    font-family: Roboto, system-ui, -apple-ui, sans-serif;
+    color: #333333;
+    .message {
+      font-size: 20px;
+      color: white;
+    }
+    .detailed-message {
+      font-size: 16px;
+      color: white;
+    }
+    .emptyIcon {
+      font-size: 80px;
+      height: 80px;
+      width: 80px;
+      line-height: 80px;
+      color: white;
+    }
+    .retry-button {
+      margin-top: 16px;
+      .retry-icon {
+        padding-bottom: 2px;
+      }
+    }
+  }
+}

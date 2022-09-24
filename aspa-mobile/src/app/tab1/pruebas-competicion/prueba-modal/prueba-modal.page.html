@@ -1,0 +1,69 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Datos de la prueba</ion-title>
+    <ion-buttons slot="end">
+      <ion-button color="danger" (click)="close()"
+        ><ion-icon name="close"></ion-icon
+      ></ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item>
+      <ion-note>Disciplina</ion-note>
+      <ion-label>&nbsp;{{ getDisciplina(prueba.tipo_prueba) }}</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-note>Categoría</ion-note>
+      <ion-label>&nbsp;{{ getCategoria(prueba.tipo_prueba) }}</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-note>Sexo</ion-note>
+      <ion-label>&nbsp;{{ getSexo(prueba.tipo_prueba) }}</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-note>Fecha</ion-note>
+      <ion-label>&nbsp;{{ prueba.fecha | formatDate }}</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-note>Apertura cámara de llamadas</ion-note>
+      <ion-label>&nbsp;{{ prueba.apertura_camara | hourAndMinutes }}</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-note>Cierre cámara de llamadas</ion-note>
+      <ion-label>&nbsp;{{ prueba.cierre_camara | hourAndMinutes }}</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-note>Hora prueba</ion-note>
+      <ion-label>&nbsp;{{ prueba.hora_prueba | hourAndMinutes }}</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-note>Número de intentos</ion-note>
+      <ion-label>&nbsp;{{ prueba.num_intentos || 'N/A' }}</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-note>Número de intentos mejora</ion-note>
+      <ion-label>&nbsp;{{ prueba.num_intentos_mejora || 'N/A' }}</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-note>Número de atletas mejora</ion-note>
+      <ion-label>&nbsp;{{ prueba.num_atletas_mejora || 'N/A' }}</ion-label>
+    </ion-item>
+  </ion-list>
+  <ion-button
+    *ngIf="!inscripcion && isAuthenticated() && canParticipate"
+    color="primary"
+    expand="block"
+    (click)="realizarInscripcionAlert()"
+    >Inscríbete</ion-button
+  >
+  <ion-button
+    *ngIf="inscripcion && isAuthenticated()"
+    color="danger"
+    expand="block"
+    (click)="realizarInscripcionAlert(true)"
+    >Eliminar inscripción</ion-button
+  >
+</ion-content>

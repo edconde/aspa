@@ -1,0 +1,46 @@
+@import '../../../../assets/scss/breakpoints';
+
+.user-info-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 40px;
+  background:#F44336;
+  color: white;
+
+  @media only screen and (min-width: $desktop-screen-md) {
+    padding: 8px;
+  }
+
+  img {
+    width: 56px;
+    padding-right: 8px;
+
+    @media only screen and (min-width: $desktop-screen-md) {
+      width: 40px;
+    }
+  }
+
+  .user-icon {
+    font-size: 48px;
+    width: 48px;
+    height: 48px;
+    background-color: white;
+    border-radius: 50%;
+    margin-right: 8px;
+  }
+
+  .user-info {
+    display: flex;
+    flex-direction: column;
+    line-height: initial;
+
+    .user-name {
+      font-size: 16px;
+    }
+
+    .user-rol {
+      font-size: 12px;
+    }
+  }
+}

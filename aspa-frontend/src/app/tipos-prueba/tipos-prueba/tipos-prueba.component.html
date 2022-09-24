@@ -1,0 +1,5 @@
+<aspa-tipos-prueba-list [tiposPrueba]="tiposPrueba" *ngIf="tiposPrueba"
+    (tipoPruebaDeletedOrCreated)="onTipoPruebaDeletedOrCreated()">
+</aspa-tipos-prueba-list>
+<aspa-empty-state *ngIf="error" [message]="errorMessage" [retryButton]="true" (retry)="onRetry()"></aspa-empty-state>
+<aspa-spinner *ngIf="!tiposPrueba && !error" [message]="loadingMessage"></aspa-spinner>

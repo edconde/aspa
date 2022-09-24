@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Prueba</ion-title>
+    <ion-buttons>
+      <ion-back-button
+        [routerLink]="'/fga/resultados/' + idcompeticion"
+        text="Atrás"
+        color="danger"
+      ></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list *ngIf="esSaltoVertical">
+    <ion-list-header>Alturas</ion-list-header>
+    <ion-item *ngFor="let a of alturas; let i = index" (click)="showAltura(a)">
+      <ion-note>{{ i == 0 ? 'Altura actual' : 'Listón a' }}</ion-note>
+      <ion-label>&nbsp;{{ a.altura }} m</ion-label>
+    </ion-item>
+  </ion-list>
+  <ion-list *ngIf="!esSaltoVertical">
+    <ion-list-header>Intentos</ion-list-header>
+    <ion-item
+      *ngFor="let i of intentos; let idx = index"
+      (click)="showIntento(i)"
+    >
+      <ion-note>{{ idx == 0 ? 'Intento actual' : 'Intento nº' }}</ion-note>
+      <ion-label>&nbsp; {{ i }}</ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>

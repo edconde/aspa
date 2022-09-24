@@ -1,0 +1,76 @@
+@import "../../../assets/scss/breakpoints";
+
+.aspa-container {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.aspa-sidenav-container {
+  /* When the sidenav is not fixed, stretch the sidenav container to fill the available space. This
+         causes `<mat-sidenav-content>` to act as our scrolling element for desktop layouts. */
+  flex: 1 0 auto;
+  background: rgb(242, 242, 242);
+  color: rgb(51, 51, 51);
+}
+
+// .aspa-is-mobile .aspa-sidenav-container {
+/* When the sidenav is fixed, don't constrain the height of the sidenav container. This allows the
+         `<body>` to be our scrolling element for mobile layouts. */
+//   flex: 1 0 auto;
+//   background: rgb(242, 242, 242);
+//   color: rgb(51, 51, 51);
+// }
+
+.mat-sidenav {
+  width: 320px;
+  @media only screen and (min-width: $tablet-screen-md) {
+    margin-top: 8px;
+  }
+}
+
+.sidenav-content {
+  display: flex;
+  position: absolute;
+  width: calc(100% - 32px);
+  height: calc(100% - 88px);
+  padding: 16px 16px;
+  margin-top: 56px;
+  background-image: url("../../../assets/img/background.jpg");
+  background-size: cover;
+
+  @media only screen and (min-width: $tablet-screen-md) {
+    padding: 24px 24px;
+    margin-top: 64px;
+    width: calc(100% - 48px);
+    height: calc(100% - 110px);
+  }
+
+  @media only screen and (min-width: $desktop-screen-lg) {
+    width: calc(100% - 368px);
+    height: calc(100% - 110px);
+  }
+
+  .container {
+    // width: $desktop-screen-lg;
+    width: 100%;
+    max-width: $desktop-screen-lg;
+    margin: 0 auto;
+  }
+}
+
+.mat-subheader {
+  font-family: "Roboto";
+}
+
+.mat-icon-button {
+  display: inline-block;
+
+  @media only screen and (min-width: $desktop-screen-lg) {
+    display: none;
+  }
+}

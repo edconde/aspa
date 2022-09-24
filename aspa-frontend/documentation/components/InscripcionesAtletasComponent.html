@@ -1,0 +1,1545 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>aspa documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">aspa documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li>InscripcionesAtletasComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/competiciones/competiciones/pruebas-list/inscripciones-atletas/inscripciones-atletas.component.ts</code>
+</p>
+
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                    <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>aspa-inscripciones-atletas</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./inscripciones-atletas.component.scss</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./inscripciones-atletas.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#atletas">atletas</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#data">data</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#dataSource">dataSource</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#displayedColumns">displayedColumns</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#inscripciones">inscripciones</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#loading">loading</a>
+                            </li>
+                            <li>
+                                <a href="#paginator">paginator</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#prueba">prueba</a>
+                            </li>
+                            <li>
+                                <a href="#sort">sort</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#desInscribirAtleta">desInscribirAtleta</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#inscribirAtleta">inscribirAtleta</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#isCategoriaAndSexo">isCategoriaAndSexo</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#isInscrito">isInscrito</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit">ngOnInit</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#onPresentadoChange">onPresentadoChange</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#openSnackBar">openSnackBar</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#setDataSource">setDataSource</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(data: literal type, inscripcionService: <a href="../injectables/InscripcionService.html">InscripcionService</a>, changeDetector: <a href="https://angular.io/api/core/ChangeDetectorRef" target="_blank">ChangeDetectorRef</a>, snackBar: MatSnackBar)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="42" class="link-to-prism">src/app/competiciones/competiciones/pruebas-list/inscripciones-atletas/inscripciones-atletas.component.ts:42</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>data</td>
+                                                  
+                                                        <td>
+                                                                    <code>literal type</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>inscripcionService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/InscripcionService.html" target="_self" >InscripcionService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>changeDetector</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/core/ChangeDetectorRef" target="_blank" >ChangeDetectorRef</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>snackBar</td>
+                                                  
+                                                        <td>
+                                                                    <code>MatSnackBar</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="desInscribirAtleta"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Private</span>
+                            desInscribirAtleta
+                        </b>
+                        <a href="#desInscribirAtleta"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>desInscribirAtleta(atleta: <a href="../interfaces/Atleta.html">Atleta</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="157"
+                            class="link-to-prism">src/app/competiciones/competiciones/pruebas-list/inscripciones-atletas/inscripciones-atletas.component.ts:157</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>atleta</td>
+                                    <td>
+                                                <code><a href="../interfaces/Atleta.html" target="_self" >Atleta</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="inscribirAtleta"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Private</span>
+                            inscribirAtleta
+                        </b>
+                        <a href="#inscribirAtleta"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>inscribirAtleta(atleta: <a href="../interfaces/Atleta.html">Atleta</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="133"
+                            class="link-to-prism">src/app/competiciones/competiciones/pruebas-list/inscripciones-atletas/inscripciones-atletas.component.ts:133</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>atleta</td>
+                                    <td>
+                                                <code><a href="../interfaces/Atleta.html" target="_self" >Atleta</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="isCategoriaAndSexo"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Private</span>
+                            isCategoriaAndSexo
+                        </b>
+                        <a href="#isCategoriaAndSexo"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>isCategoriaAndSexo(atleta: <a href="../interfaces/Atleta.html">Atleta</a>, categoria: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, sexo: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="78"
+                            class="link-to-prism">src/app/competiciones/competiciones/pruebas-list/inscripciones-atletas/inscripciones-atletas.component.ts:78</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>atleta</td>
+                                    <td>
+                                                <code><a href="../interfaces/Atleta.html" target="_self" >Atleta</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>categoria</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>sexo</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="isInscrito"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            isInscrito
+                        </b>
+                        <a href="#isInscrito"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>isInscrito(atleta: <a href="../interfaces/Atleta.html">Atleta</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="177"
+                            class="link-to-prism">src/app/competiciones/competiciones/pruebas-list/inscripciones-atletas/inscripciones-atletas.component.ts:177</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>atleta</td>
+                                    <td>
+                                                <code><a href="../interfaces/Atleta.html" target="_self" >Atleta</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <b>
+                            ngOnInit
+                        </b>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="60"
+                            class="link-to-prism">src/app/competiciones/competiciones/pruebas-list/inscripciones-atletas/inscripciones-atletas.component.ts:60</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="onPresentadoChange"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            onPresentadoChange
+                        </b>
+                        <a href="#onPresentadoChange"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>onPresentadoChange(event: MatCheckboxChange, atleta: <a href="../interfaces/Atleta.html">Atleta</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="122"
+                            class="link-to-prism">src/app/competiciones/competiciones/pruebas-list/inscripciones-atletas/inscripciones-atletas.component.ts:122</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>event</td>
+                                    <td>
+                                            <code>MatCheckboxChange</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>atleta</td>
+                                    <td>
+                                                <code><a href="../interfaces/Atleta.html" target="_self" >Atleta</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="openSnackBar"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Private</span>
+                            openSnackBar
+                        </b>
+                        <a href="#openSnackBar"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>openSnackBar(message: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, action: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="184"
+                            class="link-to-prism">src/app/competiciones/competiciones/pruebas-list/inscripciones-atletas/inscripciones-atletas.component.ts:184</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>message</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>action</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="setDataSource"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Private</span>
+                            setDataSource
+                        </b>
+                        <a href="#setDataSource"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>setDataSource()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="64"
+                            class="link-to-prism">src/app/competiciones/competiciones/pruebas-list/inscripciones-atletas/inscripciones-atletas.component.ts:64</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="atletas"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            atletas</b>
+                            <a href="#atletas"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="../interfaces/Atleta.html" target="_self" >Atleta[]</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="34" class="link-to-prism">src/app/competiciones/competiciones/pruebas-list/inscripciones-atletas/inscripciones-atletas.component.ts:34</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="data"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            data</b>
+                            <a href="#data"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>literal type</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <b>Decorators : </b>
+                            <br />
+                            <code>
+                                @Inject(MAT_BOTTOM_SHEET_DATA)<br />
+                            </code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="46" class="link-to-prism">src/app/competiciones/competiciones/pruebas-list/inscripciones-atletas/inscripciones-atletas.component.ts:46</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="dataSource"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            dataSource</b>
+                            <a href="#dataSource"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="../interfaces/Atleta.html" target="_self" >MatTableDataSource&lt;Atleta&gt;</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="36" class="link-to-prism">src/app/competiciones/competiciones/pruebas-list/inscripciones-atletas/inscripciones-atletas.component.ts:36</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="displayedColumns"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            displayedColumns</b>
+                            <a href="#displayedColumns"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>string[]</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>[
+    &#x27;inscrito&#x27;,
+    &#x27;nombre&#x27;,
+    &#x27;apellidos&#x27;,
+    &#x27;licencia&#x27;,
+  ]</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="37" class="link-to-prism">src/app/competiciones/competiciones/pruebas-list/inscripciones-atletas/inscripciones-atletas.component.ts:37</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="inscripciones"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            inscripciones</b>
+                            <a href="#inscripciones"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="../interfaces/Inscripcion.html" target="_self" >Inscripcion[]</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="32" class="link-to-prism">src/app/competiciones/competiciones/pruebas-list/inscripciones-atletas/inscripciones-atletas.component.ts:32</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="loading"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            loading</b>
+                            <a href="#loading"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean" target="_blank" >Boolean</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="35" class="link-to-prism">src/app/competiciones/competiciones/pruebas-list/inscripciones-atletas/inscripciones-atletas.component.ts:35</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="paginator"></a>
+                        <span class="name">
+                            <b>
+                            paginator</b>
+                            <a href="#paginator"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>MatPaginator</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <b>Decorators : </b>
+                            <br />
+                            <code>
+                                @ViewChild(MatPaginator)<br />
+                            </code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="31" class="link-to-prism">src/app/competiciones/competiciones/pruebas-list/inscripciones-atletas/inscripciones-atletas.component.ts:31</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="prueba"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            prueba</b>
+                            <a href="#prueba"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="../interfaces/Prueba.html" target="_self" >Prueba</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="33" class="link-to-prism">src/app/competiciones/competiciones/pruebas-list/inscripciones-atletas/inscripciones-atletas.component.ts:33</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="sort"></a>
+                        <span class="name">
+                            <b>
+                            sort</b>
+                            <a href="#sort"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>MatSort</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <b>Decorators : </b>
+                            <br />
+                            <code>
+                                @ViewChild(MatSort)<br />
+                            </code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="30" class="link-to-prism">src/app/competiciones/competiciones/pruebas-list/inscripciones-atletas/inscripciones-atletas.component.ts:30</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import {
+  Component,
+  OnInit,
+  Inject,
+  ViewChild,
+  ChangeDetectorRef,
+} from &#x27;@angular/core&#x27;;
+import {
+  MAT_BOTTOM_SHEET_DATA,
+  MatTableDataSource,
+  MatSort,
+  MatPaginator,
+  MatCheckboxChange,
+  MatSnackBar,
+} from &#x27;@angular/material&#x27;;
+import { Inscripcion } from &#x27;src/app/shared/models/Inscripcion&#x27;;
+import { InscripcionService } from &#x27;src/app/shared/services/inscripcion.service&#x27;;
+import { finalize } from &#x27;rxjs/operators&#x27;;
+import { HttpErrorResponse } from &#x27;@angular/common/http&#x27;;
+import { Atleta } from &#x27;src/app/shared/models/Atleta&#x27;;
+import { Prueba } from &#x27;src/app/shared/models/Prueba&#x27;;
+import { SEXOS } from &#x27;src/app/shared/models/Sexo&#x27;;
+
+@Component({
+  selector: &#x27;aspa-inscripciones-atletas&#x27;,
+  templateUrl: &#x27;./inscripciones-atletas.component.html&#x27;,
+  styleUrls: [&#x27;./inscripciones-atletas.component.scss&#x27;],
+})
+export class InscripcionesAtletasComponent implements OnInit {
+  @ViewChild(MatSort) sort: MatSort;
+  @ViewChild(MatPaginator) paginator: MatPaginator;
+  private inscripciones: Inscripcion[];
+  private prueba: Prueba;
+  private atletas: Atleta[];
+  public loading: Boolean;
+  public dataSource: MatTableDataSource&lt;Atleta&gt;;
+  public displayedColumns: string[] &#x3D; [
+    &#x27;inscrito&#x27;,
+    &#x27;nombre&#x27;,
+    &#x27;apellidos&#x27;,
+    &#x27;licencia&#x27;,
+  ];
+
+  constructor(
+    @Inject(MAT_BOTTOM_SHEET_DATA)
+    public data: {
+      inscripciones: Inscripcion[];
+      prueba: Prueba;
+      atletas: Atleta[];
+    },
+    private inscripcionService: InscripcionService,
+    private changeDetector: ChangeDetectorRef,
+    private snackBar: MatSnackBar
+  ) {
+    this.inscripciones &#x3D; data.inscripciones;
+    this.prueba &#x3D; data.prueba;
+    this.atletas &#x3D; data.atletas;
+  }
+
+  ngOnInit() {
+    this.setDataSource();
+  }
+
+  private setDataSource() {
+    this.dataSource &#x3D; new MatTableDataSource&lt;Atleta&gt;(
+      this.atletas.filter(a &#x3D;&gt;
+        this.isCategoriaAndSexo(
+          a,
+          this.prueba.tipo_prueba.categoria,
+          this.prueba.tipo_prueba.sexo
+        )
+      )
+    );
+    this.dataSource.sort &#x3D; this.sort;
+    this.dataSource.paginator &#x3D; this.paginator;
+  }
+
+  private isCategoriaAndSexo(
+    atleta: Atleta,
+    categoria: string,
+    sexo: string
+  ): boolean {
+    if (
+      (SEXOS[sexo] &#x3D;&#x3D;&#x3D; &#x27;Masculino&#x27; &amp;&amp; atleta.sexo) ||
+      (SEXOS[sexo] &#x3D;&#x3D;&#x3D; &#x27;Femenino&#x27; &amp;&amp; !atleta.sexo)
+    ) {
+      return false;
+    }
+    const anoAtleta &#x3D; new Date(atleta.fechaNacimiento).getFullYear();
+    const anoActual &#x3D; new Date().getFullYear();
+    let isCategoria &#x3D; false;
+    switch (categoria) {
+      case &#x27;BENJAMIN&#x27;:
+        isCategoria &#x3D; anoAtleta &gt;&#x3D; anoActual - 10;
+        break;
+      case &#x27;ALEVIN&#x27;:
+        isCategoria &#x3D; anoAtleta &gt;&#x3D; anoActual - 12;
+        break;
+      case &#x27;INFANTIL&#x27;:
+        isCategoria &#x3D; anoAtleta &gt;&#x3D; anoActual - 14;
+        break;
+      case &#x27;CADETE&#x27;:
+        isCategoria &#x3D; anoAtleta &gt;&#x3D; anoActual - 16;
+        break;
+      case &#x27;JUVENIL&#x27;:
+        isCategoria &#x3D; anoAtleta &gt;&#x3D; anoActual - 18;
+        break;
+      case &#x27;PROMESA&#x27;:
+        isCategoria &#x3D;
+          anoAtleta &lt;&#x3D; anoActual - 19 &amp;&amp; anoAtleta &gt;&#x3D; anoActual - 23;
+        break;
+      case &#x27;ABSOLUTA&#x27;:
+        isCategoria &#x3D; true;
+        break;
+      case &#x27;MASTER&#x27;:
+        isCategoria &#x3D; anoAtleta &lt;&#x3D; anoActual - 30;
+        break;
+    }
+    return isCategoria;
+  }
+
+  public onPresentadoChange(event: MatCheckboxChange, atleta: Atleta) {
+    if (this.isInscrito(atleta) !&#x3D;&#x3D; event.checked) {
+      this.loading &#x3D; true;
+      if (event.checked) {
+        this.inscribirAtleta(atleta);
+      } else {
+        this.desInscribirAtleta(atleta);
+      }
+    }
+  }
+
+  private inscribirAtleta(atleta: Atleta): void {
+    this.inscripcionService
+      .add(this.prueba.idprueba, atleta)
+      .pipe(
+        finalize(() &#x3D;&gt; {
+          this.loading &#x3D; false;
+          this.changeDetector.detectChanges();
+        })
+      )
+      .subscribe(
+        response &#x3D;&gt; {},
+        (error: HttpErrorResponse) &#x3D;&gt; {
+          if (error.status &#x3D;&#x3D;&#x3D; 422) {
+            this.openSnackBar(
+              &#x27;Atleta ya inscrito o prueba finalizada&#x27;,
+              &#x27;Cerrar&#x27;
+            );
+          } else {
+            this.openSnackBar(&#x27;Ha ocurrido un error en la anotación&#x27;, &#x27;Cerrar&#x27;);
+          }
+        }
+      );
+  }
+
+  private desInscribirAtleta(atleta: Atleta): void {
+    const idinscripcion &#x3D; this.inscripciones.find(
+      i &#x3D;&gt; i.atleta.idatleta &#x3D;&#x3D;&#x3D; atleta.idatleta
+    ).idinscripcion;
+    this.inscripcionService
+      .delete(this.prueba.idprueba, idinscripcion)
+      .pipe(
+        finalize(() &#x3D;&gt; {
+          this.loading &#x3D; false;
+          this.changeDetector.detectChanges();
+        })
+      )
+      .subscribe(
+        response &#x3D;&gt; {},
+        (error: HttpErrorResponse) &#x3D;&gt; {
+          this.openSnackBar(&#x27;Ha ocurrido un error en la anotación&#x27;, &#x27;Cerrar&#x27;);
+        }
+      );
+  }
+
+  public isInscrito(atleta: Atleta): boolean {
+    return (
+      this.inscripciones.find(i &#x3D;&gt; i.atleta.idatleta &#x3D;&#x3D;&#x3D; atleta.idatleta) !&#x3D;&#x3D;
+      undefined
+    );
+  }
+
+  private openSnackBar(message: string, action: string) {
+    this.snackBar.open(message, action, {
+      duration: 2000,
+    });
+  }
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;list-container&quot;&gt;
+  &lt;table
+    mat-table
+    [dataSource]&#x3D;&quot;dataSource&quot;
+    matSort
+    class&#x3D;&quot;inscripciones-table&quot;
+  &gt;
+    &lt;!-- Presentado Column --&gt;
+    &lt;ng-container matColumnDef&#x3D;&quot;inscrito&quot;&gt;
+      &lt;th mat-header-cell mat-sort-header *matHeaderCellDef&gt;Inscrito&lt;/th&gt;
+      &lt;td mat-cell *matCellDef&#x3D;&quot;let atleta&quot;&gt;
+        &lt;mat-checkbox
+          color&#x3D;&quot;primary&quot;
+          [checked]&#x3D;&quot;isInscrito(atleta)&quot;
+          (change)&#x3D;&quot;onPresentadoChange($event, atleta)&quot;
+        &gt;&lt;/mat-checkbox&gt;
+      &lt;/td&gt;
+    &lt;/ng-container&gt;
+
+    &lt;!-- Atleta Nombre Column --&gt;
+    &lt;ng-container matColumnDef&#x3D;&quot;nombre&quot;&gt;
+      &lt;th mat-header-cell mat-sort-header *matHeaderCellDef&gt;Nombre&lt;/th&gt;
+      &lt;td mat-cell *matCellDef&#x3D;&quot;let atleta&quot;&gt;
+        {{ atleta.nombre || &#x27;-&#x27; }}
+      &lt;/td&gt;
+    &lt;/ng-container&gt;
+
+    &lt;!-- Atleta Apellidos Column --&gt;
+    &lt;ng-container matColumnDef&#x3D;&quot;apellidos&quot;&gt;
+      &lt;th mat-header-cell mat-sort-header *matHeaderCellDef&gt;Apellidos&lt;/th&gt;
+      &lt;td mat-cell *matCellDef&#x3D;&quot;let atleta&quot;&gt;
+        {{ atleta.apellidos || &#x27;-&#x27; }}
+      &lt;/td&gt;
+    &lt;/ng-container&gt;
+
+    &lt;!-- Atleta Licencia Column --&gt;
+    &lt;ng-container matColumnDef&#x3D;&quot;licencia&quot;&gt;
+      &lt;th mat-header-cell mat-sort-header *matHeaderCellDef&gt;Licencia&lt;/th&gt;
+      &lt;td mat-cell *matCellDef&#x3D;&quot;let atleta&quot;&gt;
+        {{ atleta.licencia }}
+      &lt;/td&gt;
+    &lt;/ng-container&gt;
+
+    &lt;tr mat-header-row *matHeaderRowDef&#x3D;&quot;displayedColumns&quot;&gt;&lt;/tr&gt;
+    &lt;tr mat-row *matRowDef&#x3D;&quot;let row; columns: displayedColumns&quot;&gt;&lt;/tr&gt;
+  &lt;/table&gt;
+
+  &lt;mat-paginator
+    [pageSizeOptions]&#x3D;&quot;[5, 10]&quot;
+    showFirstLastButtons
+  &gt;&lt;/mat-paginator&gt;
+
+  &lt;div *ngIf&#x3D;&quot;loading&quot; class&#x3D;&quot;full-screen&quot;&gt;
+    &lt;aspa-spinner [message]&#x3D;&quot;&#x27;&#x27;&quot;&gt;&lt;/aspa-spinner&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./inscripciones-atletas.component.scss</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">.list-container {
+  width: 100%;
+  height: 100%;
+}
+
+.inscripciones-table {
+  width: 100%;
+}
+
+.full-screen {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  background-color: transparent;
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><div class="list-container">  <table    mat-table    [dataSource]="dataSource"    matSort    class="inscripciones-table"  >    <!-- Presentado Column -->    <ng-container matColumnDef="inscrito">      <th mat-header-cell mat-sort-header *matHeaderCellDef>Inscrito</th>      <td mat-cell *matCellDef="let atleta">        <mat-checkbox          color="primary"          [checked]="isInscrito(atleta)"          (change)="onPresentadoChange($event, atleta)"        ></mat-checkbox>      </td>    </ng-container>    <!-- Atleta Nombre Column -->    <ng-container matColumnDef="nombre">      <th mat-header-cell mat-sort-header *matHeaderCellDef>Nombre</th>      <td mat-cell *matCellDef="let atleta">        {{ atleta.nombre || \'-\' }}      </td>    </ng-container>    <!-- Atleta Apellidos Column -->    <ng-container matColumnDef="apellidos">      <th mat-header-cell mat-sort-header *matHeaderCellDef>Apellidos</th>      <td mat-cell *matCellDef="let atleta">        {{ atleta.apellidos || \'-\' }}      </td>    </ng-container>    <!-- Atleta Licencia Column -->    <ng-container matColumnDef="licencia">      <th mat-header-cell mat-sort-header *matHeaderCellDef>Licencia</th>      <td mat-cell *matCellDef="let atleta">        {{ atleta.licencia }}      </td>    </ng-container>    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>    <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>  </table>  <mat-paginator    [pageSizeOptions]="[5, 10]"    showFirstLastButtons  ></mat-paginator>  <div *ngIf="loading" class="full-screen">    <aspa-spinner [message]="\'\'"></aspa-spinner>  </div></div></div>'
+    var COMPONENTS = [{'name': 'ActionsFooterComponent', 'selector': 'aspa-actions-footer'},{'name': 'AlturaEditComponent', 'selector': 'app-altura-edit'},{'name': 'AlturasAddComponent', 'selector': 'app-alturas-add'},{'name': 'AppComponent', 'selector': 'aspa-root'},{'name': 'AtletaFormComponent', 'selector': 'aspa-atleta-form'},{'name': 'AtletasComponent', 'selector': 'aspa-atletas'},{'name': 'AtletasListComponent', 'selector': 'aspa-atletas-list'},{'name': 'BreadcrumbComponent', 'selector': 'aspa-breadcrumb'},{'name': 'CampoPopupComponent', 'selector': 'app-campo-popup'},{'name': 'ClubesComponent', 'selector': 'aspa-clubes'},{'name': 'ClubesListComponent', 'selector': 'aspa-clubes-list'},{'name': 'ClubPopupComponent', 'selector': 'app-club-popup'},{'name': 'CompeticionesComponent', 'selector': 'aspa-competiciones'},{'name': 'CompeticionesListComponent', 'selector': 'aspa-competiciones-list'},{'name': 'CompeticionPopupComponent', 'selector': 'app-competicion-popup'},{'name': 'ConfirmacionPopupComponent', 'selector': 'app-confirmacion-popup'},{'name': 'EmptyStateComponent', 'selector': 'aspa-empty-state'},{'name': 'HojaDeCampoNoSvComponent', 'selector': 'aspa-hoja-de-campo-no-sv'},{'name': 'HojaDeCampoSvComponent', 'selector': 'aspa-hoja-de-campo-sv'},{'name': 'HomeComponent', 'selector': 'ihair-home'},{'name': 'InscripcionesAtletasComponent', 'selector': 'aspa-inscripciones-atletas'},{'name': 'InscripcionesListComponent', 'selector': 'app-inscripciones-list'},{'name': 'LayoutComponent', 'selector': 'aspa-layout'},{'name': 'PageNotFoundComponent', 'selector': 'aspa-page-not-found'},{'name': 'PruebaAyudaComponent', 'selector': 'app-prueba-ayuda'},{'name': 'PruebaPopupComponent', 'selector': 'app-prueba-popup'},{'name': 'PruebasListComponent', 'selector': 'aspa-pruebas-list'},{'name': 'ResultadoIntentoNoSvComponent', 'selector': 'aspa-resultado-intento-no-sv'},{'name': 'ResultadoIntentoSvComponent', 'selector': 'aspa-resultado-intento-sv'},{'name': 'SidenavComponent', 'selector': 'aspa-sidenav'},{'name': 'SpinnerComponent', 'selector': 'aspa-spinner'},{'name': 'TipoPruebaPopupComponent', 'selector': 'app-tipo-prueba-popup'},{'name': 'TiposPruebaComponent', 'selector': 'aspa-tipos-prueba'},{'name': 'TiposPruebaListComponent', 'selector': 'aspa-tipos-prueba-list'},{'name': 'ToolbarComponent', 'selector': 'aspa-toolbar'},{'name': 'UserInfoComponent', 'selector': 'aspa-user-info'},{'name': 'UsuarioFormComponent', 'selector': 'aspa-usuario-form'},{'name': 'UsuariosComponent', 'selector': 'aspa-usuarios'},{'name': 'UsuariosListComponent', 'selector': 'aspa-usuarios-list'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'InscripcionesAtletasComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+                   
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'InscripcionesAtletasComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

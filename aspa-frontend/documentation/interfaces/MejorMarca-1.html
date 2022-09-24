@@ -1,0 +1,1096 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>aspa documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">aspa documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content interface">
+                   <div class="content-data">
+
+
+
+
+
+
+
+
+
+
+
+
+<ol class="breadcrumb">
+  <li>Interfaces</li>
+  <li>MejorMarca</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info">
+        <p class="comment">
+            <h3>File</h3>
+        </p>
+        <p class="comment">
+            <code>src/app/competiciones/competiciones/pruebas-list/hoja-de-campo-sv/hoja-de-campo-sv.component.ts</code>
+        </p>
+
+
+
+        <section>
+            <h3 id="index">Index</h3>
+            <table class="table table-sm table-bordered index-table">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <h6><b>Properties</b></h6>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <ul class="index-list">
+                                <li>
+                                        <a href="#idatleta">idatleta</a>
+                                </li>
+                                <li>
+                                        <a href="#marca">marca</a>
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+
+
+            <section>
+                <h3 id="inputs">Properties</h3>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <a name="idatleta"></a>
+                                        <span class="name"><b>idatleta</b><a href="#idatleta"><span class="icon ion-ios-link"></span></a></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <code>idatleta:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+</code>
+                                    </td>
+                                </tr>
+
+
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                                        </td>
+                                    </tr>
+
+
+
+
+
+                        </tbody>
+                    </table>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <a name="marca"></a>
+                                        <span class="name"><b>marca</b><a href="#marca"><span class="icon ion-ios-link"></span></a></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <code>marca:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+</code>
+                                    </td>
+                                </tr>
+
+
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                                        </td>
+                                    </tr>
+
+
+
+
+
+                        </tbody>
+                    </table>
+            </section>
+    </div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit, ViewChild } from &#x27;@angular/core&#x27;;
+import { ActivatedRoute, Router } from &#x27;@angular/router&#x27;;
+import { PruebaService } from &#x27;src/app/shared/services/prueba.service&#x27;;
+import { Prueba } from &#x27;src/app/shared/models/Prueba&#x27;;
+import { Inscripcion } from &#x27;src/app/shared/models/Inscripcion&#x27;;
+import { InscripcionService } from &#x27;src/app/shared/services/inscripcion.service&#x27;;
+import { forkJoin } from &#x27;rxjs&#x27;;
+import {
+  MatTableDataSource,
+  MatBottomSheet,
+  MatSnackBar,
+  MatDialog,
+  MatPaginator,
+} from &#x27;@angular/material&#x27;;
+import { MarcaSvService } from &#x27;src/app/shared/services/marca-sv.service&#x27;;
+import { MarcaSv } from &#x27;src/app/shared/models/Marca&#x27;;
+import { RESULTADO } from &#x27;src/app/shared/models/enums/Resultado&#x27;;
+import { ResultadoIntentoSvComponent } from &#x27;./resultado-intento-sv/resultado-intento-sv.component&#x27;;
+import { Column } from &#x27;src/app/shared/models/helpers/Column&#x27;;
+import { HttpErrorResponse } from &#x27;@angular/common/http&#x27;;
+import { Clasificacion } from &#x27;src/app/shared/models/Clasificacion&#x27;;
+import { SessionService } from &#x27;src/app/core/session/session.service&#x27;;
+import { ClasificacionService } from &#x27;src/app/shared/services/clasificacion.service&#x27;;
+import { ConfirmacionPopupComponent } from &#x27;src/app/shared/components/confirmacion-popup/confirmacion-popup.component&#x27;;
+import { AlturaService } from &#x27;src/app/shared/services/altura.service&#x27;;
+import { AlturasAddComponent } from &#x27;./alturas-add/alturas-add.component&#x27;;
+import { Altura } from &#x27;src/app/shared/models/Altura&#x27;;
+import { AlturaEditComponent } from &#x27;./altura-edit/altura-edit.component&#x27;;
+import { AlturaDialogResponse } from &#x27;src/app/shared/models/helpers/AlturaDialogResponse&#x27;;
+import { ACTIONS } from &#x27;src/app/shared/models/enums/Actions&#x27;;
+import { PruebaAyudaComponent } from &#x27;../prueba-ayuda/prueba-ayuda.component&#x27;;
+import { Atleta } from &#x27;src/app/shared/models/Atleta&#x27;;
+import { DISCIPLINAS } from &#x27;src/app/shared/models/Disciplina&#x27;;
+import { TipoPrueba } from &#x27;src/app/shared/models/TipoPrueba&#x27;;
+import { CATEGORIAS } from &#x27;src/app/shared/models/Categoria&#x27;;
+import { SEXOS } from &#x27;src/app/shared/models/Sexo&#x27;;
+
+export interface MejorMarca {
+  idatleta: number;
+  marca: number;
+}
+
+@Component({
+  selector: &#x27;aspa-hoja-de-campo-sv&#x27;,
+  templateUrl: &#x27;./hoja-de-campo-sv.component.html&#x27;,
+  styleUrls: [&#x27;./hoja-de-campo-sv.component.scss&#x27;],
+})
+export class HojaDeCampoSvComponent implements OnInit {
+  readonly INTENTOS &#x3D; [1, 2, 3]; // Los intentos por cada altura
+  @ViewChild(MatPaginator) paginator: MatPaginator;
+  public dataSource: MatTableDataSource&lt;Inscripcion&gt;;
+  private idcompeticion: number;
+  private idprueba: number;
+  private prueba: Prueba;
+  public nombrePrueba: string;
+  private inscripciones: Array&lt;Inscripcion&gt;;
+  private alturas: Array&lt;Altura&gt;;
+  private marcas: Array&lt;MarcaSv&gt;;
+  private columns: Array&lt;Column&gt;;
+  public displayedColumns: Array&lt;string&gt;;
+  // Array con las marcas con resultado NULO que son la última de una secuencia descalificante (3 nulos seguidos)
+  private disqualifyingMarks: Array&lt;MarcaSv&gt; &#x3D; [];
+  // Array con todas las marcas con resultado NULO que forman parte de una secuencia descalificante (3 nulos seguidos)
+  private disqualifyingSequencesMarks: Array&lt;MarcaSv&gt; &#x3D; [];
+
+  constructor(
+    private route: ActivatedRoute,
+    private bottomSheet: MatBottomSheet,
+    private session: SessionService,
+    private pruebaService: PruebaService,
+    private inscripcionService: InscripcionService,
+    private clasificacionService: ClasificacionService,
+    private alturaService: AlturaService,
+    private marcaService: MarcaSvService,
+    private snackBar: MatSnackBar,
+    private router: Router,
+    private dialog: MatDialog
+  ) {}
+
+  ngOnInit() {
+    this.route.params.subscribe(params &#x3D;&gt; {
+      this.idcompeticion &#x3D; params[&#x27;idcompeticion&#x27;];
+      this.idprueba &#x3D; params[&#x27;idprueba&#x27;];
+      this.getAllInfo();
+    });
+  }
+
+  private getAllInfo() {
+    const prueba &#x3D; this.pruebaService.get(this.idcompeticion, this.idprueba);
+    const inscripciones &#x3D; this.inscripcionService.getAllPresentedByPrueba(
+      this.idprueba
+    );
+    const alturas &#x3D; this.alturaService.getAllByPrueba(this.idprueba);
+    forkJoin([prueba, inscripciones, alturas]).subscribe(responseList &#x3D;&gt; {
+      this.prueba &#x3D; responseList[0];
+      this.nombrePrueba &#x3D; this.buildNombrePrueba(responseList[0].tipo_prueba);
+      this.inscripciones &#x3D; responseList[1];
+      responseList[2].sort((a, b) &#x3D;&gt; a.altura - b.altura);
+      this.alturas &#x3D; responseList[2];
+      this.getMarcas();
+    });
+  }
+
+  private getMarcas() {
+    this.marcaService
+      .getAllByPrueba(this.prueba.idprueba)
+      .subscribe((marcas: Array&lt;MarcaSv&gt;) &#x3D;&gt; {
+        marcas.forEach(m &#x3D;&gt; {
+          m.altura &#x3D; this.alturas.find(a &#x3D;&gt; a.idaltura &#x3D;&#x3D;&#x3D; m.idaltura).altura;
+        });
+        this.marcas &#x3D; marcas; // Estas son las marcas que existen en bd
+        this.fillMarcas(); // Añadimos marcas que aun no existen en bd en los intentos que no tienen marca
+        this.checkDisqualifications();
+      });
+  }
+
+  private fillMarcas() {
+    this.inscripciones.forEach(inscripcion &#x3D;&gt; {
+      const atleta &#x3D; inscripcion.atleta.idatleta;
+      this.alturas.forEach(altura &#x3D;&gt; {
+        for (let i &#x3D; 1; i &lt;&#x3D; this.INTENTOS.length; i++) {
+          if (!this.existMarca(atleta, altura.altura, i)) {
+            this.marcas.push(this.createMarca(atleta, altura.altura, i));
+          }
+        }
+      });
+    });
+    this.createColumns();
+  }
+
+  private checkDisqualifications() {
+    this.inscripciones.forEach(inscripcion &#x3D;&gt; {
+      let consecutives &#x3D; 0;
+      // Array con las marcas con resultado NULO del atleta que forman parte de una secuencia descalificante (3 nulos seguidos)
+      let athleteDisqualifyingSequenceMarks: Array&lt;MarcaSv&gt; &#x3D; [];
+      const athleteMarks &#x3D; this.marcas.filter(
+        m &#x3D;&gt; m.atleta &#x3D;&#x3D;&#x3D; inscripcion.atleta.idatleta
+      );
+      this.alturas.forEach(altura &#x3D;&gt; {
+        for (let i &#x3D; 1; i &lt;&#x3D; 3 &amp;&amp; consecutives &lt; 3; i++) {
+          const marca &#x3D; athleteMarks.find(
+            m &#x3D;&gt; m.altura &#x3D;&#x3D;&#x3D; altura.altura &amp;&amp; m.intento &#x3D;&#x3D;&#x3D; i
+          );
+          if (marca.resultado &#x3D;&#x3D;&#x3D; &#x27;NULO&#x27;) {
+            consecutives++;
+            athleteDisqualifyingSequenceMarks.push(marca);
+            if (consecutives &#x3D;&#x3D;&#x3D; 3) {
+              athleteDisqualifyingSequenceMarks.forEach(adsm &#x3D;&gt;
+                this.disqualifyingSequencesMarks.push(adsm)
+              );
+              // this.disqualifyingSequencesMarks.push(...athleteDisqualifyingSequenceMarks);
+              this.disqualifyingMarks.push(marca);
+            }
+          } else if (marca.resultado &#x3D;&#x3D;&#x3D; &#x27;VALIDO&#x27;) {
+            consecutives &#x3D; 0;
+            athleteDisqualifyingSequenceMarks &#x3D; [];
+          }
+        }
+      });
+      if (consecutives &#x3D;&#x3D;&#x3D; 3) {
+        // eliminar aquí marcas posteriores a la última marca de la secuencia descalificante
+        const disqualifyingMark &#x3D; this.disqualifyingMarks.find(
+          m &#x3D;&gt; m.atleta &#x3D;&#x3D;&#x3D; inscripcion.atleta.idatleta
+        );
+        const marksToDelete &#x3D; athleteMarks.filter(
+          m &#x3D;&gt;
+            m.resultado !&#x3D;&#x3D; null &amp;&amp;
+            (m.altura &gt; disqualifyingMark.altura ||
+              (m.altura &#x3D;&#x3D;&#x3D; disqualifyingMark.altura &amp;&amp;
+                m.intento &gt; disqualifyingMark.intento))
+        );
+        this.cleanMarks(marksToDelete);
+      }
+    });
+  }
+
+  private getHighestMark(idatleta: number): number {
+    const athleteMarks: Array&lt;MarcaSv&gt; &#x3D; this.marcas.filter(
+      m &#x3D;&gt; m.atleta &#x3D;&#x3D;&#x3D; idatleta &amp;&amp; m.resultado &#x3D;&#x3D;&#x3D; &#x27;VALIDO&#x27;
+    );
+    return athleteMarks.length &gt; 0
+      ? Math.max.apply(Math, athleteMarks.map(m &#x3D;&gt; m.altura))
+      : null;
+  }
+
+  private getPosition(idatleta: number) {
+    const athleteBestMark: number &#x3D; this.getHighestMark(idatleta);
+    if (athleteBestMark) {
+      const marksAbove &#x3D; this.marcas.filter(
+        m &#x3D;&gt;
+          m.atleta !&#x3D;&#x3D; idatleta &amp;&amp;
+          m.resultado &#x3D;&#x3D;&#x3D; &#x27;VALIDO&#x27; &amp;&amp;
+          m.altura &gt; athleteBestMark
+      );
+      const athletesAbove &#x3D; marksAbove.map(m &#x3D;&gt; m.atleta);
+      // sin repetidos:
+      let positionsAbove &#x3D; athletesAbove.filter(
+        (a, i) &#x3D;&gt; athletesAbove.indexOf(a) &#x3D;&#x3D;&#x3D; i
+      ).length;
+      const draws &#x3D; this.marcas.filter(
+        m &#x3D;&gt;
+          m.altura &#x3D;&#x3D;&#x3D; athleteBestMark &amp;&amp;
+          m.resultado &#x3D;&#x3D;&#x3D; &#x27;VALIDO&#x27; &amp;&amp;
+          !athletesAbove.includes(m.atleta)
+      );
+      if (draws.length &gt; 0) {
+        const currentAthleteFailsInLastHeight &#x3D; this.marcas.filter(
+          m &#x3D;&gt;
+            m.atleta &#x3D;&#x3D;&#x3D; idatleta &amp;&amp;
+            m.altura &#x3D;&#x3D;&#x3D; athleteBestMark &amp;&amp;
+            m.resultado &#x3D;&#x3D;&#x3D; &#x27;NULO&#x27;
+        ).length;
+        const currentAthleteFailsInPrevHeights &#x3D; this.marcas.filter(
+          m &#x3D;&gt;
+            m.atleta &#x3D;&#x3D;&#x3D; idatleta &amp;&amp;
+            m.altura &lt; athleteBestMark &amp;&amp;
+            m.resultado &#x3D;&#x3D;&#x3D; &#x27;NULO&#x27;
+        ).length;
+        draws.forEach(d &#x3D;&gt; {
+          const dAthleteFailsInLastHeight &#x3D; this.marcas.filter(
+            m &#x3D;&gt;
+              m.atleta &#x3D;&#x3D;&#x3D; d.atleta &amp;&amp;
+              m.altura &#x3D;&#x3D;&#x3D; d.altura &amp;&amp;
+              m.resultado &#x3D;&#x3D;&#x3D; &#x27;NULO&#x27;
+          ).length;
+          if (dAthleteFailsInLastHeight &lt; currentAthleteFailsInLastHeight) {
+            positionsAbove++;
+          } else if (
+            dAthleteFailsInLastHeight &#x3D;&#x3D;&#x3D; currentAthleteFailsInLastHeight
+          ) {
+            const dAthleteFailsInPrevHeights &#x3D; this.marcas.filter(
+              m &#x3D;&gt;
+                m.atleta &#x3D;&#x3D;&#x3D; d.atleta &amp;&amp;
+                m.altura &lt; d.altura &amp;&amp;
+                m.resultado &#x3D;&#x3D;&#x3D; &#x27;NULO&#x27;
+            ).length;
+            if (dAthleteFailsInPrevHeights &lt; currentAthleteFailsInPrevHeights) {
+              positionsAbove++;
+            }
+          }
+        });
+      }
+      return positionsAbove + 1;
+    } else {
+      return &#x27;-&#x27;;
+    }
+  }
+
+  private createColumns() {
+    this.columns &#x3D; [
+      {
+        columnDef: &#x27;atleta&#x27;,
+        header: &#x27;Atleta&#x27;,
+        isAttempt: false,
+        sticky: true,
+        stickyEnd: false,
+        class: &#x27;&#x27;,
+        marca: null,
+        cell: (inscripcion: Inscripcion) &#x3D;&gt;
+          &#x60;${inscripcion.atleta.nombre} ${inscripcion.atleta.apellidos}&#x60;,
+        enabled: () &#x3D;&gt; {
+          return;
+        },
+      },
+    ];
+    this.alturas.forEach(altura &#x3D;&gt; {
+      this.columns.push({
+        columnDef: &#x60;${altura.altura}&#x60;,
+        header: &#x60;${altura.altura}m&#x60;,
+        isAttempt: true,
+        sticky: false,
+        stickyEnd: false,
+        marca: (inscripcion: Inscripcion, i: number) &#x3D;&gt;
+          this.getMarca(inscripcion.atleta.idatleta, altura.altura, i),
+        class: (inscripcion: Inscripcion, i: number) &#x3D;&gt;
+          this.getCellClass(
+            inscripcion.atleta.idatleta,
+            altura.altura,
+            i
+          ).toLowerCase(),
+        cell: (inscripcion: Inscripcion, i: number) &#x3D;&gt;
+          this.getCellValue(inscripcion.atleta.idatleta, altura.altura, i),
+        enabled: () &#x3D;&gt; {
+          return;
+        },
+      });
+    });
+    this.columns.push({
+      columnDef: &#x27;mejorMarca&#x27;,
+      header: &#x27;Mejor marca&#x27;,
+      isAttempt: false,
+      sticky: false,
+      stickyEnd: true,
+      class: &#x27;&#x27;,
+      marca: null,
+      cell: (inscripcion: Inscripcion) &#x3D;&gt;
+        this.getPositionCellValue(inscripcion.atleta.idatleta),
+      enabled: () &#x3D;&gt; {
+        return;
+      },
+    });
+    this.updateDatasource();
+  }
+
+  public isQualified(idatleta: number): boolean {
+    const position &#x3D; this.getPosition(idatleta);
+    return position !&#x3D;&#x3D; &#x27;-&#x27; &amp;&amp; position &lt;&#x3D; this.prueba.num_atletas_mejora;
+  }
+
+  public isEnabled(marca: MarcaSv): boolean {
+    let enabled &#x3D; true;
+    const atleta &#x3D; marca.atleta;
+    if (this.isDisqualified(atleta)) {
+      const disqualifyingMark &#x3D; this.disqualifyingMarks.find(
+        m &#x3D;&gt; m.atleta &#x3D;&#x3D;&#x3D; atleta
+      );
+      if (
+        disqualifyingMark &amp;&amp;
+        (marca.altura &gt; disqualifyingMark.altura ||
+          (marca.altura &#x3D;&#x3D;&#x3D; disqualifyingMark.altura &amp;&amp;
+            marca.intento &gt; disqualifyingMark.intento))
+      ) {
+        enabled &#x3D; false;
+      }
+    }
+    return enabled;
+  }
+
+  private existMarca(idatleta: number, altura: number, intento: number) {
+    return (
+      this.marcas.find(
+        m &#x3D;&gt;
+          m.atleta &#x3D;&#x3D;&#x3D; idatleta &amp;&amp; m.altura &#x3D;&#x3D;&#x3D; altura &amp;&amp; m.intento &#x3D;&#x3D;&#x3D; intento
+      ) !&#x3D;&#x3D; undefined
+    );
+  }
+
+  private getMarca(idatleta: number, altura: number, intento: number): MarcaSv {
+    let marca: MarcaSv &#x3D; this.marcas.find(
+      m &#x3D;&gt; m.atleta &#x3D;&#x3D;&#x3D; idatleta &amp;&amp; m.altura &#x3D;&#x3D;&#x3D; altura &amp;&amp; m.intento &#x3D;&#x3D;&#x3D; intento
+    );
+    if (typeof marca &#x3D;&#x3D;&#x3D; &#x27;undefined&#x27;) {
+      marca &#x3D; {
+        atleta: idatleta,
+        intento,
+        resultado: null,
+        idaltura: this.getIdAltura(altura),
+        altura,
+      };
+    }
+    return marca;
+  }
+
+  private createMarca(
+    idatleta: number,
+    altura: number,
+    intento: number
+  ): MarcaSv {
+    return {
+      atleta: idatleta,
+      intento,
+      resultado: null,
+      idaltura: this.getIdAltura(altura),
+      altura,
+    };
+  }
+
+  private getIdAltura(altura: number): number {
+    return this.alturas.find(a &#x3D;&gt; a.altura &#x3D;&#x3D;&#x3D; altura).idaltura || null;
+  }
+
+  private getCellClass(
+    idatleta: number,
+    altura: number,
+    intento: number
+  ): string {
+    const marca &#x3D; this.marcas.find(
+      m &#x3D;&gt; m.atleta &#x3D;&#x3D;&#x3D; idatleta &amp;&amp; m.altura &#x3D;&#x3D; altura &amp;&amp; m.intento &#x3D;&#x3D;&#x3D; intento
+    );
+    return marca ? marca.resultado || &#x27;&#x27; : &#x27;&#x27;;
+  }
+
+  private getCellValue(
+    idatleta: number,
+    altura: number,
+    intento: number
+  ): string {
+    const marca &#x3D; this.marcas.find(
+      m &#x3D;&gt; m.atleta &#x3D;&#x3D;&#x3D; idatleta &amp;&amp; m.altura &#x3D;&#x3D;&#x3D; altura &amp;&amp; m.intento &#x3D;&#x3D;&#x3D; intento
+    );
+    if (marca) {
+      return RESULTADO[marca.resultado];
+    } else {
+      return &#x27;&#x27;;
+    }
+  }
+
+  private getPositionCellValue(idatleta: number): { mark: any; pos: any } {
+    return {
+      mark: this.getHighestMark(idatleta),
+      pos: this.getPosition(idatleta),
+    };
+  }
+
+  private updateDatasource() {
+    this.displayedColumns &#x3D; this.columns.map(c &#x3D;&gt; c.columnDef);
+    this.dataSource &#x3D; new MatTableDataSource(this.inscripciones);
+    setTimeout(() &#x3D;&gt; (this.dataSource.paginator &#x3D; this.paginator));
+  }
+
+  private refreshTable() {
+    this.getMarcas();
+  }
+
+  private isDisqualified(idatleta: number): boolean {
+    return (
+      this.disqualifyingMarks.find(m &#x3D;&gt; m.atleta &#x3D;&#x3D;&#x3D; idatleta) !&#x3D;&#x3D; undefined
+    );
+  }
+
+  private getAthleteName(idatleta: number): string {
+    const atleta: Atleta &#x3D; this.inscripciones.find(
+      i &#x3D;&gt; i.atleta.idatleta &#x3D;&#x3D;&#x3D; idatleta
+    ).atleta;
+    return atleta ? &#x60;${atleta.nombre} ${atleta.apellidos}&#x60; : &#x27;El atleta&#x27;;
+  }
+
+  private hasEmptyMarksBefore(marca: MarcaSv): boolean {
+    const emptyMarksBefore &#x3D; this.marcas.find(
+      m &#x3D;&gt;
+        !this.isDisqualified(m.atleta) &amp;&amp;
+        (m.altura &lt; marca.altura ||
+          (m.altura &#x3D;&#x3D;&#x3D; marca.altura &amp;&amp; m.intento &lt; marca.intento)) &amp;&amp;
+        m.resultado &#x3D;&#x3D;&#x3D; null &amp;&amp;
+        !this.marcas.find(
+          marcaValidaOPasa &#x3D;&gt;
+            marcaValidaOPasa.altura &#x3D;&#x3D;&#x3D; m.altura &amp;&amp;
+            marcaValidaOPasa.intento &lt; m.intento &amp;&amp;
+            (marcaValidaOPasa.resultado &#x3D;&#x3D;&#x3D; &#x27;PASA&#x27; ||
+              marcaValidaOPasa.resultado &#x3D;&#x3D;&#x3D; &#x27;VALIDO&#x27;)
+        )
+    );
+    return emptyMarksBefore !&#x3D;&#x3D; undefined;
+  }
+
+  private hasAlreadyPassed(marca: MarcaSv) {
+    return (
+      this.marcas.find(
+        m &#x3D;&gt;
+          m.atleta &#x3D;&#x3D;&#x3D; marca.atleta &amp;&amp;
+          m.altura &#x3D;&#x3D;&#x3D; marca.altura &amp;&amp;
+          m.intento &lt; marca.intento &amp;&amp;
+          m.resultado &#x3D;&#x3D;&#x3D; &#x27;VALIDO&#x27;
+      ) !&#x3D;&#x3D; undefined
+    );
+  }
+
+  private hasAlreadySkipped(marca: MarcaSv) {
+    return (
+      this.marcas.find(
+        m &#x3D;&gt;
+          m.atleta &#x3D;&#x3D;&#x3D; marca.atleta &amp;&amp;
+          m.altura &#x3D;&#x3D;&#x3D; marca.altura &amp;&amp;
+          m.intento &lt; marca.intento &amp;&amp;
+          m.resultado &#x3D;&#x3D;&#x3D; &#x27;PASA&#x27;
+      ) !&#x3D;&#x3D; undefined
+    );
+  }
+
+  public openBottomSheet(marca: MarcaSv): void {
+    if (
+      this.isDisqualified(marca.atleta) &amp;&amp;
+      !this.disqualifyingSequencesMarks.includes(marca)
+    ) {
+      this.openSnackBar(&#x27;El atleta está descalificado!&#x27;, &#x27;Cerrar&#x27;);
+      return;
+    }
+    if (this.hasEmptyMarksBefore(marca)) {
+      this.openSnackBar(&#x27;Hay intentos anteriores sin cubrir&#x27;, &#x27;Cerrar&#x27;);
+      return;
+    }
+    if (this.hasAlreadyPassed(marca)) {
+      this.openSnackBar(&#x27;El atleta ya ha superado esta altura&#x27;, &#x27;Cerrar&#x27;);
+      return;
+    }
+    if (this.hasAlreadySkipped(marca)) {
+      this.openSnackBar(&#x27;El atleta ha pasado en esta altura&#x27;, &#x27;Cerrar&#x27;);
+      return;
+    }
+    const marcaBackup: MarcaSv &#x3D; Object.assign({}, marca);
+    const bottomSheetRef &#x3D; this.bottomSheet.open(ResultadoIntentoSvComponent, {
+      data: {
+        marca: marca,
+      },
+    });
+    bottomSheetRef.afterDismissed().subscribe((newMarca: MarcaSv) &#x3D;&gt; {
+      if (newMarca) {
+        if (newMarca.resultado &#x3D;&#x3D;&#x3D; &#x27;NULO&#x27;) {
+          let consecutives &#x3D; 0;
+          // Array con las marcas con resultado NULO del atleta que forman parte de una secuencia descalificante (3 nulos seguidos)
+          let athleteDisqualifyingSequenceMarks: Array&lt;MarcaSv&gt; &#x3D; [];
+          const athleteMarks &#x3D; this.marcas.filter(
+            m &#x3D;&gt; m.atleta &#x3D;&#x3D;&#x3D; newMarca.atleta
+          );
+          this.alturas.forEach(altura &#x3D;&gt; {
+            for (let i &#x3D; 1; i &lt;&#x3D; 3 &amp;&amp; consecutives &lt; 3; i++) {
+              const marca &#x3D; athleteMarks.find(
+                m &#x3D;&gt; m.altura &#x3D;&#x3D;&#x3D; altura.altura &amp;&amp; m.intento &#x3D;&#x3D;&#x3D; i
+              );
+              if (marca.resultado &#x3D;&#x3D;&#x3D; &#x27;NULO&#x27;) {
+                consecutives++;
+                athleteDisqualifyingSequenceMarks.push(marca);
+                if (consecutives &#x3D;&#x3D;&#x3D; 3) {
+                  athleteDisqualifyingSequenceMarks.forEach(adsm &#x3D;&gt;
+                    this.disqualifyingSequencesMarks.push(adsm)
+                  );
+                  // this.disqualifyingSequencesMarks.push(...athleteDisqualifyingSequenceMarks);
+                  this.disqualifyingMarks.push(marca);
+                }
+              } else if (marca.resultado &#x3D;&#x3D;&#x3D; &#x27;VALIDO&#x27;) {
+                consecutives &#x3D; 0;
+                athleteDisqualifyingSequenceMarks &#x3D; [];
+              }
+            }
+          });
+          if (consecutives &#x3D;&#x3D;&#x3D; 3) {
+            this.openSnackBar(
+              &#x60;${this.getAthleteName(newMarca.atleta)} ha sido descalificado/a&#x60;,
+              &#x27;Cerrar&#x27;
+            );
+            // eliminar aquí marcas posteriores a la última marca de la secuencia descalificante
+            const disqualifyingMark &#x3D; this.disqualifyingMarks.find(
+              m &#x3D;&gt; m.atleta &#x3D;&#x3D;&#x3D; newMarca.atleta
+            );
+            const marksToDelete &#x3D; athleteMarks.filter(
+              m &#x3D;&gt;
+                m.resultado !&#x3D;&#x3D; null &amp;&amp;
+                (m.altura &gt; disqualifyingMark.altura ||
+                  (m.altura &#x3D;&#x3D;&#x3D; disqualifyingMark.altura &amp;&amp;
+                    m.intento &gt; disqualifyingMark.intento))
+            );
+            if (marcaBackup.resultado !&#x3D;&#x3D; &#x27;NULO&#x27; &amp;&amp; marksToDelete.length &gt; 0) {
+              const dialogref &#x3D; this.dialog.open(ConfirmacionPopupComponent, {
+                data: {
+                  title: &#x27;¿Eliminar marcas posteriores?&#x27;,
+                  detailedMessage:
+                    &#x27;El atleta tiene marcas posteriores al &quot;NULO&quot; que lo descalifica, se eliminarán si confirma su descalificación.&#x27;,
+                },
+              });
+              dialogref.afterClosed().subscribe(result &#x3D;&gt; {
+                if (result &amp;&amp; result &#x3D;&#x3D;&#x3D; true) {
+                  this.editMarca({ marca, marcaBackup, marksToDelete });
+                } else {
+                  Object.assign(marca, marcaBackup);
+                }
+              });
+            } else {
+              this.editMarca({ marca, marcaBackup });
+            }
+          } else {
+            this.editMarca({ marca, marcaBackup });
+          }
+        } else {
+          // Es VALIDO o PASA
+          this.editMarca({ marca, marcaBackup, checkIfDisqualified: true });
+        }
+      } else {
+        Object.assign(marca, marcaBackup);
+      }
+    });
+  }
+
+  private editMarca(params: {
+    marca: MarcaSv;
+    marcaBackup: MarcaSv;
+    marksToDelete?: Array&lt;MarcaSv&gt;;
+    checkIfDisqualified?: boolean;
+  }) {
+    this.marcaService.edit(this.idprueba, params.marca).subscribe(
+      response &#x3D;&gt; {
+        // Object.assign(marca, newMarca);
+        if (params.marksToDelete) {
+          this.cleanMarks(params.marksToDelete);
+        } else if (params.checkIfDisqualified) {
+          if (this.disqualifyingSequencesMarks.indexOf(params.marca) &gt; -1) {
+            // Si pertenecía a una secuencia descalificante
+            // El atleta deja de estar descalificado así que dejamos de anotar sus marcas descalificantes.
+            this.disqualifyingSequencesMarks &#x3D; this.disqualifyingSequencesMarks.filter(
+              m &#x3D;&gt; m.atleta !&#x3D;&#x3D; params.marca.atleta
+            );
+            this.disqualifyingMarks &#x3D; this.disqualifyingMarks.filter(
+              m &#x3D;&gt; m.atleta !&#x3D;&#x3D; params.marca.atleta
+            );
+          }
+        }
+      },
+      (error: HttpErrorResponse) &#x3D;&gt; {
+        Object.assign(params.marca, params.marcaBackup);
+        if (error.status &#x3D;&#x3D;&#x3D; 403) {
+          this.openSnackBar(
+            &#x27;No tienes permisos para editar las marcas&#x27;,
+            &#x27;cerrar&#x27;
+          );
+        } else {
+          this.openSnackBar(&#x27;Error en el servidor&#x27;, &#x27;cerrar&#x27;);
+        }
+      }
+    );
+  }
+
+  /**
+   * Eliminar marcas de un atleta que pudiese haber posteriores a la marca con resultado &#x27;NULO&#x27;
+   * (3era consecutiva) que ha descalificado al atleta.
+   */
+  private cleanMarks(marksToDelete: Array&lt;MarcaSv&gt;) {
+    if (marksToDelete.length &gt; 0) {
+      this.marcaService.delete(this.idprueba, marksToDelete).subscribe(
+        response &#x3D;&gt; {
+          marksToDelete.forEach(marca &#x3D;&gt; {
+            marca.resultado &#x3D; null;
+          });
+        },
+        (error: HttpErrorResponse) &#x3D;&gt; {
+          this.openSnackBar(
+            &#x27;Ha ocurrido un error eliminando marcas sobrantes.&#x27;,
+            &#x27;Cerrar&#x27;
+          );
+        }
+      );
+    }
+  }
+
+  public confirmFinalize() {
+    const dialogref &#x3D; this.dialog.open(ConfirmacionPopupComponent, {
+      data: {
+        title: &#x27;¿Finalizar prueba?&#x27;,
+        detailedMessage:
+          &#x27;Se guardará la clasificación y se anotará la prueba como finalizada.&#x27;,
+      },
+    });
+    dialogref.afterClosed().subscribe(result &#x3D;&gt; {
+      if (result &amp;&amp; result &#x3D;&#x3D;&#x3D; true) {
+        if (this.disqualifyingMarks.length &lt; this.inscripciones.length) {
+          this.askIfFinalizeWithAthletesStillCompeting();
+        } else {
+          this.finalize();
+        }
+      }
+    });
+  }
+
+  private askIfFinalizeWithAthletesStillCompeting() {
+    const dialogref &#x3D; this.dialog.open(ConfirmacionPopupComponent, {
+      data: {
+        title: &#x27;¿Seguro que quieres finalizar la prueba?&#x27;,
+        detailedMessage:
+          &#x27;Todavía hay atletas compitiendo! &#x27; +
+          &#x27;Si finalizas la prueba y después quieres editar la hoja, deberás pedirle a un administrador que la vuelva a habilitar.&#x27;,
+      },
+    });
+    dialogref.afterClosed().subscribe(result &#x3D;&gt; {
+      if (result &amp;&amp; result &#x3D;&#x3D;&#x3D; true) {
+        if (this.disqualifyingMarks.length &lt; this.inscripciones.length) {
+          this.finalize();
+        }
+      }
+    });
+  }
+
+  private finalize() {
+    const clasificaciones &#x3D; this.crearClasificacion();
+    this.clasificacionService
+      .editFullClassification(this.idprueba, clasificaciones)
+      .subscribe(
+        response &#x3D;&gt; {
+          this.openSnackBar(&#x27;Clasificación actualizada&#x27;, &#x27;cerrar&#x27;);
+          this.prueba.finalizada &#x3D; true;
+          this.pruebaService.edit(this.idcompeticion, this.prueba).subscribe(
+            (data: any) &#x3D;&gt; {
+              this.openSnackBar(&#x27;Prueba finalizada&#x27;, &#x27;cerrar&#x27;);
+              this.goBack();
+            },
+            (error: HttpErrorResponse) &#x3D;&gt; {
+              if (error.status &#x3D;&#x3D;&#x3D; 404) {
+                this.openSnackBar(&#x27;No existe la prueba a editar&#x27;, &#x27;cerrar&#x27;);
+              } else {
+                this.openSnackBar(&#x27;Error en el servidor&#x27;, &#x27;cerrar&#x27;);
+              }
+            }
+          );
+        },
+        (error: any) &#x3D;&gt; {
+          this.openSnackBar(&#x27;Error actualizando la clasificación&#x27;, &#x27;cerrar&#x27;);
+        }
+      );
+  }
+
+  public onHeightRightClick(e: MouseEvent, columnDef: string) {
+    e.preventDefault();
+    const alturaValue: number &#x3D; parseFloat(columnDef) || null;
+    const altura: Altura &#x3D; this.alturas.find(a &#x3D;&gt; a.altura &#x3D;&#x3D;&#x3D; alturaValue);
+    const alturaCopy: Altura &#x3D; Object.assign({}, altura);
+    const dialogRef &#x3D; this.dialog.open(AlturaEditComponent, {
+      data: {
+        altura: alturaCopy,
+        alturas: this.alturas.map(a &#x3D;&gt; a.altura),
+      },
+    });
+    dialogRef.afterClosed().subscribe((result: AlturaDialogResponse) &#x3D;&gt; {
+      if (result) {
+        if (result.action &#x3D;&#x3D;&#x3D; ACTIONS.EDIT) {
+          this.editarAltura(altura, result.altura);
+        } else if (result.action &#x3D;&#x3D;&#x3D; ACTIONS.DELETE) {
+          this.eliminarAltura(altura);
+        }
+      }
+    });
+  }
+
+  private editarAltura(oldAltura: Altura, newAltura: Altura) {
+    const dialogRef &#x3D; this.dialog.open(ConfirmacionPopupComponent, {
+      data: {
+        title: &#x27;¿Modificar altura?&#x27;,
+      },
+    });
+    dialogRef.afterClosed().subscribe(result &#x3D;&gt; {
+      if (result &amp;&amp; result &#x3D;&#x3D;&#x3D; true) {
+        this.alturaService
+          .edit(this.idprueba, newAltura.idaltura, newAltura.altura)
+          .subscribe(
+            response &#x3D;&gt; {
+              Object.assign(oldAltura, newAltura);
+              this.getMarcas();
+            },
+            (error: HttpErrorResponse) &#x3D;&gt; {
+              this.openSnackBar(
+                &#x27;Ha ocurrido un error editando la altura&#x27;,
+                &#x27;Cerrar&#x27;
+              );
+            }
+          );
+      }
+    });
+  }
+
+  private eliminarAltura(altura: Altura) {
+    const dialogRef &#x3D; this.dialog.open(ConfirmacionPopupComponent, {
+      data: {
+        title: &#x27;¿Eliminar altura?&#x27;,
+        detailedMessage: &#x27;Se eliminarán las marcas asociadas a la altura&#x27;,
+      },
+    });
+    dialogRef.afterClosed().subscribe(result &#x3D;&gt; {
+      if (result &amp;&amp; result &#x3D;&#x3D;&#x3D; true) {
+        this.alturaService.delete(this.idprueba, altura.idaltura).subscribe(
+          response &#x3D;&gt; {
+            const alturaIndex &#x3D; this.alturas.indexOf(altura);
+            this.alturas.splice(alturaIndex, 1);
+            this.marcas &#x3D; this.marcas.filter(
+              m &#x3D;&gt; m.idaltura !&#x3D;&#x3D; altura.idaltura
+            );
+            this.fillMarcas();
+          },
+          (error: HttpErrorResponse) &#x3D;&gt; {
+            this.openSnackBar(
+              &#x27;Ha ocurrido un error eliminando la altura&#x27;,
+              &#x27;Cerrar&#x27;
+            );
+          }
+        );
+      }
+    });
+  }
+
+  public onAttemptRightClick(e: MouseEvent, marca: MarcaSv) {
+    e.preventDefault();
+    const dialogRef &#x3D; this.dialog.open(ConfirmacionPopupComponent, {
+      data: {
+        title: &#x27;¿Borrar marca?&#x27;,
+        detailedMessage: &#x27;Se eliminará la marca asociada a este intento.&#x27;,
+      },
+    });
+    dialogRef.afterClosed().subscribe(result &#x3D;&gt; {
+      if (result &amp;&amp; result &#x3D;&#x3D;&#x3D; true) {
+        this.eliminarMarca(marca);
+      }
+    });
+  }
+
+  private eliminarMarca(marca: MarcaSv) {
+    this.marcaService.delete(this.idprueba, [marca]).subscribe(
+      response &#x3D;&gt; {
+        if (this.disqualifyingSequencesMarks.indexOf(marca) &gt; -1) {
+          // Si pertenecía a una secuencia descalificante
+          this.disqualifyingSequencesMarks &#x3D; this.disqualifyingSequencesMarks.filter(
+            m &#x3D;&gt; m.atleta !&#x3D;&#x3D; marca.atleta
+          );
+          this.disqualifyingMarks &#x3D; this.disqualifyingMarks.filter(
+            m &#x3D;&gt; m.atleta !&#x3D;&#x3D; marca.atleta
+          );
+        }
+        marca.resultado &#x3D; null;
+      },
+      (error: HttpErrorResponse) &#x3D;&gt; {
+        this.openSnackBar(&#x27;No se ha podido eliminar la marca&#x27;, &#x27;Cerrar&#x27;);
+      }
+    );
+  }
+
+  private crearClasificacion(): Array&lt;Clasificacion&gt; {
+    const clasificaciones &#x3D; new Array&lt;Clasificacion&gt;();
+    this.inscripciones.forEach(i &#x3D;&gt; {
+      const posicion &#x3D; this.getPosition(i.atleta.idatleta);
+      clasificaciones.push({
+        id: {
+          idprueba: this.prueba.idprueba,
+          atleta: i.atleta.idatleta,
+        },
+        posicion: posicion !&#x3D;&#x3D; &#x27;-&#x27; ? posicion : null,
+      });
+    });
+    return clasificaciones;
+  }
+
+  public addAlturas() {
+    const bottomSheetRef &#x3D; this.bottomSheet.open(AlturasAddComponent, {
+      data: {
+        alturas: this.alturas.map(a &#x3D;&gt; a.altura),
+      },
+    });
+    bottomSheetRef.afterDismissed().subscribe((newAlturas: Array&lt;number&gt;) &#x3D;&gt; {
+      if (newAlturas &amp;&amp; newAlturas.length &gt; 0) {
+        this.alturaService.addMultiple(this.idprueba, newAlturas).subscribe(
+          (listAlturas: Array&lt;Altura&gt;) &#x3D;&gt; {
+            listAlturas.forEach(a &#x3D;&gt; this.alturas.push(a));
+            this.alturas.sort((a, b) &#x3D;&gt; a.altura - b.altura);
+            this.fillMarcas();
+          },
+          (error: HttpErrorResponse) &#x3D;&gt; {
+            this.openSnackBar(&#x27;No se han podido crear las alturas&#x27;, &#x27;Cerrar&#x27;);
+          }
+        );
+      }
+    });
+  }
+
+  public openHelp() {
+    this.bottomSheet.open(PruebaAyudaComponent, {
+      data: {
+        isSv: true,
+      },
+    });
+  }
+
+  private buildNombrePrueba(t: TipoPrueba): string {
+    return &#x60;${DISCIPLINAS[t.disciplina]} - ${CATEGORIAS[t.categoria]}, ${
+      SEXOS[t.sexo]
+    }&#x60;;
+  }
+
+  private openSnackBar(message: string, action: string) {
+    this.snackBar.open(message, action, {
+      duration: 2000,
+    });
+  }
+
+  get canEditSheet() {
+    return (
+      this.session.getUserid() &#x3D;&#x3D;&#x3D; parseInt(this.prueba.usuario.idusuario, 10)
+    );
+  }
+
+  public goBack() {
+    this.router.navigate([&#x27;/competiciones&#x27;, this.idcompeticion, &#x27;pruebas&#x27;]);
+  }
+}
+</code></pre>
+    </div>
+</div>
+
+
+                   
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'interface';
+            var COMPODOC_CURRENT_PAGE_URL = 'MejorMarca-1.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

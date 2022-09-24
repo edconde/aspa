@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Marcas</ion-title>
+    <ion-buttons slot="end">
+      <ion-button color="danger" (click)="close()"
+        ><ion-icon name="close"></ion-icon
+      ></ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list *ngIf="esSaltoVertical">
+    <ion-list-header>{{ getFullName() }}</ion-list-header>
+    <ion-item *ngFor="let a of alturasSv">
+      <ion-list>
+        <ion-list-header>Listón a {{ a.altura }} m</ion-list-header>
+        <ion-item *ngFor="let m of a.marcas">
+          <ion-note>Intento nº {{ m.intento }}</ion-note>
+          <ion-label>&nbsp; {{ m.resultado }}</ion-label>
+        </ion-item>
+      </ion-list>
+    </ion-item>
+  </ion-list>
+  <ion-list *ngIf="!esSaltoVertical">
+    <ion-list-header>{{ getFullName() }}</ion-list-header>
+    <ion-item>
+      <ion-list>
+        <ion-list-header>Intentos</ion-list-header>
+        <ion-item *ngFor="let m of marcasNs">
+          <ion-note>Intento nº {{ m.intento }}</ion-note>
+          <ion-label>&nbsp; {{ m.resultado }}{{ getMarca(m.marca) }}</ion-label>
+        </ion-item>
+      </ion-list>
+    </ion-item>
+    <ion-item *ngIf="marcasNsMejora.length > 0">
+      <ion-list>
+        <ion-list-header>Intentos mejora</ion-list-header>
+        <ion-item *ngFor="let m of marcasNsMejora">
+          <ion-note>Intento nº {{ m.intento }}</ion-note>
+          <ion-label>&nbsp; {{ m.resultado }}{{ getMarca(m.marca) }}</ion-label>
+        </ion-item>
+      </ion-list>
+    </ion-item>
+  </ion-list>
+</ion-content>

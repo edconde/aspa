@@ -1,0 +1,16 @@
+.toggle-group {
+    margin-top: 8px;
+    width: fit-content;
+    align-self: center;
+  }
+
+  .row {
+    width: 100%;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+  }
+
+  .not-selected {
+      opacity: 0.3;
+  }

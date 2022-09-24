@@ -1,0 +1,31 @@
+@import '../../../../assets/scss/breakpoints';
+
+.breadcrumb {
+  background-color: transparent;
+  padding: 20px 0px;
+
+  @media only screen and (min-width: $desktop-screen-md) {
+    padding: unset;
+    margin: unset;
+  }
+
+  a {
+    color: #495057;
+  }
+
+  li {
+    display: inline;
+
+    &:last-child span {
+      font-weight: bold;
+    }
+  }
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+  content: ' - ';
+}
+
+.initBreadcrumb {
+  display: none;
+}

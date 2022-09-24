@@ -1,0 +1,1622 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>aspa documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">aspa documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li>TiposPruebaListComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/tipos-prueba/tipos-prueba/tipos-prueba-list/tipos-prueba-list.component.ts</code>
+</p>
+
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                    <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+                    <code><a href="https://angular.io/api/core/OnChanges" target="_blank" >OnChanges</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>aspa-tipos-prueba-list</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./tipos-prueba-list.component.scss</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./tipos-prueba-list.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#categorias">categorias</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#dataSource">dataSource</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#dialog">dialog</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#disciplinas">disciplinas</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#displayedColumns">displayedColumns</a>
+                            </li>
+                            <li>
+                                <a href="#paginator">paginator</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#sexos">sexos</a>
+                            </li>
+                            <li>
+                                <a href="#sort">sort</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#applyFilter">applyFilter</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#deleteTipoPrueba">deleteTipoPrueba</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#getCategoriaLabel">getCategoriaLabel</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#getDisciplinaLabel">getDisciplinaLabel</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#getSexoLabel">getSexoLabel</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnChanges">ngOnChanges</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit">ngOnInit</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#openDialog">openDialog</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#openForm">openForm</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#openSnackBar">openSnackBar</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Inputs</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#tiposPrueba">tiposPrueba</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Outputs</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#tipoPruebaDeletedOrCreated">tipoPruebaDeletedOrCreated</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(tipoPruebaService: <a href="../injectables/TipoPruebaService.html">TipoPruebaService</a>, router: <a href="https://angular.io/api/router/Router" target="_blank">Router</a>, dialog: MatDialog, snackBar: MatSnackBar)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="42" class="link-to-prism">src/app/tipos-prueba/tipos-prueba/tipos-prueba-list/tipos-prueba-list.component.ts:42</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>tipoPruebaService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/TipoPruebaService.html" target="_self" >TipoPruebaService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>router</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/router/Router" target="_blank" >Router</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>dialog</td>
+                                                  
+                                                        <td>
+                                                                    <code>MatDialog</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>snackBar</td>
+                                                  
+                                                        <td>
+                                                                    <code>MatSnackBar</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+    <section>
+    <h3 id="inputs">Inputs</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="tiposPrueba"></a>
+                        <b>tiposPrueba</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>Array&lt;TipoPrueba&gt;</code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="36" class="link-to-prism">src/app/tipos-prueba/tipos-prueba/tipos-prueba-list/tipos-prueba-list.component.ts:36</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+</section>
+    <section>
+    <h3 id="outputs">Outputs</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="tipoPruebaDeletedOrCreated"></a>
+                        <b>tipoPruebaDeletedOrCreated</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://angular.io/api/core/EventEmitter" target="_blank" >EventEmitter</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="39" class="link-to-prism">src/app/tipos-prueba/tipos-prueba/tipos-prueba-list/tipos-prueba-list.component.ts:39</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+</section>
+
+
+    <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="applyFilter"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            applyFilter
+                        </b>
+                        <a href="#applyFilter"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>applyFilter(filterValue: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="57"
+                            class="link-to-prism">src/app/tipos-prueba/tipos-prueba/tipos-prueba-list/tipos-prueba-list.component.ts:57</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>filterValue</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="deleteTipoPrueba"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Private</span>
+                            deleteTipoPrueba
+                        </b>
+                        <a href="#deleteTipoPrueba"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>deleteTipoPrueba(idtipoprueba)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="92"
+                            class="link-to-prism">src/app/tipos-prueba/tipos-prueba/tipos-prueba-list/tipos-prueba-list.component.ts:92</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>idtipoprueba</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getCategoriaLabel"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            getCategoriaLabel
+                        </b>
+                        <a href="#getCategoriaLabel"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getCategoriaLabel(categoria)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="123"
+                            class="link-to-prism">src/app/tipos-prueba/tipos-prueba/tipos-prueba-list/tipos-prueba-list.component.ts:123</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>categoria</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getDisciplinaLabel"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            getDisciplinaLabel
+                        </b>
+                        <a href="#getDisciplinaLabel"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getDisciplinaLabel(disciplina)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="119"
+                            class="link-to-prism">src/app/tipos-prueba/tipos-prueba/tipos-prueba-list/tipos-prueba-list.component.ts:119</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>disciplina</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getSexoLabel"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            getSexoLabel
+                        </b>
+                        <a href="#getSexoLabel"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getSexoLabel(sexo)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="127"
+                            class="link-to-prism">src/app/tipos-prueba/tipos-prueba/tipos-prueba-list/tipos-prueba-list.component.ts:127</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>sexo</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnChanges"></a>
+                    <span class="name">
+                        <b>
+                            ngOnChanges
+                        </b>
+                        <a href="#ngOnChanges"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnChanges(changes: <a href="https://angular.io/api/core/SimpleChanges" target="_blank">SimpleChanges</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="113"
+                            class="link-to-prism">src/app/tipos-prueba/tipos-prueba/tipos-prueba-list/tipos-prueba-list.component.ts:113</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>changes</td>
+                                    <td>
+                                                <code><a href="https://angular.io/api/core/SimpleChanges" target="_blank" >SimpleChanges</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <b>
+                            ngOnInit
+                        </b>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="51"
+                            class="link-to-prism">src/app/tipos-prueba/tipos-prueba/tipos-prueba-list/tipos-prueba-list.component.ts:51</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="openDialog"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            openDialog
+                        </b>
+                        <a href="#openDialog"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>openDialog(idtipoprueba)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="76"
+                            class="link-to-prism">src/app/tipos-prueba/tipos-prueba/tipos-prueba-list/tipos-prueba-list.component.ts:76</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>idtipoprueba</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="openForm"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            openForm
+                        </b>
+                        <a href="#openForm"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>openForm()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="61"
+                            class="link-to-prism">src/app/tipos-prueba/tipos-prueba/tipos-prueba-list/tipos-prueba-list.component.ts:61</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="openSnackBar"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Private</span>
+                            openSnackBar
+                        </b>
+                        <a href="#openSnackBar"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>openSnackBar(message: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, action: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="131"
+                            class="link-to-prism">src/app/tipos-prueba/tipos-prueba/tipos-prueba-list/tipos-prueba-list.component.ts:131</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>message</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>action</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="categorias"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            categorias</b>
+                            <a href="#categorias"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>CATEGORIAS</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="41" class="link-to-prism">src/app/tipos-prueba/tipos-prueba/tipos-prueba-list/tipos-prueba-list.component.ts:41</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="dataSource"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            dataSource</b>
+                            <a href="#dataSource"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>MatTableDataSource&lt;TipoPrueba&gt;</code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="38" class="link-to-prism">src/app/tipos-prueba/tipos-prueba/tipos-prueba-list/tipos-prueba-list.component.ts:38</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="dialog"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            dialog</b>
+                            <a href="#dialog"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>MatDialog</code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="47" class="link-to-prism">src/app/tipos-prueba/tipos-prueba/tipos-prueba-list/tipos-prueba-list.component.ts:47</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="disciplinas"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            disciplinas</b>
+                            <a href="#disciplinas"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>DISCIPLINAS</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="40" class="link-to-prism">src/app/tipos-prueba/tipos-prueba/tipos-prueba-list/tipos-prueba-list.component.ts:40</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="displayedColumns"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            displayedColumns</b>
+                            <a href="#displayedColumns"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>[]</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>[&#x27;disciplina&#x27;, &#x27;categoria&#x27;, &#x27;sexo&#x27;, &#x27;eliminar&#x27;]</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="37" class="link-to-prism">src/app/tipos-prueba/tipos-prueba/tipos-prueba-list/tipos-prueba-list.component.ts:37</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="paginator"></a>
+                        <span class="name">
+                            <b>
+                            paginator</b>
+                            <a href="#paginator"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>MatPaginator</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <b>Decorators : </b>
+                            <br />
+                            <code>
+                                @ViewChild(MatPaginator)<br />
+                            </code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="35" class="link-to-prism">src/app/tipos-prueba/tipos-prueba/tipos-prueba-list/tipos-prueba-list.component.ts:35</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="sexos"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            sexos</b>
+                            <a href="#sexos"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>SEXOS</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="42" class="link-to-prism">src/app/tipos-prueba/tipos-prueba/tipos-prueba-list/tipos-prueba-list.component.ts:42</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="sort"></a>
+                        <span class="name">
+                            <b>
+                            sort</b>
+                            <a href="#sort"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>MatSort</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <b>Decorators : </b>
+                            <br />
+                            <code>
+                                @ViewChild(MatSort)<br />
+                            </code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="34" class="link-to-prism">src/app/tipos-prueba/tipos-prueba/tipos-prueba-list/tipos-prueba-list.component.ts:34</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import {
+  Component,
+  OnInit,
+  Input,
+  ViewChild,
+  EventEmitter,
+  SimpleChanges,
+  OnChanges,
+  Output,
+} from &#x27;@angular/core&#x27;;
+import { TipoPrueba } from &#x27;../../../shared/models/TipoPrueba&#x27;;
+import {
+  MatTableDataSource,
+  MatSort,
+  MatDialog,
+  MatPaginator,
+  MatSnackBar,
+} from &#x27;@angular/material&#x27;;
+import { TipoPruebaService } from &#x27;../../../shared/services/tipo-prueba.service&#x27;;
+import { ConfirmacionPopupComponent } from &#x27;src/app/shared/components/confirmacion-popup/confirmacion-popup.component&#x27;;
+import { HttpErrorResponse } from &#x27;@angular/common/http&#x27;;
+import { TipoPruebaPopupComponent } from &#x27;./tipo-prueba-popup/tipo-prueba-popup.component&#x27;;
+import { DISCIPLINAS } from &#x27;../../../shared/models/Disciplina&#x27;;
+import { CATEGORIAS } from &#x27;../../../shared/models/Categoria&#x27;;
+import { SEXOS } from &#x27;../../../shared/models/Sexo&#x27;;
+import { Router } from &#x27;@angular/router&#x27;;
+
+@Component({
+  selector: &#x27;aspa-tipos-prueba-list&#x27;,
+  templateUrl: &#x27;./tipos-prueba-list.component.html&#x27;,
+  styleUrls: [&#x27;./tipos-prueba-list.component.scss&#x27;],
+})
+export class TiposPruebaListComponent implements OnInit, OnChanges {
+  @ViewChild(MatSort) sort: MatSort;
+  @ViewChild(MatPaginator) paginator: MatPaginator;
+  @Input() tiposPrueba: Array&lt;TipoPrueba&gt;;
+  public displayedColumns &#x3D; [&#x27;disciplina&#x27;, &#x27;categoria&#x27;, &#x27;sexo&#x27;, &#x27;eliminar&#x27;];
+  public dataSource: MatTableDataSource&lt;TipoPrueba&gt;;
+  @Output() tipoPruebaDeletedOrCreated &#x3D; new EventEmitter&lt;any&gt;();
+  private disciplinas &#x3D; DISCIPLINAS;
+  private categorias &#x3D; CATEGORIAS;
+  private sexos &#x3D; SEXOS;
+
+  constructor(
+    private tipoPruebaService: TipoPruebaService,
+    private router: Router,
+    public dialog: MatDialog,
+    private snackBar: MatSnackBar
+  ) {}
+
+  ngOnInit() {
+    this.dataSource &#x3D; new MatTableDataSource(this.tiposPrueba);
+    this.dataSource.sort &#x3D; this.sort;
+    this.dataSource.paginator &#x3D; this.paginator;
+  }
+
+  public applyFilter(filterValue: string) {
+    this.dataSource.filter &#x3D; filterValue.trim().toLowerCase();
+  }
+
+  public openForm() {
+    const dialogRef &#x3D; this.dialog.open(TipoPruebaPopupComponent, {
+      data: {
+        title: &#x27;Nuevo tipo de prueba:&#x27;,
+      },
+    });
+
+    dialogRef.afterClosed().subscribe(created &#x3D;&gt; {
+      if (created &#x3D;&#x3D;&#x3D; true) {
+        this.tipoPruebaDeletedOrCreated.emit();
+        this.openSnackBar(&#x27;Tipo de prueba creado&#x27;, &#x27;cerrar&#x27;);
+      }
+    });
+  }
+
+  public openDialog(idtipoprueba) {
+    const dialogRef &#x3D; this.dialog.open(ConfirmacionPopupComponent, {
+      data: {
+        title: &#x27;¿Eliminar tipo de prueba?&#x27;,
+      },
+    });
+
+    dialogRef.afterClosed().subscribe(result &#x3D;&gt; {
+      if (result &#x3D;&#x3D;&#x3D; true) {
+        this.deleteTipoPrueba(idtipoprueba);
+      } else {
+        dialogRef.close();
+      }
+    });
+  }
+
+  private deleteTipoPrueba(idtipoprueba) {
+    this.tipoPruebaService.delete(idtipoprueba).subscribe(
+      response &#x3D;&gt; {
+        this.tipoPruebaDeletedOrCreated.emit();
+        this.openSnackBar(&#x27;Tipo de prueba eliminado&#x27;, &#x27;cerrar&#x27;);
+      },
+      (error: HttpErrorResponse) &#x3D;&gt; {
+        if (error.status &#x3D;&#x3D;&#x3D; 422) {
+          this.openSnackBar(&#x27;Hay pruebas con ese tipo de concurso!&#x27;, &#x27;cerrar&#x27;);
+        } else if (error.status &#x3D;&#x3D;&#x3D; 404) {
+          this.openSnackBar(
+            &#x27;No existe el tipo de concurso a eliminar&#x27;,
+            &#x27;cerrar&#x27;
+          );
+        } else {
+          this.openSnackBar(&#x27;Ha ocurrido un error&#x27;, &#x27;cerrar&#x27;);
+        }
+      }
+    );
+  }
+
+  ngOnChanges(changes: SimpleChanges) {
+    if (changes.tiposPrueba) {
+      this.ngOnInit();
+    }
+  }
+
+  public getDisciplinaLabel(disciplina) {
+    return this.disciplinas[disciplina];
+  }
+
+  public getCategoriaLabel(categoria) {
+    return this.categorias[categoria];
+  }
+
+  public getSexoLabel(sexo) {
+    return this.sexos[sexo];
+  }
+
+  private openSnackBar(message: string, action: string) {
+    this.snackBar.open(message, action, {
+      duration: 2000,
+    });
+  }
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;list-container&quot;&gt;
+  &lt;div class&#x3D;&quot;mat-elevation-z8 table-container&quot;&gt;
+    &lt;table mat-table [dataSource]&#x3D;&quot;dataSource&quot; matSort class&#x3D;&quot;table&quot;&gt;
+      &lt;!-- Disciplina Column --&gt;
+      &lt;ng-container matColumnDef&#x3D;&quot;disciplina&quot;&gt;
+        &lt;th mat-header-cell mat-sort-header *matHeaderCellDef&gt;Disciplina&lt;/th&gt;
+        &lt;td mat-cell *matCellDef&#x3D;&quot;let tipoPrueba&quot;&gt;
+          {{ getDisciplinaLabel(tipoPrueba.disciplina) }}
+        &lt;/td&gt;
+      &lt;/ng-container&gt;
+
+      &lt;!-- Categoría Column --&gt;
+      &lt;ng-container matColumnDef&#x3D;&quot;categoria&quot;&gt;
+        &lt;th mat-header-cell mat-sort-header *matHeaderCellDef&gt;Categoria&lt;/th&gt;
+        &lt;td mat-cell *matCellDef&#x3D;&quot;let tipoPrueba&quot;&gt;
+          {{ getCategoriaLabel(tipoPrueba.categoria) }}
+        &lt;/td&gt;
+      &lt;/ng-container&gt;
+
+      &lt;!-- Sexo Column --&gt;
+      &lt;ng-container matColumnDef&#x3D;&quot;sexo&quot;&gt;
+        &lt;th mat-header-cell mat-sort-header *matHeaderCellDef&gt;Sexo&lt;/th&gt;
+        &lt;td mat-cell *matCellDef&#x3D;&quot;let tipoPrueba&quot;&gt;
+          {{ getSexoLabel(tipoPrueba.sexo) }}
+        &lt;/td&gt;
+      &lt;/ng-container&gt;
+
+      &lt;!-- Eliminar Column --&gt;
+      &lt;ng-container matColumnDef&#x3D;&quot;eliminar&quot;&gt;
+        &lt;th mat-header-cell *matHeaderCellDef&gt;Eliminar&lt;/th&gt;
+        &lt;td mat-cell *matCellDef&#x3D;&quot;let tipoPrueba&quot;&gt;
+          &lt;button
+            mat-icon-button
+            color&#x3D;&quot;primary&quot;
+            (click)&#x3D;&quot;openDialog(tipoPrueba.idtipoprueba)&quot;
+          &gt;
+            &lt;mat-icon&gt;delete&lt;/mat-icon&gt;
+          &lt;/button&gt;
+        &lt;/td&gt;
+      &lt;/ng-container&gt;
+
+      &lt;tr mat-header-row *matHeaderRowDef&#x3D;&quot;displayedColumns&quot;&gt;&lt;/tr&gt;
+      &lt;tr mat-row *matRowDef&#x3D;&quot;let row; columns: displayedColumns&quot;&gt;&lt;/tr&gt;
+    &lt;/table&gt;
+
+    &lt;mat-paginator
+      [pageSize]&#x3D;&quot;10&quot;
+      [pageSizeOptions]&#x3D;&quot;[5, 10, 20]&quot;
+      showFirstLastButtons
+    &gt;&lt;/mat-paginator&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;aspa-actions-footer&gt;
+  &lt;mat-form-field class&#x3D;&quot;filter&quot;&gt;
+    &lt;input
+      matInput
+      (keyup)&#x3D;&quot;applyFilter($event.target.value)&quot;
+      placeholder&#x3D;&quot;Buscar tipo de prueba...&quot;
+    /&gt;
+  &lt;/mat-form-field&gt;
+  &lt;div class&#x3D;&quot;float-right&quot;&gt;
+    &lt;button mat-raised-button color&#x3D;&quot;primary&quot; (click)&#x3D;&quot;openForm()&quot;&gt;
+      Añadir tipo de prueba
+    &lt;/button&gt;
+  &lt;/div&gt;
+&lt;/aspa-actions-footer&gt;
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./tipos-prueba-list.component.scss</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">.list-container {
+  width: 100%;
+  overflow-x: auto;
+  .table-container {
+    width: 98%;
+    margin: 1%;
+    .table {
+      width: 100%;
+    }
+  }
+}
+.filter {
+  font-size: 14px;
+  width: 240px;
+  height: 42px;
+  color: #f44336;
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><div class="list-container">  <div class="mat-elevation-z8 table-container">    <table mat-table [dataSource]="dataSource" matSort class="table">      <!-- Disciplina Column -->      <ng-container matColumnDef="disciplina">        <th mat-header-cell mat-sort-header *matHeaderCellDef>Disciplina</th>        <td mat-cell *matCellDef="let tipoPrueba">          {{ getDisciplinaLabel(tipoPrueba.disciplina) }}        </td>      </ng-container>      <!-- Categoría Column -->      <ng-container matColumnDef="categoria">        <th mat-header-cell mat-sort-header *matHeaderCellDef>Categoria</th>        <td mat-cell *matCellDef="let tipoPrueba">          {{ getCategoriaLabel(tipoPrueba.categoria) }}        </td>      </ng-container>      <!-- Sexo Column -->      <ng-container matColumnDef="sexo">        <th mat-header-cell mat-sort-header *matHeaderCellDef>Sexo</th>        <td mat-cell *matCellDef="let tipoPrueba">          {{ getSexoLabel(tipoPrueba.sexo) }}        </td>      </ng-container>      <!-- Eliminar Column -->      <ng-container matColumnDef="eliminar">        <th mat-header-cell *matHeaderCellDef>Eliminar</th>        <td mat-cell *matCellDef="let tipoPrueba">          <button            mat-icon-button            color="primary"            (click)="openDialog(tipoPrueba.idtipoprueba)"          >            <mat-icon>delete</mat-icon>          </button>        </td>      </ng-container>      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>      <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>    </table>    <mat-paginator      [pageSize]="10"      [pageSizeOptions]="[5, 10, 20]"      showFirstLastButtons    ></mat-paginator>  </div></div><aspa-actions-footer>  <mat-form-field class="filter">    <input      matInput      (keyup)="applyFilter($event.target.value)"      placeholder="Buscar tipo de prueba..."    />  </mat-form-field>  <div class="float-right">    <button mat-raised-button color="primary" (click)="openForm()">      Añadir tipo de prueba    </button>  </div></aspa-actions-footer></div>'
+    var COMPONENTS = [{'name': 'ActionsFooterComponent', 'selector': 'aspa-actions-footer'},{'name': 'AlturaEditComponent', 'selector': 'app-altura-edit'},{'name': 'AlturasAddComponent', 'selector': 'app-alturas-add'},{'name': 'AppComponent', 'selector': 'aspa-root'},{'name': 'AtletaFormComponent', 'selector': 'aspa-atleta-form'},{'name': 'AtletasComponent', 'selector': 'aspa-atletas'},{'name': 'AtletasListComponent', 'selector': 'aspa-atletas-list'},{'name': 'BreadcrumbComponent', 'selector': 'aspa-breadcrumb'},{'name': 'CampoPopupComponent', 'selector': 'app-campo-popup'},{'name': 'ClubesComponent', 'selector': 'aspa-clubes'},{'name': 'ClubesListComponent', 'selector': 'aspa-clubes-list'},{'name': 'ClubPopupComponent', 'selector': 'app-club-popup'},{'name': 'CompeticionesComponent', 'selector': 'aspa-competiciones'},{'name': 'CompeticionesListComponent', 'selector': 'aspa-competiciones-list'},{'name': 'CompeticionPopupComponent', 'selector': 'app-competicion-popup'},{'name': 'ConfirmacionPopupComponent', 'selector': 'app-confirmacion-popup'},{'name': 'EmptyStateComponent', 'selector': 'aspa-empty-state'},{'name': 'HojaDeCampoNoSvComponent', 'selector': 'aspa-hoja-de-campo-no-sv'},{'name': 'HojaDeCampoSvComponent', 'selector': 'aspa-hoja-de-campo-sv'},{'name': 'HomeComponent', 'selector': 'ihair-home'},{'name': 'InscripcionesAtletasComponent', 'selector': 'aspa-inscripciones-atletas'},{'name': 'InscripcionesListComponent', 'selector': 'app-inscripciones-list'},{'name': 'LayoutComponent', 'selector': 'aspa-layout'},{'name': 'PageNotFoundComponent', 'selector': 'aspa-page-not-found'},{'name': 'PruebaAyudaComponent', 'selector': 'app-prueba-ayuda'},{'name': 'PruebaPopupComponent', 'selector': 'app-prueba-popup'},{'name': 'PruebasListComponent', 'selector': 'aspa-pruebas-list'},{'name': 'ResultadoIntentoNoSvComponent', 'selector': 'aspa-resultado-intento-no-sv'},{'name': 'ResultadoIntentoSvComponent', 'selector': 'aspa-resultado-intento-sv'},{'name': 'SidenavComponent', 'selector': 'aspa-sidenav'},{'name': 'SpinnerComponent', 'selector': 'aspa-spinner'},{'name': 'TipoPruebaPopupComponent', 'selector': 'app-tipo-prueba-popup'},{'name': 'TiposPruebaComponent', 'selector': 'aspa-tipos-prueba'},{'name': 'TiposPruebaListComponent', 'selector': 'aspa-tipos-prueba-list'},{'name': 'ToolbarComponent', 'selector': 'aspa-toolbar'},{'name': 'UserInfoComponent', 'selector': 'aspa-user-info'},{'name': 'UsuarioFormComponent', 'selector': 'aspa-usuario-form'},{'name': 'UsuariosComponent', 'selector': 'aspa-usuarios'},{'name': 'UsuariosListComponent', 'selector': 'aspa-usuarios-list'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'TiposPruebaListComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+                   
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'TiposPruebaListComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

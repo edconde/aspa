@@ -1,0 +1,56 @@
+<div class="list-container">
+  <table
+    mat-table
+    [dataSource]="dataSource"
+    matSort
+    class="inscripciones-table"
+  >
+    <!-- Presentado Column -->
+    <ng-container matColumnDef="inscrito">
+      <th mat-header-cell mat-sort-header *matHeaderCellDef>Inscrito</th>
+      <td mat-cell *matCellDef="let atleta">
+        <mat-checkbox
+          color="primary"
+          [checked]="isInscrito(atleta)"
+          (change)="onPresentadoChange($event, atleta)"
+        ></mat-checkbox>
+      </td>
+    </ng-container>
+
+    <!-- Atleta Nombre Column -->
+    <ng-container matColumnDef="nombre">
+      <th mat-header-cell mat-sort-header *matHeaderCellDef>Nombre</th>
+      <td mat-cell *matCellDef="let atleta">
+        {{ atleta.nombre || '-' }}
+      </td>
+    </ng-container>
+
+    <!-- Atleta Apellidos Column -->
+    <ng-container matColumnDef="apellidos">
+      <th mat-header-cell mat-sort-header *matHeaderCellDef>Apellidos</th>
+      <td mat-cell *matCellDef="let atleta">
+        {{ atleta.apellidos || '-' }}
+      </td>
+    </ng-container>
+
+    <!-- Atleta Licencia Column -->
+    <ng-container matColumnDef="licencia">
+      <th mat-header-cell mat-sort-header *matHeaderCellDef>Licencia</th>
+      <td mat-cell *matCellDef="let atleta">
+        {{ atleta.licencia }}
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+  </table>
+
+  <mat-paginator
+    [pageSizeOptions]="[5, 10]"
+    showFirstLastButtons
+  ></mat-paginator>
+
+  <div *ngIf="loading" class="full-screen">
+    <aspa-spinner [message]="''"></aspa-spinner>
+  </div>
+</div>

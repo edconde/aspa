@@ -1,0 +1,16 @@
+<aspa-clubes-list
+  [clubes]="clubes"
+  *ngIf="clubes"
+  (clubesChanged)="onClubesChanged()"
+>
+</aspa-clubes-list>
+<aspa-empty-state
+  *ngIf="error"
+  [message]="errorMessage"
+  [retryButton]="true"
+  (retry)="onRetry()"
+></aspa-empty-state>
+<aspa-spinner
+  *ngIf="!clubes && !error"
+  [message]="loadingMessage"
+></aspa-spinner>

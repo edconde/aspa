@@ -1,0 +1,64 @@
+::ng-deep {
+  aspa-usuario-form {
+      width: 100%;
+      height: calc(100% - 30px);
+      overflow-y: auto;
+  }
+}
+
+span,
+p,
+strong {
+  font-size: 14px;
+}
+
+.fields-list {
+  list-style: none;
+  margin: 24px 0 0;
+  padding: 0;
+  -moz-column-width: 16rem;
+  -webkit-column-width: 16rem;
+  column-width: 16rem;
+  -moz-column-rule: solid 1px #e5e5e5;
+  -webkit-column-rule: solid 1px #e5e5e5;
+  column-rule: solid 1px #e5e5e5;
+  -moz-column-gap: 48px;
+  -webkit-column-gap: 48px;
+  column-gap: 48px;
+}
+.field {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  //border-top: dashed 1px #e5e5e5;
+  padding: 10px 0 10px 36px;
+  box-sizing: border-box;
+  color: #999;
+}
+.field-item {
+  display: inline-flex;
+  mat-icon {
+    padding: 5px 5px 0px 0px;
+  }
+  span {
+    white-space: nowrap;
+    font-weight: bold;
+    margin: 0.3em 2.5em 0.3em 0;
+    font-size: 14px;
+    color: #333;
+    strong {
+      display: block;
+      font-weight: normal;
+      color: #999;
+      font-size: 12px;
+      line-height: 1.1;
+    }
+  }
+}
+.actions {
+    text-align: right;
+    padding: 0px 24px;
+}
+.card {
+  margin-bottom: 8px;
+}

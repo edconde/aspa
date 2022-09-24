@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Marcas intento</ion-title>
+    <ion-buttons slot="end">
+      <ion-button color="danger" (click)="close()"
+        ><ion-icon name="close"></ion-icon
+      ></ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list *ngIf="esSaltoVertical">
+    <ion-list-header>{{ titulo }}</ion-list-header>
+    <ion-item *ngFor="let i of intentos">
+      <ion-list>
+        <ion-list-header>Intento nº {{ i }}</ion-list-header>
+        <ion-item *ngFor="let m of getMarcasIntento(i)">
+          <ion-note>{{ m.resultado }}</ion-note>
+          <ion-label>&nbsp;{{ getAtleta(m) }}</ion-label>
+        </ion-item>
+      </ion-list>
+    </ion-item>
+  </ion-list>
+  <ion-list *ngIf="!esSaltoVertical">
+    <ion-list-header>{{ titulo }}</ion-list-header>
+    <ion-item *ngFor="let m of marcas">
+      <ion-list>
+        <ion-list-header>{{ getAtleta(m) }}</ion-list-header>
+        <ion-item>
+          <ion-note>{{ m.resultado }}</ion-note>
+          <ion-label>&nbsp; {{ m.marca }} {{ m.marca ? 'm' : '' }}</ion-label>
+        </ion-item>
+      </ion-list>
+    </ion-item>
+  </ion-list>
+</ion-content>

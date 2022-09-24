@@ -1,0 +1,173 @@
+<form [formGroup]="pruebaForm" autocomplete="off" (ngSubmit)="onSubmit()">
+  <h1 mat-dialog-title>{{ action }} prueba</h1>
+  <div mat-dialog-content>
+    <ul class="fields-list">
+      <li class="field">
+        <mat-form-field class="field-item">
+          <input
+            matInput
+            [matDatepicker]="fecha"
+            placeholder="Fecha"
+            readonly
+            formControlName="fecha"
+          />
+          <mat-datepicker-toggle matPrefix [for]="fecha">
+            <mat-icon matDatepickerToggleIcon>today</mat-icon>
+          </mat-datepicker-toggle>
+          <mat-datepicker #fecha touchUi></mat-datepicker>
+          <mat-error *ngIf="pruebaForm.get('fecha').hasError('required')"
+            >Selecciona una fecha</mat-error
+          >
+        </mat-form-field>
+      </li>
+      <li class="field">
+        <mat-form-field class="field-item">
+          <input
+            matInput
+            placeholder="Apertura cámara"
+            [format]="24"
+            [ngxTimepicker]="picker2"
+            formControlName="apertura_camara"
+          />
+          <ngx-material-timepicker
+            #picker2
+            [enableKeyboardInput]="true"
+            [ngxMaterialTimepickerTheme]="aspaTheme"
+          ></ngx-material-timepicker>
+          <mat-icon matPrefix>date_range</mat-icon>
+          <mat-error
+            *ngIf="pruebaForm.get('apertura_camara').hasError('required')"
+            >Selecciona una hora</mat-error
+          >
+        </mat-form-field>
+      </li>
+      <li class="field">
+        <mat-form-field class="field-item">
+          <input
+            matInput
+            placeholder="Cierre cámara"
+            [format]="24"
+            [ngxTimepicker]="picker3"
+            formControlName="cierre_camara"
+          />
+          <ngx-material-timepicker
+            #picker3
+            [enableKeyboardInput]="true"
+            [ngxMaterialTimepickerTheme]="aspaTheme"
+          ></ngx-material-timepicker>
+          <mat-icon matPrefix>date_range</mat-icon>
+          <mat-error
+            *ngIf="pruebaForm.get('cierre_camara').hasError('required')"
+            >Selecciona una hora</mat-error
+          >
+        </mat-form-field>
+      </li>
+      <li class="field">
+        <mat-form-field class="field-item">
+          <input
+            matInput
+            placeholder="Hora prueba"
+            [format]="24"
+            [ngxTimepicker]="picker"
+            formControlName="hora_prueba"
+          />
+          <ngx-material-timepicker
+            #picker
+            [enableKeyboardInput]="true"
+            [ngxMaterialTimepickerTheme]="aspaTheme"
+          ></ngx-material-timepicker>
+          <mat-icon matPrefix>today</mat-icon>
+          <mat-error *ngIf="pruebaForm.get('hora_prueba').hasError('required')"
+            >Selecciona una hora</mat-error
+          >
+        </mat-form-field>
+      </li>
+      <li class="field">
+        <mat-form-field class="field-item">
+          <mat-select placeholder="Juez secretario/a" formControlName="usuario">
+            <mat-option *ngFor="let u of usuarios" [value]="u"
+              >{{ u.nombre }} {{ u.apellidos }}</mat-option
+            >
+          </mat-select>
+          <mat-icon matPrefix>poll</mat-icon>
+          <mat-error *ngIf="pruebaForm.get('usuario').hasError('required')"
+            >Selecciona un juez</mat-error
+          >
+        </mat-form-field>
+      </li>
+      <li class="field">
+        <mat-form-field class="field-item">
+          <mat-select placeholder="Concurso" formControlName="tipo_prueba">
+            <mat-option *ngFor="let t of tiposPrueba" [value]="t">{{
+              getDescription(t)
+            }}</mat-option>
+          </mat-select>
+          <mat-icon matPrefix>poll</mat-icon>
+          <mat-error *ngIf="pruebaForm.get('tipo_prueba').hasError('required')"
+            >Selecciona un concurso</mat-error
+          >
+        </mat-form-field>
+      </li>
+      <li class="field">
+        <mat-form-field class="field-item">
+          <input
+            matInput
+            placeholder="Nº intentos"
+            type="number"
+            min="0"
+            formControlName="num_intentos"
+          />
+          <mat-icon matPrefix>edit</mat-icon>
+          <mat-error *ngIf="pruebaForm.get('num_intentos').hasError('required')"
+            >Rellena este campo</mat-error
+          >
+        </mat-form-field>
+      </li>
+      <li class="field">
+        <mat-form-field class="field-item">
+          <input
+            matInput
+            placeholder="Nº intentos mejora"
+            type="number"
+            min="0"
+            formControlName="num_intentos_mejora"
+          />
+          <mat-icon matPrefix>edit</mat-icon>
+          <mat-error
+            *ngIf="pruebaForm.get('num_intentos_mejora').hasError('required')"
+            >Rellena este campo</mat-error
+          >
+        </mat-form-field>
+      </li>
+      <li class="field">
+        <mat-form-field class="field-item">
+          <input
+            matInput
+            placeholder="Nº atletas mejora"
+            type="number"
+            min="0"
+            formControlName="num_atletas_mejora"
+          />
+          <mat-icon matPrefix>edit</mat-icon>
+          <mat-error
+            *ngIf="pruebaForm.get('num_atletas_mejora').hasError('required')"
+            >Rellena este campo</mat-error
+          >
+        </mat-form-field>
+      </li>
+    </ul>
+  </div>
+  <div mat-dialog-actions>
+    <button
+      mat-raised-button
+      color="primary"
+      type="submit"
+      [disabled]="!pruebaForm.valid"
+    >
+      GUARDAR
+    </button>
+    <button mat-button color="primary" type="button" (click)="goBack()">
+      VOLVER
+    </button>
+  </div>
+</form>

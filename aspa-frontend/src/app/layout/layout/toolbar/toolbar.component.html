@@ -1,0 +1,12 @@
+<mat-toolbar color="primary" class="aspa-toolbar">
+  <button *ngIf="isMobile" mat-icon-button (click)="click()">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <h1 class="aspa-app-name">
+    <aspa-breadcrumb></aspa-breadcrumb>
+  </h1>
+
+  <span class="fill-remaining-space"></span>
+
+  <aspa-user-info *ngIf="!isMobile"></aspa-user-info>
+</mat-toolbar>

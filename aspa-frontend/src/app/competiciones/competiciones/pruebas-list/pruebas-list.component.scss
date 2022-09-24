@@ -1,0 +1,27 @@
+::ng-deep {
+  aspa-pruebas-list {
+    width: 100%;
+    height: calc(100% - 30px);
+    overflow-y: auto;
+  }
+}
+
+.filter {
+  font-size: 14px;
+  width: 100%;
+}
+.table-container {
+  width: 98%;
+  margin: 1%;
+  .table {
+    width: 100%;
+  }
+}
+
+.time-left {
+  color: #f44336;
+}
+
+.nombre-competicion {
+  margin-left: 16px;
+}

@@ -1,0 +1,3 @@
+<aspa-usuarios-list [usuarios]="usuarios" *ngIf="usuarios" (usuarioDeleted)="onUsuarioDeleted()"></aspa-usuarios-list>
+<aspa-empty-state *ngIf="error" [message]="errorMessage" [retryButton]="true" (retry)="onRetry()"></aspa-empty-state>
+<aspa-spinner *ngIf="!usuarios && !error" [message]="loadingMessage"></aspa-spinner>

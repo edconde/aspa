@@ -1,0 +1,23 @@
+<div class="row">
+  <mat-form-field appearance="outline" *ngIf="group.value==='VALIDO'">
+    <mat-label>Marca</mat-label>
+    <input matInput placeholder="0.00" type="number" [(ngModel)]="marca.marca" required autocomplete="off" min="0.00"
+      step="0.01" [disabled]="group.value!='VALIDO'" autofocus>
+    <mat-icon matSuffix>create</mat-icon>
+    <mat-hint>Campo requerido</mat-hint>
+  </mat-form-field>
+  <button mat-raised-button color="primary" (click)="updateIntento()">Actualizar intento</button>
+</div>
+<div class="row">
+  <mat-button-toggle-group #group="matButtonToggleGroup" [(ngModel)]="marca.resultado" class="toggle-group">
+    <mat-button-toggle value="VALIDO" class="valido" [ngClass]="{'not-selected':group.value!='VALIDO'}">
+      <mat-icon>panorama_fish_eye</mat-icon>
+    </mat-button-toggle>
+    <mat-button-toggle value="PASA" class="pasa" [ngClass]="{'not-selected':group.value!='PASA'}">
+      <mat-icon>remove</mat-icon>
+    </mat-button-toggle>
+    <mat-button-toggle value="NULO" class="nulo" [ngClass]="{'not-selected':group.value!='NULO'}">
+      <mat-icon>clear</mat-icon>
+    </mat-button-toggle>
+  </mat-button-toggle-group>
+</div>

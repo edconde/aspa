@@ -1,0 +1,3643 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>aspa documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">aspa documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li>HojaDeCampoNoSvComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/competiciones/competiciones/pruebas-list/hoja-de-campo-no-sv/hoja-de-campo-no-sv.component.ts</code>
+</p>
+
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                    <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>aspa-hoja-de-campo-no-sv</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./hoja-de-campo-no-sv.component.scss</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./hoja-de-campo-no-sv.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#columns">columns</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#dataSource">dataSource</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#displayedColumns">displayedColumns</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#idcompeticion">idcompeticion</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#idprueba">idprueba</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#inscripciones">inscripciones</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#marcas">marcas</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#mejoresMarcas">mejoresMarcas</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#nombrePrueba">nombrePrueba</a>
+                            </li>
+                            <li>
+                                <a href="#paginator">paginator</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#prueba">prueba</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#askIfMarkAsSkipped">askIfMarkAsSkipped</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#buildNombrePrueba">buildNombrePrueba</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#calculateHighestMark">calculateHighestMark</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#cleanMarks">cleanMarks</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#confirmFinalize">confirmFinalize</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#crearClasificacion">crearClasificacion</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#createColumns">createColumns</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#createMarca">createMarca</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#eliminarMarca">eliminarMarca</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#existMarca">existMarca</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#fillMarcas">fillMarcas</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#getAllInfo">getAllInfo</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#getCellClass">getCellClass</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#getCellValue">getCellValue</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#getEmptyAttempts">getEmptyAttempts</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#getHighestMark">getHighestMark</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#getMarca">getMarca</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#getMarcas">getMarcas</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#getPosition">getPosition</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#getPositionCellValue">getPositionCellValue</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#goBack">goBack</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#hasEmptyMarksBefore">hasEmptyMarksBefore</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#isQualified">isQualified</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#markEmptyAttempsAsSkipped">markEmptyAttempsAsSkipped</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit">ngOnInit</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#onRightClick">onRightClick</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#openBottomSheet">openBottomSheet</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#openHelp">openHelp</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#openSnackBar">openSnackBar</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#refreshTable">refreshTable</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#saveClassification">saveClassification</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#updateDatasource">updateDatasource</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <h6><b>Accessors</b></h6>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <ul class="index-list">
+                                <li>
+                                    <a href="#canEditSheet">canEditSheet</a>
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(route: <a href="https://angular.io/api/router/ActivatedRoute" target="_blank">ActivatedRoute</a>, bottomSheet: MatBottomSheet, session: <a href="../injectables/SessionService.html">SessionService</a>, pruebaService: <a href="../injectables/PruebaService.html">PruebaService</a>, inscripcionService: <a href="../injectables/InscripcionService.html">InscripcionService</a>, clasificacionService: <a href="../injectables/ClasificacionService.html">ClasificacionService</a>, marcaService: <a href="../injectables/MarcaNsService.html">MarcaNsService</a>, snackBar: MatSnackBar, router: <a href="https://angular.io/api/router/Router" target="_blank">Router</a>, dialog: MatDialog)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="52" class="link-to-prism">src/app/competiciones/competiciones/pruebas-list/hoja-de-campo-no-sv/hoja-de-campo-no-sv.component.ts:52</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>route</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/router/ActivatedRoute" target="_blank" >ActivatedRoute</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>bottomSheet</td>
+                                                  
+                                                        <td>
+                                                                    <code>MatBottomSheet</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>session</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/SessionService.html" target="_self" >SessionService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>pruebaService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/PruebaService.html" target="_self" >PruebaService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>inscripcionService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/InscripcionService.html" target="_self" >InscripcionService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>clasificacionService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/ClasificacionService.html" target="_self" >ClasificacionService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>marcaService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/MarcaNsService.html" target="_self" >MarcaNsService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>snackBar</td>
+                                                  
+                                                        <td>
+                                                                    <code>MatSnackBar</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>router</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/router/Router" target="_blank" >Router</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>dialog</td>
+                                                  
+                                                        <td>
+                                                                    <code>MatDialog</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="askIfMarkAsSkipped"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Private</span>
+                            askIfMarkAsSkipped
+                        </b>
+                        <a href="#askIfMarkAsSkipped"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>askIfMarkAsSkipped(emptyAttempts: Array<MarcaNs>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="442"
+                            class="link-to-prism">src/app/competiciones/competiciones/pruebas-list/hoja-de-campo-no-sv/hoja-de-campo-no-sv.component.ts:442</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>emptyAttempts</td>
+                                    <td>
+                                            <code>Array&lt;MarcaNs&gt;</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="buildNombrePrueba"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Private</span>
+                            buildNombrePrueba
+                        </b>
+                        <a href="#buildNombrePrueba"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>buildNombrePrueba(t: <a href="../interfaces/TipoPrueba.html">TipoPrueba</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="582"
+                            class="link-to-prism">src/app/competiciones/competiciones/pruebas-list/hoja-de-campo-no-sv/hoja-de-campo-no-sv.component.ts:582</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>t</td>
+                                    <td>
+                                                <code><a href="../interfaces/TipoPrueba.html" target="_self" >TipoPrueba</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="calculateHighestMark"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Private</span>
+                            calculateHighestMark
+                        </b>
+                        <a href="#calculateHighestMark"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>calculateHighestMark(atleta: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="121"
+                            class="link-to-prism">src/app/competiciones/competiciones/pruebas-list/hoja-de-campo-no-sv/hoja-de-campo-no-sv.component.ts:121</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>atleta</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="cleanMarks"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Private</span>
+                            cleanMarks
+                        </b>
+                        <a href="#cleanMarks"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>cleanMarks()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="477"
+                            class="link-to-prism">src/app/competiciones/competiciones/pruebas-list/hoja-de-campo-no-sv/hoja-de-campo-no-sv.component.ts:477</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Eliminar marcas que se introdujeron (por error del usuario) en intentos de mejora para un atleta que no se clasifica para la mejora.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="confirmFinalize"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            confirmFinalize
+                        </b>
+                        <a href="#confirmFinalize"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>confirmFinalize()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="402"
+                            class="link-to-prism">src/app/competiciones/competiciones/pruebas-list/hoja-de-campo-no-sv/hoja-de-campo-no-sv.component.ts:402</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="crearClasificacion"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Private</span>
+                            crearClasificacion
+                        </b>
+                        <a href="#crearClasificacion"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>crearClasificacion()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="559"
+                            class="link-to-prism">src/app/competiciones/competiciones/pruebas-list/hoja-de-campo-no-sv/hoja-de-campo-no-sv.component.ts:559</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../interfaces/Clasificacion.html" target="_self" >Array&lt;Clasificacion&gt;</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="createColumns"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Private</span>
+                            createColumns
+                        </b>
+                        <a href="#createColumns"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>createColumns()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="189"
+                            class="link-to-prism">src/app/competiciones/competiciones/pruebas-list/hoja-de-campo-no-sv/hoja-de-campo-no-sv.component.ts:189</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="createMarca"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Private</span>
+                            createMarca
+                        </b>
+                        <a href="#createMarca"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>createMarca(idatleta: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>, intento: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="288"
+                            class="link-to-prism">src/app/competiciones/competiciones/pruebas-list/hoja-de-campo-no-sv/hoja-de-campo-no-sv.component.ts:288</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>idatleta</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>intento</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../interfaces/MarcaNs.html" target="_self" >MarcaNs</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="eliminarMarca"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Private</span>
+                            eliminarMarca
+                        </b>
+                        <a href="#eliminarMarca"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>eliminarMarca(marca: <a href="../interfaces/MarcaNs.html">MarcaNs</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="547"
+                            class="link-to-prism">src/app/competiciones/competiciones/pruebas-list/hoja-de-campo-no-sv/hoja-de-campo-no-sv.component.ts:547</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>marca</td>
+                                    <td>
+                                                <code><a href="../interfaces/MarcaNs.html" target="_self" >MarcaNs</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="existMarca"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Private</span>
+                            existMarca
+                        </b>
+                        <a href="#existMarca"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>existMarca(atleta: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>, intento: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="266"
+                            class="link-to-prism">src/app/competiciones/competiciones/pruebas-list/hoja-de-campo-no-sv/hoja-de-campo-no-sv.component.ts:266</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>atleta</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>intento</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="fillMarcas"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Private</span>
+                            fillMarcas
+                        </b>
+                        <a href="#fillMarcas"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>fillMarcas()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="98"
+                            class="link-to-prism">src/app/competiciones/competiciones/pruebas-list/hoja-de-campo-no-sv/hoja-de-campo-no-sv.component.ts:98</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getAllInfo"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Private</span>
+                            getAllInfo
+                        </b>
+                        <a href="#getAllInfo"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getAllInfo()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="75"
+                            class="link-to-prism">src/app/competiciones/competiciones/pruebas-list/hoja-de-campo-no-sv/hoja-de-campo-no-sv.component.ts:75</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getCellClass"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Private</span>
+                            getCellClass
+                        </b>
+                        <a href="#getCellClass"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getCellClass(idatleta: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>, intento: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="297"
+                            class="link-to-prism">src/app/competiciones/competiciones/pruebas-list/hoja-de-campo-no-sv/hoja-de-campo-no-sv.component.ts:297</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>idatleta</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>intento</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getCellValue"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Private</span>
+                            getCellValue
+                        </b>
+                        <a href="#getCellValue"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getCellValue(idatleta: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>, intento: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="304"
+                            class="link-to-prism">src/app/competiciones/competiciones/pruebas-list/hoja-de-campo-no-sv/hoja-de-campo-no-sv.component.ts:304</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>idatleta</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>intento</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getEmptyAttempts"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Private</span>
+                            getEmptyAttempts
+                        </b>
+                        <a href="#getEmptyAttempts"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getEmptyAttempts()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="422"
+                            class="link-to-prism">src/app/competiciones/competiciones/pruebas-list/hoja-de-campo-no-sv/hoja-de-campo-no-sv.component.ts:422</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Array&lt;MarcaNs&gt;</code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getHighestMark"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Private</span>
+                            getHighestMark
+                        </b>
+                        <a href="#getHighestMark"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getHighestMark(atleta: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="133"
+                            class="link-to-prism">src/app/competiciones/competiciones/pruebas-list/hoja-de-campo-no-sv/hoja-de-campo-no-sv.component.ts:133</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>atleta</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getMarca"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Private</span>
+                            getMarca
+                        </b>
+                        <a href="#getMarca"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getMarca(atleta: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>, intento: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="273"
+                            class="link-to-prism">src/app/competiciones/competiciones/pruebas-list/hoja-de-campo-no-sv/hoja-de-campo-no-sv.component.ts:273</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>atleta</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>intento</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../interfaces/MarcaNs.html" target="_self" >MarcaNs</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getMarcas"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Private</span>
+                            getMarcas
+                        </b>
+                        <a href="#getMarcas"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getMarcas()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="88"
+                            class="link-to-prism">src/app/competiciones/competiciones/pruebas-list/hoja-de-campo-no-sv/hoja-de-campo-no-sv.component.ts:88</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getPosition"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Private</span>
+                            getPosition
+                        </b>
+                        <a href="#getPosition"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getPosition(atleta: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="138"
+                            class="link-to-prism">src/app/competiciones/competiciones/pruebas-list/hoja-de-campo-no-sv/hoja-de-campo-no-sv.component.ts:138</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>atleta</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>number | &quot;-&quot;</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getPositionCellValue"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Private</span>
+                            getPositionCellValue
+                        </b>
+                        <a href="#getPositionCellValue"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getPositionCellValue(idatleta: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="319"
+                            class="link-to-prism">src/app/competiciones/competiciones/pruebas-list/hoja-de-campo-no-sv/hoja-de-campo-no-sv.component.ts:319</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>idatleta</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>literal type</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="goBack"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            goBack
+                        </b>
+                        <a href="#goBack"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>goBack()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="600"
+                            class="link-to-prism">src/app/competiciones/competiciones/pruebas-list/hoja-de-campo-no-sv/hoja-de-campo-no-sv.component.ts:600</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="hasEmptyMarksBefore"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Private</span>
+                            hasEmptyMarksBefore
+                        </b>
+                        <a href="#hasEmptyMarksBefore"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>hasEmptyMarksBefore(marca: <a href="../interfaces/MarcaNs.html">MarcaNs</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="336"
+                            class="link-to-prism">src/app/competiciones/competiciones/pruebas-list/hoja-de-campo-no-sv/hoja-de-campo-no-sv.component.ts:336</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>marca</td>
+                                    <td>
+                                                <code><a href="../interfaces/MarcaNs.html" target="_self" >MarcaNs</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="isQualified"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Private</span>
+                            isQualified
+                        </b>
+                        <a href="#isQualified"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>isQualified(atleta: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="261"
+                            class="link-to-prism">src/app/competiciones/competiciones/pruebas-list/hoja-de-campo-no-sv/hoja-de-campo-no-sv.component.ts:261</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>atleta</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="markEmptyAttempsAsSkipped"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Private</span>
+                            markEmptyAttempsAsSkipped
+                        </b>
+                        <a href="#markEmptyAttempsAsSkipped"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>markEmptyAttempsAsSkipped(emptyAttempts: Array<MarcaNs>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="457"
+                            class="link-to-prism">src/app/competiciones/competiciones/pruebas-list/hoja-de-campo-no-sv/hoja-de-campo-no-sv.component.ts:457</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>emptyAttempts</td>
+                                    <td>
+                                            <code>Array&lt;MarcaNs&gt;</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <b>
+                            ngOnInit
+                        </b>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="67"
+                            class="link-to-prism">src/app/competiciones/competiciones/pruebas-list/hoja-de-campo-no-sv/hoja-de-campo-no-sv.component.ts:67</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="onRightClick"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            onRightClick
+                        </b>
+                        <a href="#onRightClick"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>onRightClick(e: MouseEvent, marca: <a href="../interfaces/MarcaNs.html">MarcaNs</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="532"
+                            class="link-to-prism">src/app/competiciones/competiciones/pruebas-list/hoja-de-campo-no-sv/hoja-de-campo-no-sv.component.ts:532</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>e</td>
+                                    <td>
+                                            <code>MouseEvent</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>marca</td>
+                                    <td>
+                                                <code><a href="../interfaces/MarcaNs.html" target="_self" >MarcaNs</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="openBottomSheet"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            openBottomSheet
+                        </b>
+                        <a href="#openBottomSheet"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>openBottomSheet(marca: <a href="../interfaces/MarcaNs.html">MarcaNs</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="358"
+                            class="link-to-prism">src/app/competiciones/competiciones/pruebas-list/hoja-de-campo-no-sv/hoja-de-campo-no-sv.component.ts:358</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>marca</td>
+                                    <td>
+                                                <code><a href="../interfaces/MarcaNs.html" target="_self" >MarcaNs</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="openHelp"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            openHelp
+                        </b>
+                        <a href="#openHelp"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>openHelp()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="574"
+                            class="link-to-prism">src/app/competiciones/competiciones/pruebas-list/hoja-de-campo-no-sv/hoja-de-campo-no-sv.component.ts:574</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="openSnackBar"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Private</span>
+                            openSnackBar
+                        </b>
+                        <a href="#openSnackBar"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>openSnackBar(message: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, action: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="588"
+                            class="link-to-prism">src/app/competiciones/competiciones/pruebas-list/hoja-de-campo-no-sv/hoja-de-campo-no-sv.component.ts:588</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>message</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>action</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="refreshTable"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Private</span>
+                            refreshTable
+                        </b>
+                        <a href="#refreshTable"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>refreshTable()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="332"
+                            class="link-to-prism">src/app/competiciones/competiciones/pruebas-list/hoja-de-campo-no-sv/hoja-de-campo-no-sv.component.ts:332</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="saveClassification"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Private</span>
+                            saveClassification
+                        </b>
+                        <a href="#saveClassification"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>saveClassification()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="504"
+                            class="link-to-prism">src/app/competiciones/competiciones/pruebas-list/hoja-de-campo-no-sv/hoja-de-campo-no-sv.component.ts:504</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="updateDatasource"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Private</span>
+                            updateDatasource
+                        </b>
+                        <a href="#updateDatasource"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>updateDatasource()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="326"
+                            class="link-to-prism">src/app/competiciones/competiciones/pruebas-list/hoja-de-campo-no-sv/hoja-de-campo-no-sv.component.ts:326</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="columns"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            columns</b>
+                            <a href="#columns"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="../interfaces/Column.html" target="_self" >Array&lt;Column&gt;</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="50" class="link-to-prism">src/app/competiciones/competiciones/pruebas-list/hoja-de-campo-no-sv/hoja-de-campo-no-sv.component.ts:50</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="dataSource"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            dataSource</b>
+                            <a href="#dataSource"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="../interfaces/Inscripcion.html" target="_self" >MatTableDataSource&lt;Inscripcion&gt;</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="43" class="link-to-prism">src/app/competiciones/competiciones/pruebas-list/hoja-de-campo-no-sv/hoja-de-campo-no-sv.component.ts:43</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="displayedColumns"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            displayedColumns</b>
+                            <a href="#displayedColumns"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>Array&lt;string&gt;</code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="51" class="link-to-prism">src/app/competiciones/competiciones/pruebas-list/hoja-de-campo-no-sv/hoja-de-campo-no-sv.component.ts:51</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="idcompeticion"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            idcompeticion</b>
+                            <a href="#idcompeticion"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="44" class="link-to-prism">src/app/competiciones/competiciones/pruebas-list/hoja-de-campo-no-sv/hoja-de-campo-no-sv.component.ts:44</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="idprueba"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            idprueba</b>
+                            <a href="#idprueba"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="45" class="link-to-prism">src/app/competiciones/competiciones/pruebas-list/hoja-de-campo-no-sv/hoja-de-campo-no-sv.component.ts:45</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="inscripciones"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            inscripciones</b>
+                            <a href="#inscripciones"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="../interfaces/Inscripcion.html" target="_self" >Array&lt;Inscripcion&gt;</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="48" class="link-to-prism">src/app/competiciones/competiciones/pruebas-list/hoja-de-campo-no-sv/hoja-de-campo-no-sv.component.ts:48</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="marcas"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            marcas</b>
+                            <a href="#marcas"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>Array&lt;MarcaNs&gt;</code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="49" class="link-to-prism">src/app/competiciones/competiciones/pruebas-list/hoja-de-campo-no-sv/hoja-de-campo-no-sv.component.ts:49</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="mejoresMarcas"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            mejoresMarcas</b>
+                            <a href="#mejoresMarcas"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>Array&lt;MejorMarca&gt;</code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="52" class="link-to-prism">src/app/competiciones/competiciones/pruebas-list/hoja-de-campo-no-sv/hoja-de-campo-no-sv.component.ts:52</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="nombrePrueba"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            nombrePrueba</b>
+                            <a href="#nombrePrueba"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="47" class="link-to-prism">src/app/competiciones/competiciones/pruebas-list/hoja-de-campo-no-sv/hoja-de-campo-no-sv.component.ts:47</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="paginator"></a>
+                        <span class="name">
+                            <b>
+                            paginator</b>
+                            <a href="#paginator"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>MatPaginator</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <b>Decorators : </b>
+                            <br />
+                            <code>
+                                @ViewChild(MatPaginator)<br />
+                            </code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="42" class="link-to-prism">src/app/competiciones/competiciones/pruebas-list/hoja-de-campo-no-sv/hoja-de-campo-no-sv.component.ts:42</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="prueba"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            prueba</b>
+                            <a href="#prueba"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="../interfaces/Prueba.html" target="_self" >Prueba</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="46" class="link-to-prism">src/app/competiciones/competiciones/pruebas-list/hoja-de-campo-no-sv/hoja-de-campo-no-sv.component.ts:46</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+</section>
+
+    <section>
+    <h3 id="accessors">
+        Accessors
+    </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="canEditSheet"></a>
+                        <span class="name"><b>canEditSheet</b><a href="#canEditSheet"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>canEditSheet()</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="594" class="link-to-prism">src/app/competiciones/competiciones/pruebas-list/hoja-de-campo-no-sv/hoja-de-campo-no-sv.component.ts:594</a></div>
+                                </td>
+                            </tr>
+
+            </tbody>
+        </table>
+</section>
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit, ViewChild } from &#x27;@angular/core&#x27;;
+import { ActivatedRoute, Router } from &#x27;@angular/router&#x27;;
+import { PruebaService } from &#x27;src/app/shared/services/prueba.service&#x27;;
+import { Prueba } from &#x27;src/app/shared/models/Prueba&#x27;;
+import { Inscripcion } from &#x27;src/app/shared/models/Inscripcion&#x27;;
+import { InscripcionService } from &#x27;src/app/shared/services/inscripcion.service&#x27;;
+import { forkJoin } from &#x27;rxjs&#x27;;
+import {
+  MatTableDataSource,
+  MatBottomSheet,
+  MatSnackBar,
+  MatDialog,
+  MatPaginator,
+} from &#x27;@angular/material&#x27;;
+import { MarcaNsService } from &#x27;src/app/shared/services/marca-ns.service&#x27;;
+import { MarcaNs } from &#x27;src/app/shared/models/Marca&#x27;;
+import { RESULTADO } from &#x27;src/app/shared/models/enums/Resultado&#x27;;
+import { ResultadoIntentoNoSvComponent } from &#x27;./resultado-intento-no-sv/resultado-intento-no-sv.component&#x27;;
+import { Column } from &#x27;src/app/shared/models/helpers/Column&#x27;;
+import { HttpErrorResponse } from &#x27;@angular/common/http&#x27;;
+import { Clasificacion } from &#x27;src/app/shared/models/Clasificacion&#x27;;
+import { SessionService } from &#x27;src/app/core/session/session.service&#x27;;
+import { ClasificacionService } from &#x27;src/app/shared/services/clasificacion.service&#x27;;
+import { ConfirmacionPopupComponent } from &#x27;src/app/shared/components/confirmacion-popup/confirmacion-popup.component&#x27;;
+import { PruebaAyudaComponent } from &#x27;../prueba-ayuda/prueba-ayuda.component&#x27;;
+import { DISCIPLINAS } from &#x27;src/app/shared/models/Disciplina&#x27;;
+import { TipoPrueba } from &#x27;src/app/shared/models/TipoPrueba&#x27;;
+import { CATEGORIAS } from &#x27;src/app/shared/models/Categoria&#x27;;
+import { SEXOS } from &#x27;src/app/shared/models/Sexo&#x27;;
+
+export interface MejorMarca {
+  atleta: number;
+  marca: number;
+}
+
+@Component({
+  selector: &#x27;aspa-hoja-de-campo-no-sv&#x27;,
+  templateUrl: &#x27;./hoja-de-campo-no-sv.component.html&#x27;,
+  styleUrls: [&#x27;./hoja-de-campo-no-sv.component.scss&#x27;],
+})
+export class HojaDeCampoNoSvComponent implements OnInit {
+  @ViewChild(MatPaginator) paginator: MatPaginator;
+  public dataSource: MatTableDataSource&lt;Inscripcion&gt;;
+  private idcompeticion: number;
+  private idprueba: number;
+  private prueba: Prueba;
+  public nombrePrueba: string;
+  private inscripciones: Array&lt;Inscripcion&gt;;
+  private marcas: Array&lt;MarcaNs&gt;;
+  private columns: Array&lt;Column&gt;;
+  public displayedColumns: Array&lt;string&gt;;
+  private mejoresMarcas: Array&lt;MejorMarca&gt;;
+
+  constructor(
+    private route: ActivatedRoute,
+    private bottomSheet: MatBottomSheet,
+    private session: SessionService,
+    private pruebaService: PruebaService,
+    private inscripcionService: InscripcionService,
+    private clasificacionService: ClasificacionService,
+    private marcaService: MarcaNsService,
+    private snackBar: MatSnackBar,
+    private router: Router,
+    private dialog: MatDialog
+  ) {}
+
+  ngOnInit() {
+    this.route.params.subscribe(params &#x3D;&gt; {
+      this.idcompeticion &#x3D; params[&#x27;idcompeticion&#x27;];
+      this.idprueba &#x3D; params[&#x27;idprueba&#x27;];
+      this.getAllInfo();
+    });
+  }
+
+  private getAllInfo() {
+    const prueba &#x3D; this.pruebaService.get(this.idcompeticion, this.idprueba);
+    const inscripciones &#x3D; this.inscripcionService.getAllPresentedByPrueba(
+      this.idprueba
+    );
+    forkJoin([prueba, inscripciones]).subscribe(responseList &#x3D;&gt; {
+      this.prueba &#x3D; responseList[0];
+      this.nombrePrueba &#x3D; this.buildNombrePrueba(responseList[0].tipo_prueba);
+      this.inscripciones &#x3D; responseList[1];
+      this.getMarcas();
+    });
+  }
+
+  private getMarcas() {
+    this.marcaService
+      .getAllByPrueba(this.prueba.idprueba)
+      .subscribe((marcas: Array&lt;MarcaNs&gt;) &#x3D;&gt; {
+        this.marcas &#x3D; marcas; // Estas son las marcas que existen en bd
+        this.fillMarcas(); // Añadimos marcas que aun no existen en bd en los intentos que no tienen marca
+        this.createColumns();
+      });
+  }
+
+  private fillMarcas() {
+    this.mejoresMarcas &#x3D; [];
+    this.inscripciones.forEach(inscripcion &#x3D;&gt; {
+      const atleta &#x3D; inscripcion.atleta.idatleta;
+      for (let i &#x3D; 1; i &lt;&#x3D; this.prueba.num_intentos; i++) {
+        if (!this.existMarca(atleta, i)) {
+          this.marcas.push(this.createMarca(atleta, i));
+        }
+      }
+      for (let i &#x3D; 1; i &lt;&#x3D; this.prueba.num_intentos_mejora; i++) {
+        if (!this.existMarca(atleta, i + this.prueba.num_intentos)) {
+          this.marcas.push(
+            this.createMarca(atleta, i + this.prueba.num_intentos)
+          );
+        }
+      }
+      this.mejoresMarcas.push({
+        atleta: atleta,
+        marca: this.calculateHighestMark(atleta),
+      });
+    });
+  }
+
+  private calculateHighestMark(atleta: number): number {
+    const highestMark &#x3D; Math.max.apply(
+      Math,
+      this.marcas
+        .filter(m &#x3D;&gt; m.atleta &#x3D;&#x3D;&#x3D; atleta)
+        .map(function(m) {
+          return m.marca ? parseFloat(m.marca) : null;
+        })
+    );
+    return highestMark &gt; 0 ? highestMark : null;
+  }
+
+  private getHighestMark(atleta: number): number {
+    const highestMark &#x3D; this.mejoresMarcas.find(m &#x3D;&gt; m.atleta &#x3D;&#x3D;&#x3D; atleta).marca;
+    return highestMark &gt; 0 ? highestMark : null;
+  }
+
+  private getPosition(atleta: number) {
+    const athleteBestMark: number &#x3D; this.mejoresMarcas.find(
+      m &#x3D;&gt; m.atleta &#x3D;&#x3D;&#x3D; atleta
+    ).marca;
+    if (athleteBestMark &gt; 0) {
+      let positionsAbove: number &#x3D; this.mejoresMarcas.filter(
+        m &#x3D;&gt; m.marca &gt; athleteBestMark
+      ).length;
+      const draws &#x3D; this.mejoresMarcas.filter(
+        m &#x3D;&gt; m.marca &#x3D;&#x3D;&#x3D; athleteBestMark &amp;&amp; m.atleta !&#x3D;&#x3D; atleta
+      );
+      if (draws.length &gt; 0) {
+        draws.forEach(d &#x3D;&gt; {
+          let currentAthleteHighestMark &#x3D; athleteBestMark;
+          let dAthleteHighestMark &#x3D; athleteBestMark;
+          const currentAthleteMarks &#x3D; this.marcas
+            .filter(m &#x3D;&gt; m.atleta &#x3D;&#x3D;&#x3D; atleta)
+            .map(m &#x3D;&gt; (m.marca ? parseFloat(m.marca) : null));
+          const dAthleteMarks &#x3D; this.marcas
+            .filter(m &#x3D;&gt; m.atleta &#x3D;&#x3D;&#x3D; d.atleta)
+            .map(m &#x3D;&gt; (m.marca ? parseFloat(m.marca) : null));
+          while (
+            currentAthleteHighestMark &amp;&amp;
+            currentAthleteHighestMark &#x3D;&#x3D;&#x3D; dAthleteHighestMark
+          ) {
+            currentAthleteMarks.splice(
+              currentAthleteMarks.indexOf(currentAthleteHighestMark),
+              1
+            ); // remove max from the array
+            dAthleteMarks.splice(dAthleteMarks.indexOf(dAthleteHighestMark), 1); // remove max from the array
+            currentAthleteHighestMark &#x3D; Math.max.apply(
+              Math,
+              currentAthleteMarks
+            ); // get the max of the array
+            dAthleteHighestMark &#x3D; Math.max.apply(Math, dAthleteMarks); // get the max of the array
+          }
+          if (
+            dAthleteHighestMark &amp;&amp;
+            (!currentAthleteHighestMark ||
+              dAthleteHighestMark &gt; currentAthleteHighestMark)
+          ) {
+            positionsAbove++;
+          }
+        });
+      }
+      return positionsAbove + 1;
+    } else {
+      return &#x27;-&#x27;;
+    }
+  }
+
+  private createColumns() {
+    this.columns &#x3D; [
+      {
+        columnDef: &#x27;atleta&#x27;,
+        header: &#x27;Atleta&#x27;,
+        isAttempt: false,
+        sticky: true,
+        stickyEnd: false,
+        class: &#x27;&#x27;,
+        marca: null,
+        cell: (inscripcion: Inscripcion) &#x3D;&gt;
+          &#x60;${inscripcion.atleta.nombre} ${inscripcion.atleta.apellidos}&#x60;,
+        enabled: (inscripcion: Inscripcion) &#x3D;&gt; true,
+      },
+    ];
+    for (let i &#x3D; 1; i &lt;&#x3D; this.prueba.num_intentos; i++) {
+      this.columns.push({
+        columnDef: &#x60;intento${i}&#x60;,
+        header: &#x60;Intento ${i}&#x60;,
+        isAttempt: true,
+        sticky: false,
+        stickyEnd: false,
+        marca: (inscripcion: Inscripcion) &#x3D;&gt;
+          this.getMarca(inscripcion.atleta.idatleta, i),
+        class: (inscripcion: Inscripcion) &#x3D;&gt;
+          this.getCellClass(inscripcion.atleta.idatleta, i).toLowerCase(),
+        cell: (inscripcion: Inscripcion) &#x3D;&gt;
+          this.getCellValue(inscripcion.atleta.idatleta, i),
+        enabled: (inscripcion: Inscripcion) &#x3D;&gt; true,
+      });
+    }
+    for (let i &#x3D; 1; i &lt;&#x3D; this.prueba.num_intentos_mejora; i++) {
+      this.columns.push({
+        columnDef: &#x60;intentoMejora${i}&#x60;,
+        header: &#x60;Intento mejora ${i}&#x60;,
+        isAttempt: true,
+        sticky: false,
+        stickyEnd: false,
+        marca: (inscripcion: Inscripcion) &#x3D;&gt;
+          this.getMarca(
+            inscripcion.atleta.idatleta,
+            i + this.prueba.num_intentos
+          ),
+        class: (inscripcion: Inscripcion) &#x3D;&gt;
+          this.getCellClass(
+            inscripcion.atleta.idatleta,
+            i + this.prueba.num_intentos
+          ).toLowerCase(),
+        cell: (inscripcion: Inscripcion) &#x3D;&gt;
+          this.getCellValue(
+            inscripcion.atleta.idatleta,
+            i + this.prueba.num_intentos
+          ),
+        enabled: (inscripcion: Inscripcion) &#x3D;&gt;
+          this.isQualified(inscripcion.atleta.idatleta),
+      });
+    }
+    this.columns.push({
+      columnDef: &#x27;mejorMarca&#x27;,
+      header: &#x27;Mejor marca&#x27;,
+      isAttempt: false,
+      sticky: false,
+      stickyEnd: true,
+      class: &#x27;&#x27;,
+      marca: null,
+      cell: (inscripcion: Inscripcion) &#x3D;&gt;
+        this.getPositionCellValue(inscripcion.atleta.idatleta),
+      enabled: (inscripcion: Inscripcion) &#x3D;&gt; true,
+    });
+    this.updateDatasource();
+  }
+
+  private isQualified(atleta: number): boolean {
+    const position &#x3D; this.getPosition(atleta);
+    return position !&#x3D;&#x3D; &#x27;-&#x27; &amp;&amp; position &lt;&#x3D; this.prueba.num_atletas_mejora;
+  }
+
+  private existMarca(atleta: number, intento: number) {
+    return (
+      this.marcas.find(m &#x3D;&gt; m.atleta &#x3D;&#x3D;&#x3D; atleta &amp;&amp; m.intento &#x3D;&#x3D;&#x3D; intento) !&#x3D;&#x3D;
+      undefined
+    );
+  }
+
+  private getMarca(atleta: number, intento: number): MarcaNs {
+    let marca: MarcaNs &#x3D; this.marcas.find(
+      m &#x3D;&gt; m.atleta &#x3D;&#x3D;&#x3D; atleta &amp;&amp; m.intento &#x3D;&#x3D;&#x3D; intento
+    );
+    if (typeof marca &#x3D;&#x3D;&#x3D; &#x27;undefined&#x27;) {
+      marca &#x3D; {
+        atleta,
+        intento,
+        resultado: null,
+        marca: null,
+      };
+    }
+    return marca;
+  }
+
+  private createMarca(idatleta: number, intento: number): MarcaNs {
+    return {
+      atleta: idatleta,
+      intento: intento,
+      resultado: null,
+      marca: null,
+    };
+  }
+
+  private getCellClass(idatleta: number, intento: number): string {
+    const marca &#x3D; this.marcas.find(
+      m &#x3D;&gt; m.atleta &#x3D;&#x3D;&#x3D; idatleta &amp;&amp; m.intento &#x3D;&#x3D;&#x3D; intento
+    );
+    return marca ? marca.resultado || &#x27;&#x27; : &#x27;&#x27;;
+  }
+
+  private getCellValue(idatleta: number, intento: number): string {
+    const marca &#x3D; this.marcas.find(
+      m &#x3D;&gt; m.atleta &#x3D;&#x3D;&#x3D; idatleta &amp;&amp; m.intento &#x3D;&#x3D;&#x3D; intento
+    );
+    if (marca) {
+      if (marca.resultado &#x3D;&#x3D;&#x3D; &#x27;VALIDO&#x27;) {
+        return marca.marca ? &#x60;${marca.marca}m&#x60; : &#x27;&#x27;;
+      } else {
+        return RESULTADO[marca.resultado];
+      }
+    } else {
+      return &#x27;&#x27;;
+    }
+  }
+
+  private getPositionCellValue(idatleta: number): { mark: any; pos: any } {
+    return {
+      mark: this.getHighestMark(idatleta),
+      pos: this.getPosition(idatleta),
+    };
+  }
+
+  private updateDatasource() {
+    this.displayedColumns &#x3D; this.columns.map(c &#x3D;&gt; c.columnDef);
+    this.dataSource &#x3D; new MatTableDataSource(this.inscripciones);
+    setTimeout(() &#x3D;&gt; (this.dataSource.paginator &#x3D; this.paginator));
+  }
+
+  private refreshTable() {
+    this.getMarcas();
+  }
+
+  private hasEmptyMarksBefore(marca: MarcaNs): boolean {
+    // Miramos si hay algún intento (no de mejora) sin marca
+    if (marca.intento &lt;&#x3D; this.prueba.num_intentos + 1) {
+      const emptyMarksBefore &#x3D; this.marcas.find(
+        m &#x3D;&gt;
+          m.intento &lt; marca.intento &amp;&amp; m.resultado &#x3D;&#x3D;&#x3D; null &amp;&amp; m.marca &#x3D;&#x3D;&#x3D; null
+      );
+      return emptyMarksBefore !&#x3D;&#x3D; undefined;
+    } else {
+      // Miramos si hay algún intento de mejora sin marca
+      const emptyMarksBefore &#x3D; this.marcas.find(
+        m &#x3D;&gt;
+          (m.intento &lt;&#x3D; this.prueba.num_intentos ||
+            (m.intento &lt; marca.intento &amp;&amp;
+              this.getPosition(m.atleta) &lt;&#x3D; this.prueba.num_atletas_mejora)) &amp;&amp;
+          m.resultado &#x3D;&#x3D;&#x3D; null &amp;&amp;
+          m.marca &#x3D;&#x3D;&#x3D; null
+      );
+      return emptyMarksBefore !&#x3D;&#x3D; undefined;
+    }
+  }
+
+  public openBottomSheet(marca: MarcaNs): void {
+    if (this.hasEmptyMarksBefore(marca)) {
+      this.openSnackBar(&#x27;Hay intentos anteriores sin cubrir&#x27;, &#x27;Cerrar&#x27;);
+      return;
+    }
+    const marcaBackup: MarcaNs &#x3D; Object.assign({}, marca);
+    const bottomSheetRef &#x3D; this.bottomSheet.open(
+      ResultadoIntentoNoSvComponent,
+      {
+        data: {
+          marca: marca,
+        },
+      }
+    );
+    bottomSheetRef.afterDismissed().subscribe((newMarca: MarcaNs) &#x3D;&gt; {
+      if (newMarca) {
+        this.marcaService.edit(this.idprueba, newMarca).subscribe(
+          response &#x3D;&gt; {
+            Object.assign(marca, newMarca);
+            const currentAthleteHighestMark &#x3D; this.mejoresMarcas.find(
+              m &#x3D;&gt; m.atleta &#x3D;&#x3D;&#x3D; marca.atleta
+            );
+            currentAthleteHighestMark.marca &#x3D; this.calculateHighestMark(
+              marca.atleta
+            );
+          },
+          (error: HttpErrorResponse) &#x3D;&gt; {
+            Object.assign(marca, marcaBackup);
+            if (error.status &#x3D;&#x3D;&#x3D; 403) {
+              this.openSnackBar(
+                &#x27;No tienes permisos para editar las marcas&#x27;,
+                &#x27;cerrar&#x27;
+              );
+            } else {
+              this.openSnackBar(&#x27;Error en el servidor&#x27;, &#x27;cerrar&#x27;);
+            }
+          }
+        );
+      } else {
+        Object.assign(marca, marcaBackup);
+      }
+    });
+  }
+
+  public confirmFinalize() {
+    const dialogref &#x3D; this.dialog.open(ConfirmacionPopupComponent, {
+      data: {
+        title: &#x27;¿Finalizar prueba?&#x27;,
+        detailedMessage:
+          &#x27;Se guardará la clasificación y se anotará la prueba como finalizada.&#x27;,
+      },
+    });
+    dialogref.afterClosed().subscribe(result &#x3D;&gt; {
+      if (result &amp;&amp; result &#x3D;&#x3D;&#x3D; true) {
+        const emptyAttempts &#x3D; this.getEmptyAttempts();
+        if (emptyAttempts.length &gt; 0) {
+          this.askIfMarkAsSkipped(emptyAttempts);
+        } else {
+          this.cleanMarks();
+        }
+      }
+    });
+  }
+
+  private getEmptyAttempts(): Array&lt;MarcaNs&gt; {
+    const emptyAttempts: Array&lt;MarcaNs&gt; &#x3D; [];
+    this.inscripciones.forEach(inscripcion &#x3D;&gt; {
+      const atleta &#x3D; inscripcion.atleta.idatleta;
+      let numberOfAttempts: number &#x3D; this.prueba.num_intentos;
+      if (this.isQualified(atleta)) {
+        numberOfAttempts +&#x3D; this.prueba.num_intentos_mejora;
+      }
+      const athleteEmptyAttempts: Array&lt;MarcaNs&gt; &#x3D; this.marcas.filter(
+        m &#x3D;&gt;
+          m.atleta &#x3D;&#x3D;&#x3D; atleta &amp;&amp;
+          m.intento &lt;&#x3D; numberOfAttempts &amp;&amp;
+          m.resultado &#x3D;&#x3D;&#x3D; null
+      );
+      athleteEmptyAttempts.forEach(a &#x3D;&gt; emptyAttempts.push(a));
+      // emptyAttempts.push(...athleteEmptyAttempts);
+    });
+    return emptyAttempts;
+  }
+
+  private askIfMarkAsSkipped(emptyAttempts: Array&lt;MarcaNs&gt;) {
+    const dialogref &#x3D; this.dialog.open(ConfirmacionPopupComponent, {
+      data: {
+        title: &#x27;¿Rellenar intentos sin resultado?&#x27;,
+        detailedMessage:
+          &#x27;Los intentos sin resultado se marcarán con un &quot;PASA&quot;. Haz click en &quot;NO&quot; si quieres cubrirlos por tí mismo.&#x27;,
+      },
+    });
+    dialogref.afterClosed().subscribe(result &#x3D;&gt; {
+      if (result &amp;&amp; result &#x3D;&#x3D;&#x3D; true) {
+        this.markEmptyAttempsAsSkipped(emptyAttempts);
+      }
+    });
+  }
+
+  private markEmptyAttempsAsSkipped(emptyAttempts: Array&lt;MarcaNs&gt;) {
+    emptyAttempts.forEach(attempt &#x3D;&gt; {
+      attempt.resultado &#x3D; &#x27;PASA&#x27;;
+    });
+    this.marcaService.createSkipped(this.idprueba, emptyAttempts).subscribe(
+      response &#x3D;&gt; {
+        this.cleanMarks();
+      },
+      (error: HttpErrorResponse) &#x3D;&gt; {
+        this.openSnackBar(
+          &#x27;Ha ocurrido un error al rellenar los intentos vacíos&#x27;,
+          &#x27;Cerrar&#x27;
+        );
+      }
+    );
+  }
+
+  /**
+   * Eliminar marcas que se introdujeron (por error del usuario) en intentos de mejora para un atleta que no se clasifica para la mejora.
+   */
+  private cleanMarks() {
+    const notQualifiedAthletes: Array&lt;number&gt; &#x3D; this.inscripciones
+      .filter(i &#x3D;&gt; !this.isQualified(i.atleta.idatleta))
+      .map(i &#x3D;&gt; i.atleta.idatleta);
+    const marksToDelete: Array&lt;MarcaNs&gt; &#x3D; this.marcas.filter(
+      m &#x3D;&gt;
+        notQualifiedAthletes.includes(m.atleta) &amp;&amp;
+        m.intento &gt; this.prueba.num_intentos &amp;&amp;
+        m.resultado !&#x3D;&#x3D; null
+    );
+    if (marksToDelete.length &gt; 0) {
+      this.marcaService.delete(this.idprueba, marksToDelete).subscribe(
+        response &#x3D;&gt; {
+          this.saveClassification();
+        },
+        (error: HttpErrorResponse) &#x3D;&gt; {
+          this.openSnackBar(
+            &#x27;Ha ocurrido un error eliminando marcas sobrantes.&#x27;,
+            &#x27;Cerrar&#x27;
+          );
+        }
+      );
+    } else {
+      this.saveClassification();
+    }
+  }
+
+  private saveClassification() {
+    const clasificaciones &#x3D; this.crearClasificacion();
+    this.clasificacionService
+      .editFullClassification(this.idprueba, clasificaciones)
+      .subscribe(
+        response &#x3D;&gt; {
+          this.openSnackBar(&#x27;Clasificación actualizada&#x27;, &#x27;cerrar&#x27;);
+          this.prueba.finalizada &#x3D; true;
+          this.pruebaService.edit(this.idcompeticion, this.prueba).subscribe(
+            (data: any) &#x3D;&gt; {
+              this.openSnackBar(&#x27;Prueba finalizada&#x27;, &#x27;cerrar&#x27;);
+              this.goBack();
+            },
+            (error: HttpErrorResponse) &#x3D;&gt; {
+              if (error.status &#x3D;&#x3D;&#x3D; 404) {
+                this.openSnackBar(&#x27;No existe la prueba a editar&#x27;, &#x27;cerrar&#x27;);
+              } else {
+                this.openSnackBar(&#x27;Error en el servidor&#x27;, &#x27;cerrar&#x27;);
+              }
+            }
+          );
+        },
+        (error: any) &#x3D;&gt; {
+          this.openSnackBar(&#x27;Error actualizando la clasificación&#x27;, &#x27;cerrar&#x27;);
+        }
+      );
+  }
+
+  public onRightClick(e: MouseEvent, marca: MarcaNs) {
+    e.preventDefault();
+    const dialogRef &#x3D; this.dialog.open(ConfirmacionPopupComponent, {
+      data: {
+        title: &#x27;¿Borrar marca?&#x27;,
+        detailedMessage: &#x27;Se eliminará la marca asociada a este intento.&#x27;,
+      },
+    });
+    dialogRef.afterClosed().subscribe(result &#x3D;&gt; {
+      if (result &amp;&amp; result &#x3D;&#x3D;&#x3D; true) {
+        this.eliminarMarca(marca);
+      }
+    });
+  }
+
+  private eliminarMarca(marca: MarcaNs) {
+    this.marcaService.delete(this.idprueba, [marca]).subscribe(
+      response &#x3D;&gt; {
+        marca.marca &#x3D; null;
+        marca.resultado &#x3D; null;
+      },
+      (error: HttpErrorResponse) &#x3D;&gt; {
+        this.openSnackBar(&#x27;No se ha podido eliminar la marca&#x27;, &#x27;Cerrar&#x27;);
+      }
+    );
+  }
+
+  private crearClasificacion(): Array&lt;Clasificacion&gt; {
+    const clasificaciones &#x3D; new Array&lt;Clasificacion&gt;();
+    this.inscripciones.forEach(i &#x3D;&gt; {
+      const posicion &#x3D; this.getPosition(i.atleta.idatleta);
+      clasificaciones.push({
+        id: {
+          idprueba: this.prueba.idprueba,
+          atleta: i.atleta.idatleta,
+        },
+        posicion: posicion !&#x3D;&#x3D; &#x27;-&#x27; ? posicion : null,
+      });
+    });
+    return clasificaciones;
+  }
+
+  public openHelp() {
+    this.bottomSheet.open(PruebaAyudaComponent, {
+      data: {
+        isSv: false,
+      },
+    });
+  }
+
+  private buildNombrePrueba(t: TipoPrueba): string {
+    return &#x60;${DISCIPLINAS[t.disciplina]} - ${CATEGORIAS[t.categoria]}, ${
+      SEXOS[t.sexo]
+    }&#x60;;
+  }
+
+  private openSnackBar(message: string, action: string) {
+    this.snackBar.open(message, action, {
+      duration: 2000,
+    });
+  }
+
+  get canEditSheet() {
+    return (
+      this.session.getUserid() &#x3D;&#x3D;&#x3D; parseInt(this.prueba.usuario.idusuario, 10)
+    );
+  }
+
+  public goBack() {
+    this.router.navigate([&#x27;/competiciones&#x27;, this.idcompeticion, &#x27;pruebas&#x27;]);
+  }
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;aspa-spinner *ngIf&#x3D;&quot;!dataSource&quot;&gt;&lt;/aspa-spinner&gt;
+
+&lt;div class&#x3D;&quot;mat-elevation-z8 table-container&quot; *ngIf&#x3D;&quot;dataSource&quot;&gt;
+  &lt;table mat-table #table [dataSource]&#x3D;&quot;dataSource&quot; class&#x3D;&quot;table&quot;&gt;
+    &lt;ng-container
+      [matColumnDef]&#x3D;&quot;column.columnDef&quot;
+      [sticky]&#x3D;&quot;column.sticky&quot;
+      [stickyEnd]&#x3D;&quot;column.stickyEnd&quot;
+      *ngFor&#x3D;&quot;let column of columns&quot;
+    &gt;
+      &lt;th
+        mat-header-cell
+        *matHeaderCellDef
+        [ngClass]&#x3D;&quot;{ &#x27;center-align&#x27;: !column.sticky }&quot;
+      &gt;
+        {{ column.header }}
+      &lt;/th&gt;
+      &lt;td
+        mat-cell
+        *matCellDef&#x3D;&quot;let inscripcion&quot;
+        [ngClass]&#x3D;&quot;{
+          &#x27;min-width&#x27;: column.stickyEnd,
+          &#x27;center-align&#x27;: column.isAttempt
+        }&quot;
+      &gt;
+        &lt;span *ngIf&#x3D;&quot;column.sticky&quot;&gt;
+          {{ column.cell(inscripcion) }}
+        &lt;/span&gt;
+        &lt;span *ngIf&#x3D;&quot;column.stickyEnd&quot; class&#x3D;&quot;mark&quot;&gt;
+          {{ column.cell(inscripcion).mark
+          }}&lt;strong class&#x3D;&quot;position&quot;&gt;{{ column.cell(inscripcion).pos }}&lt;/strong&gt;
+        &lt;/span&gt;
+        &lt;button
+          (contextmenu)&#x3D;&quot;onRightClick($event, column.marca(inscripcion))&quot;
+          mat-fab
+          color&#x3D;&quot;primary&quot;
+          *ngIf&#x3D;&quot;column.isAttempt &amp;&amp; column.enabled(inscripcion)&quot;
+          [ngClass]&#x3D;&quot;column.class(inscripcion)&quot;
+          (click)&#x3D;&quot;openBottomSheet(column.marca(inscripcion))&quot;
+        &gt;
+          {{ column.cell(inscripcion) }}
+        &lt;/button&gt;
+      &lt;/td&gt;
+    &lt;/ng-container&gt;
+
+    &lt;tr mat-header-row *matHeaderRowDef&#x3D;&quot;displayedColumns&quot;&gt;&lt;/tr&gt;
+    &lt;tr mat-row *matRowDef&#x3D;&quot;let row; columns: displayedColumns&quot;&gt;&lt;/tr&gt;
+  &lt;/table&gt;
+
+  &lt;mat-paginator
+    [pageSize]&#x3D;&quot;10&quot;
+    [pageSizeOptions]&#x3D;&quot;[5, 10, 20]&quot;
+    showFirstLastButtons
+  &gt;&lt;/mat-paginator&gt;
+&lt;/div&gt;
+
+&lt;aspa-actions-footer&gt;
+  &lt;button mat-icon-button color&#x3D;&quot;primary&quot; (click)&#x3D;&quot;goBack()&quot;&gt;
+    &lt;mat-icon&gt;keyboard_backspace&lt;/mat-icon&gt;
+  &lt;/button&gt;
+  &lt;span class&#x3D;&quot;nombre-prueba&quot;&gt;{{ nombrePrueba }}&lt;/span&gt;
+  &lt;div class&#x3D;&quot;float-right&quot;&gt;
+    &lt;button mat-icon-button color&#x3D;&quot;primary&quot; (click)&#x3D;&quot;openHelp()&quot;&gt;
+      &lt;mat-icon&gt;help&lt;/mat-icon&gt;
+    &lt;/button&gt;
+    &lt;button
+      mat-raised-button
+      color&#x3D;&quot;primary&quot;
+      type&#x3D;&quot;button&quot;
+      (click)&#x3D;&quot;confirmFinalize()&quot;
+    &gt;
+      Finalizar
+    &lt;/button&gt;
+  &lt;/div&gt;
+&lt;/aspa-actions-footer&gt;
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./hoja-de-campo-no-sv.component.scss</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">@import &quot;../../../../../assets/scss/breakpoints&quot;;
+
+::ng-deep {
+  aspa-hoja-de-campo-no-sv {
+    width: 100%;
+    height: calc(100% - 30px);
+    overflow-y: auto;
+  }
+}
+
+.filter {
+  font-size: 14px;
+  width: 100%;
+}
+.table-container {
+  background: white;
+  width: 98%;
+  margin: 1%;
+  overflow-x: auto;
+  .table {
+    width: 100%;
+  }
+  .min-width {
+    min-width: 84px;
+    text-align: center;
+  }
+  .center-align {
+    text-align: center;
+  }
+  .mark {
+    font-size: 24px;
+  }
+  .position {
+    float: right;
+    color: #f44336;
+    font-size: 24px;
+  }
+}
+.nombre-prueba {
+  margin-left: 16px;
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><aspa-spinner *ngIf="!dataSource"></aspa-spinner><div class="mat-elevation-z8 table-container" *ngIf="dataSource">  <table mat-table #table [dataSource]="dataSource" class="table">    <ng-container      [matColumnDef]="column.columnDef"      [sticky]="column.sticky"      [stickyEnd]="column.stickyEnd"      *ngFor="let column of columns"    >      <th        mat-header-cell        *matHeaderCellDef        [ngClass]="{ \'center-align\': !column.sticky }"      >        {{ column.header }}      </th>      <td        mat-cell        *matCellDef="let inscripcion"        [ngClass]="{          \'min-width\': column.stickyEnd,          \'center-align\': column.isAttempt        }"      >        <span *ngIf="column.sticky">          {{ column.cell(inscripcion) }}        </span>        <span *ngIf="column.stickyEnd" class="mark">          {{ column.cell(inscripcion).mark          }}<strong class="position">{{ column.cell(inscripcion).pos }}</strong>        </span>        <button          (contextmenu)="onRightClick($event, column.marca(inscripcion))"          mat-fab          color="primary"          *ngIf="column.isAttempt && column.enabled(inscripcion)"          [ngClass]="column.class(inscripcion)"          (click)="openBottomSheet(column.marca(inscripcion))"        >          {{ column.cell(inscripcion) }}        </button>      </td>    </ng-container>    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>    <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>  </table>  <mat-paginator    [pageSize]="10"    [pageSizeOptions]="[5, 10, 20]"    showFirstLastButtons  ></mat-paginator></div><aspa-actions-footer>  <button mat-icon-button color="primary" (click)="goBack()">    <mat-icon>keyboard_backspace</mat-icon>  </button>  <span class="nombre-prueba">{{ nombrePrueba }}</span>  <div class="float-right">    <button mat-icon-button color="primary" (click)="openHelp()">      <mat-icon>help</mat-icon>    </button>    <button      mat-raised-button      color="primary"      type="button"      (click)="confirmFinalize()"    >      Finalizar    </button>  </div></aspa-actions-footer></div>'
+    var COMPONENTS = [{'name': 'ActionsFooterComponent', 'selector': 'aspa-actions-footer'},{'name': 'AlturaEditComponent', 'selector': 'app-altura-edit'},{'name': 'AlturasAddComponent', 'selector': 'app-alturas-add'},{'name': 'AppComponent', 'selector': 'aspa-root'},{'name': 'AtletaFormComponent', 'selector': 'aspa-atleta-form'},{'name': 'AtletasComponent', 'selector': 'aspa-atletas'},{'name': 'AtletasListComponent', 'selector': 'aspa-atletas-list'},{'name': 'BreadcrumbComponent', 'selector': 'aspa-breadcrumb'},{'name': 'CampoPopupComponent', 'selector': 'app-campo-popup'},{'name': 'ClubesComponent', 'selector': 'aspa-clubes'},{'name': 'ClubesListComponent', 'selector': 'aspa-clubes-list'},{'name': 'ClubPopupComponent', 'selector': 'app-club-popup'},{'name': 'CompeticionesComponent', 'selector': 'aspa-competiciones'},{'name': 'CompeticionesListComponent', 'selector': 'aspa-competiciones-list'},{'name': 'CompeticionPopupComponent', 'selector': 'app-competicion-popup'},{'name': 'ConfirmacionPopupComponent', 'selector': 'app-confirmacion-popup'},{'name': 'EmptyStateComponent', 'selector': 'aspa-empty-state'},{'name': 'HojaDeCampoNoSvComponent', 'selector': 'aspa-hoja-de-campo-no-sv'},{'name': 'HojaDeCampoSvComponent', 'selector': 'aspa-hoja-de-campo-sv'},{'name': 'HomeComponent', 'selector': 'ihair-home'},{'name': 'InscripcionesAtletasComponent', 'selector': 'aspa-inscripciones-atletas'},{'name': 'InscripcionesListComponent', 'selector': 'app-inscripciones-list'},{'name': 'LayoutComponent', 'selector': 'aspa-layout'},{'name': 'PageNotFoundComponent', 'selector': 'aspa-page-not-found'},{'name': 'PruebaAyudaComponent', 'selector': 'app-prueba-ayuda'},{'name': 'PruebaPopupComponent', 'selector': 'app-prueba-popup'},{'name': 'PruebasListComponent', 'selector': 'aspa-pruebas-list'},{'name': 'ResultadoIntentoNoSvComponent', 'selector': 'aspa-resultado-intento-no-sv'},{'name': 'ResultadoIntentoSvComponent', 'selector': 'aspa-resultado-intento-sv'},{'name': 'SidenavComponent', 'selector': 'aspa-sidenav'},{'name': 'SpinnerComponent', 'selector': 'aspa-spinner'},{'name': 'TipoPruebaPopupComponent', 'selector': 'app-tipo-prueba-popup'},{'name': 'TiposPruebaComponent', 'selector': 'aspa-tipos-prueba'},{'name': 'TiposPruebaListComponent', 'selector': 'aspa-tipos-prueba-list'},{'name': 'ToolbarComponent', 'selector': 'aspa-toolbar'},{'name': 'UserInfoComponent', 'selector': 'aspa-user-info'},{'name': 'UsuarioFormComponent', 'selector': 'aspa-usuario-form'},{'name': 'UsuariosComponent', 'selector': 'aspa-usuarios'},{'name': 'UsuariosListComponent', 'selector': 'aspa-usuarios-list'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'HojaDeCampoNoSvComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+                   
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'HojaDeCampoNoSvComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

@@ -1,0 +1,61 @@
+<form [formGroup]="tipoPruebaForm" autocomplete="off" (ngSubmit)="onSubmit()">
+  <h1 mat-dialog-title>{{ message }}</h1>
+  <div mat-dialog-content>
+    <ul class="fields-list">
+      <li class="field">
+        <mat-form-field class="field-item">
+          <mat-select placeholder="Disciplina" formControlName="disciplina">
+            <mat-option *ngFor="let d of disciplinas" [value]="d">{{
+              getDisciplinaLabel(d)
+            }}</mat-option>
+          </mat-select>
+          <mat-icon matPrefix>directions_run</mat-icon>
+          <mat-error
+            *ngIf="tipoPruebaForm.get('disciplina').hasError('required')"
+            >Selecciona una disciplina</mat-error
+          >
+        </mat-form-field>
+      </li>
+      <li class="field">
+        <mat-form-field class="field-item">
+          <mat-select placeholder="Categoría" formControlName="categoria">
+            <mat-option *ngFor="let c of categorias" [value]="c">{{
+              getCategoriaLabel(c)
+            }}</mat-option>
+          </mat-select>
+          <mat-icon matPrefix>poll</mat-icon>
+          <mat-error
+            *ngIf="tipoPruebaForm.get('categoria').hasError('required')"
+            >Selecciona una categoría</mat-error
+          >
+        </mat-form-field>
+      </li>
+      <li class="field">
+        <mat-form-field class="field-item">
+          <mat-select placeholder="Sexo" formControlName="sexo">
+            <mat-option *ngFor="let s of sexos" [value]="s">{{
+              getSexoLabel(s)
+            }}</mat-option>
+          </mat-select>
+          <mat-icon matPrefix>wc</mat-icon>
+          <mat-error *ngIf="tipoPruebaForm.get('sexo').hasError('required')"
+            >Selecciona un sexo</mat-error
+          >
+        </mat-form-field>
+      </li>
+    </ul>
+  </div>
+  <div mat-dialog-actions>
+    <button
+      mat-raised-button
+      color="primary"
+      type="submit"
+      [disabled]="!tipoPruebaForm.valid"
+    >
+      GUARDAR
+    </button>
+    <button mat-button type="button" color="primary" (click)="goBack()">
+      CERRAR
+    </button>
+  </div>
+</form>

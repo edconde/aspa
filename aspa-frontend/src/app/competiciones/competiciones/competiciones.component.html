@@ -1,0 +1,16 @@
+<aspa-competiciones-list
+  [competiciones]="competiciones"
+  *ngIf="competiciones"
+  (competicionesUpdated)="onCompeticionesUpdated()"
+>
+</aspa-competiciones-list>
+<aspa-empty-state
+  *ngIf="error"
+  [message]="errorMessage"
+  [retryButton]="true"
+  (retry)="onRetry()"
+></aspa-empty-state>
+<aspa-spinner
+  *ngIf="!competiciones && !error"
+  [message]="loadingMessage"
+></aspa-spinner>

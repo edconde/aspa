@@ -1,0 +1,14 @@
+<ol *ngIf="isInitial" class="breadcrumb">
+  <li *ngFor="let initbreadcrumb of initbreadcrumbs" class="breadcrumb-item">
+    <span>{{ initbreadcrumb.label }}</span>
+  </li>
+</ol>
+
+<ol class="breadcrumb" [ngClass]="{ initBreadcrumb: isInitial }">
+  <li
+    *ngFor="let breadcrumb of breadcrumbs$; let i = index"
+    class="breadcrumb-item"
+  >
+    <span>{{ breadcrumb.label }}</span>
+  </li>
+</ol>

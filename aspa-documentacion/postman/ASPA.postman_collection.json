@@ -1,0 +1,1576 @@
+{
+	"info": {
+		"_postman_id": "760ee578-9a66-4051-a449-15d88b3a43c3",
+		"name": "ASPA",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "inscripciones",
+			"item": [
+				{
+					"name": "https://localhost:8443/api/pruebas/3/inscripciones",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://localhost:8443/api/pruebas/3/inscripciones",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "8443",
+							"path": [
+								"api",
+								"pruebas",
+								"3",
+								"inscripciones"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://localhost:8443/api/pruebas/3/inscripciones/4",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:8443/api/pruebas/4/inscripciones/30",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "8443",
+							"path": [
+								"api",
+								"pruebas",
+								"4",
+								"inscripciones",
+								"30"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://localhost:8443/api/pruebas/3/inscripciones/3",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\n        \"atleta\": {\n        \t\"idatleta\": 1,\n            \"licencia\": \"23384TBN\",\n            \"nombre\": \"Adolfo\",\n            \"apellidos\": \"Pérez Martínez\",\n            \"dni\": \"44567789P\",\n            \"telefono\": \"663344987\"\n        },\n        \"presentado\": true\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:8443/api/pruebas/3/inscripciones/3",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "8443",
+							"path": [
+								"api",
+								"pruebas",
+								"3",
+								"inscripciones",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://localhost:8443/api/pruebas/2/inscripciones",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\n        \"atleta\": {\n        \t\"idatleta\": 1,\n            \"licencia\": \"23384TBN\",\n            \"nombre\": \"Adolfo\",\n            \"apellidos\": \"Pérez Martínez\",\n            \"dni\": \"44567789P\",\n            \"telefono\": \"663344987\"\n        }\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:8443/api/pruebas/4/inscripciones",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "8443",
+							"path": [
+								"api",
+								"pruebas",
+								"4",
+								"inscripciones"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "marcas",
+			"item": [
+				{
+					"name": "https://localhost:8443/api/pruebas/3/marcas/ns",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:8443/api/pruebas/3/marcas/ns",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "8443",
+							"path": [
+								"api",
+								"pruebas",
+								"3",
+								"marcas",
+								"ns"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://localhost:8443/api/pruebas/1/marcas/sv",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:8443/api/pruebas/1/marcas/sv",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "8443",
+							"path": [
+								"api",
+								"pruebas",
+								"1",
+								"marcas",
+								"sv"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://localhost:8443/api/pruebas/3/marcas/ns",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJBdXRlbnRpY2FjacOzbiBkZSB1c3VhcmlvIiwiZW1haWwiOiJhZG1pbkB0ZmcuY29tIiwibm9tYnJlIjoiQWRtaW4iLCJyb2wiOiJBRE1JTiIsImlhdCI6MTU1NjA0NTQxNCwiZXhwIjoxNTU2NjUwMjE0fQ.deGf_yph0RPSjZ2Sm8H_mGb2Sd9LN67wQbtmqpiYjLA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"id\": {\n    \"atleta\": \"75518TRY\",\n    \"intento\": 1\n\t},\n    \"resultado\": \"VALIDO\",\n    \"marca\": \"1.98\"\n}"
+						},
+						"url": {
+							"raw": "https://localhost:8443/api/pruebas/3/marcas/ns",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "8443",
+							"path": [
+								"api",
+								"pruebas",
+								"3",
+								"marcas",
+								"ns"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://localhost:8443/api/pruebas/3/marcas/sv",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJBdXRlbnRpY2FjacOzbiBkZSB1c3VhcmlvIiwiZW1haWwiOiJhZG1pbkB0ZmcuY29tIiwibm9tYnJlIjoiQWRtaW4iLCJyb2wiOiJBRE1JTiIsImlhdCI6MTU1NjA0NTQxNCwiZXhwIjoxNTU2NjUwMjE0fQ.deGf_yph0RPSjZ2Sm8H_mGb2Sd9LN67wQbtmqpiYjLA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"id\": {\n    \"atleta\": \"75518TRY\",\n    \"intento\": 1\n\t},\n    \"resultado\": \"VALIDO\",\n    \"marca\": \"1.98\"\n}"
+						},
+						"url": {
+							"raw": "https://localhost:8443/api/pruebas/3/marcas/sv",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "8443",
+							"path": [
+								"api",
+								"pruebas",
+								"3",
+								"marcas",
+								"sv"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://localhost:8443/api/pruebas/3/marcas/ns",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJBdXRlbnRpY2FjacOzbiBkZSB1c3VhcmlvIiwiZW1haWwiOiJhZG1pbkB0ZmcuY29tIiwibm9tYnJlIjoiQWRtaW4iLCJyb2wiOiJBRE1JTiIsImlhdCI6MTU1NjA0NTQxNCwiZXhwIjoxNTU2NjUwMjE0fQ.deGf_yph0RPSjZ2Sm8H_mGb2Sd9LN67wQbtmqpiYjLA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"id\": {\n    \"atleta\": \"75518TRY\",\n    \"intento\": 1\n\t},\n    \"resultado\": \"VALIDO\",\n    \"marca\": \"1.97\"\n}"
+						},
+						"url": {
+							"raw": "https://localhost:8443/api/pruebas/3/marcas/ns",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "8443",
+							"path": [
+								"api",
+								"pruebas",
+								"3",
+								"marcas",
+								"ns"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://localhost:8443/api/pruebas/1/marcas/sv",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"id\": {\n    \"atleta\": \"APF100378\",\n    \"intento\": 1,\n    \"idaltura\": 1\n\t},\n    \"resultado\": \"VALIDO\"\n}"
+						},
+						"url": {
+							"raw": "https://localhost:8443/api/pruebas/1/marcas/sv",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "8443",
+							"path": [
+								"api",
+								"pruebas",
+								"1",
+								"marcas",
+								"sv"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://localhost:8443/api/pruebas/3/marcas/ns",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJBdXRlbnRpY2FjacOzbiBkZSB1c3VhcmlvIiwiZW1haWwiOiJhZG1pbkB0ZmcuY29tIiwibm9tYnJlIjoiQWRtaW4iLCJyb2wiOiJBRE1JTiIsImlkdXN1YXJpbyI6MiwiaWF0IjoxNTU3NzQzNzE3LCJleHAiOjE1NTgzNDg1MTd9._oDoefEc_uDvX1DjD29WLBxlNrVhQsj9WmHFx0-hW_k",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[{\n\t\"id\": {\n    \"atleta\": \"APF100378\",\n    \"intento\": 2\n\t},\n    \"resultado\": \"PASA\",\n    \"marca\": null\n},\n{\n\t\"id\": {\n    \"atleta\": \"PLR240483\",\n    \"intento\": 2\n\t},\n    \"resultado\": \"PASA\",\n    \"marca\": null\n}]"
+						},
+						"url": {
+							"raw": "https://localhost:8443/api/pruebas/3/marcas/ns",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "8443",
+							"path": [
+								"api",
+								"pruebas",
+								"3",
+								"marcas",
+								"ns"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://localhost:8443/api/pruebas/3/marcas/sv",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJBdXRlbnRpY2FjacOzbiBkZSB1c3VhcmlvIiwiZW1haWwiOiJhZG1pbkB0ZmcuY29tIiwibm9tYnJlIjoiQWRtaW4iLCJyb2wiOiJBRE1JTiIsImlhdCI6MTU1NjA0NTQxNCwiZXhwIjoxNTU2NjUwMjE0fQ.deGf_yph0RPSjZ2Sm8H_mGb2Sd9LN67wQbtmqpiYjLA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"id\": {\n    \"atleta\": \"75518TRY\",\n    \"intento\": 1\n\t},\n    \"resultado\": \"VALIDO\",\n    \"marca\": \"1.98\"\n}"
+						},
+						"url": {
+							"raw": "https://localhost:8443/api/pruebas/3/marcas/sv",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "8443",
+							"path": [
+								"api",
+								"pruebas",
+								"3",
+								"marcas",
+								"sv"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "alturas",
+			"item": [
+				{
+					"name": "https://localhost:8443/api/pruebas/1/alturas",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://localhost:8443/api/pruebas/2/alturas",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "8443",
+							"path": [
+								"api",
+								"pruebas",
+								"2",
+								"alturas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://localhost:8443/api/pruebas/1/alturas",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://localhost:8443/api/pruebas/1/alturas?idaltura=1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "8443",
+							"path": [
+								"api",
+								"pruebas",
+								"1",
+								"alturas"
+							],
+							"query": [
+								{
+									"key": "idaltura",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://localhost:8443/api/pruebas/1/alturas",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://localhost:8443/api/pruebas/1/alturas?idaltura=1&altura=1.98",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "8443",
+							"path": [
+								"api",
+								"pruebas",
+								"1",
+								"alturas"
+							],
+							"query": [
+								{
+									"key": "idaltura",
+									"value": "1"
+								},
+								{
+									"key": "altura",
+									"value": "1.98"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://localhost:8443/api/pruebas/1/alturas",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://localhost:8443/api/pruebas/2/alturas?altura=2.09",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "8443",
+							"path": [
+								"api",
+								"pruebas",
+								"2",
+								"alturas"
+							],
+							"query": [
+								{
+									"key": "altura",
+									"value": "2.09"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://localhost:8443/api/pruebas/1/alturas/multiple",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[2.10, 2.13, 2.16]"
+						},
+						"url": {
+							"raw": "https://localhost:8443/api/pruebas/2/alturas/multiple",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "8443",
+							"path": [
+								"api",
+								"pruebas",
+								"2",
+								"alturas",
+								"multiple"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "clasificaciones",
+			"item": [
+				{
+					"name": "https://localhost:8443/api/pruebas/3/clasificaciones",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:8443/api/pruebas/3/clasificaciones",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "8443",
+							"path": [
+								"api",
+								"pruebas",
+								"3",
+								"clasificaciones"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://localhost:8443/api/competiciones/1/clasificaciones",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:8443/api/competiciones/1/clasificaciones",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "8443",
+							"path": [
+								"api",
+								"competiciones",
+								"1",
+								"clasificaciones"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://localhost:8443/api/pruebas/3/clasificaciones",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJBdXRlbnRpY2FjacOzbiBkZSB1c3VhcmlvIiwiZW1haWwiOiJhZG1pbkB0ZmcuY29tIiwibm9tYnJlIjoiQWRtaW4iLCJyb2wiOiJBRE1JTiIsImlhdCI6MTU1NjA0NTQxNCwiZXhwIjoxNTU2NjUwMjE0fQ.deGf_yph0RPSjZ2Sm8H_mGb2Sd9LN67wQbtmqpiYjLA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n        \"id\": {\n            \"idprueba\": 3,\n            \"atleta\": \"75518TRY\"\n        },\n        \"posicion\": 1\n    }"
+						},
+						"url": {
+							"raw": "https://localhost:8443/api/pruebas/3/clasificaciones",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "8443",
+							"path": [
+								"api",
+								"pruebas",
+								"3",
+								"clasificaciones"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://localhost:8443/api/pruebas/3/clasificaciones",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJBdXRlbnRpY2FjacOzbiBkZSB1c3VhcmlvIiwiZW1haWwiOiJhZG1pbkB0ZmcuY29tIiwibm9tYnJlIjoiQWRtaW4iLCJyb2wiOiJBRE1JTiIsImlkdXN1YXJpbyI6MiwiaWF0IjoxNTU2NjQ5NzM0LCJleHAiOjE1NTcyNTQ1MzR9.TUKGVXNdU3apct_grZXU8Y1d-EZhWx6p28BtHGq-3A4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n    {\n        \"id\": {\n            \"idprueba\": 3,\n            \"atleta\": \"23384TBN\"\n        },\n        \"posicion\": \"2\"\n    },\n    {\n        \"id\": {\n            \"idprueba\": 3,\n            \"atleta\": \"49658HDP\"\n        },\n        \"posicion\": \"3\"\n    }\n]"
+						},
+						"url": {
+							"raw": "https://localhost:8443/api/pruebas/3/clasificaciones",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "8443",
+							"path": [
+								"api",
+								"pruebas",
+								"3",
+								"clasificaciones"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://localhost:8443/api/pruebas/3/clasificacion",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJBdXRlbnRpY2FjacOzbiBkZSB1c3VhcmlvIiwiZW1haWwiOiJhZG1pbkB0ZmcuY29tIiwibm9tYnJlIjoiQWRtaW4iLCJyb2wiOiJBRE1JTiIsImlhdCI6MTU1NjA0NTQxNCwiZXhwIjoxNTU2NjUwMjE0fQ.deGf_yph0RPSjZ2Sm8H_mGb2Sd9LN67wQbtmqpiYjLA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n        \"id\": {\n            \"idprueba\": 3,\n            \"atleta\": \"75518TRY\"\n        },\n        \"posicion\": 1\n    }"
+						},
+						"url": {
+							"raw": "https://localhost:8443/api/pruebas/3/clasificacion",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "8443",
+							"path": [
+								"api",
+								"pruebas",
+								"3",
+								"clasificacion"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://localhost:8443/api/pruebas/3/clasificacion",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJBdXRlbnRpY2FjacOzbiBkZSB1c3VhcmlvIiwiZW1haWwiOiJhZG1pbkB0ZmcuY29tIiwibm9tYnJlIjoiQWRtaW4iLCJyb2wiOiJBRE1JTiIsImlhdCI6MTU1NjA0NTQxNCwiZXhwIjoxNTU2NjUwMjE0fQ.deGf_yph0RPSjZ2Sm8H_mGb2Sd9LN67wQbtmqpiYjLA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n        \"id\": {\n            \"idprueba\": 3,\n            \"atleta\": \"75518TRY\"\n        },\n        \"posicion\": 1\n    }"
+						},
+						"url": {
+							"raw": "https://localhost:8443/api/pruebas/3/clasificacion",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "8443",
+							"path": [
+								"api",
+								"pruebas",
+								"3",
+								"clasificacion"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "pruebas",
+			"item": [
+				{
+					"name": "https://localhost:8443/api/competiciones/1/pruebas",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json, text/plain, */*"
+							},
+							{
+								"key": "Referer",
+								"value": "http://localhost:4200/"
+							},
+							{
+								"key": "Origin",
+								"value": "http://localhost:4200"
+							},
+							{
+								"key": "User-Agent",
+								"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.108 Safari/537.36"
+							},
+							{
+								"key": "authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJBdXRlbnRpY2FjacOzbiBkZSB1c3VhcmlvIiwiZW1haWwiOiJhZG1pbkB0ZmcuY29tIiwibm9tYnJlIjoiQWRtaW4iLCJyb2wiOiJBRE1JTiIsImlhdCI6MTU1NjA0NTQxNCwiZXhwIjoxNTU2NjUwMjE0fQ.deGf_yph0RPSjZ2Sm8H_mGb2Sd9LN67wQbtmqpiYjLA"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "https://localhost:8443/api/competiciones/1/pruebas",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "8443",
+							"path": [
+								"api",
+								"competiciones",
+								"1",
+								"pruebas"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "competiciones",
+			"item": [
+				{
+					"name": "https://localhost:8443/api/competiciones",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json, text/plain, */*"
+							},
+							{
+								"key": "Referer",
+								"value": "http://localhost:4200/"
+							},
+							{
+								"key": "Origin",
+								"value": "http://localhost:4200"
+							},
+							{
+								"key": "User-Agent",
+								"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.108 Safari/537.36"
+							},
+							{
+								"key": "authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJBdXRlbnRpY2FjacOzbiBkZSB1c3VhcmlvIiwiZW1haWwiOiJhZG1pbkB0ZmcuY29tIiwibm9tYnJlIjoiQWRtaW4iLCJyb2wiOiJBRE1JTiIsImlhdCI6MTU1NjA0NTQxNCwiZXhwIjoxNTU2NjUwMjE0fQ.deGf_yph0RPSjZ2Sm8H_mGb2Sd9LN67wQbtmqpiYjLA"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "https://localhost:8443/api/competiciones",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "8443",
+							"path": [
+								"api",
+								"competiciones"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://localhost:8443/api/competiciones/1",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json, text/plain, */*"
+							},
+							{
+								"key": "Referer",
+								"value": "http://localhost:4200/"
+							},
+							{
+								"key": "Origin",
+								"value": "http://localhost:4200"
+							},
+							{
+								"key": "User-Agent",
+								"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.108 Safari/537.36"
+							},
+							{
+								"key": "authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJBdXRlbnRpY2FjacOzbiBkZSB1c3VhcmlvIiwiZW1haWwiOiJhZG1pbkB0ZmcuY29tIiwibm9tYnJlIjoiQWRtaW4iLCJyb2wiOiJBRE1JTiIsImlhdCI6MTU1NjA0NTQxNCwiZXhwIjoxNTU2NjUwMjE0fQ.deGf_yph0RPSjZ2Sm8H_mGb2Sd9LN67wQbtmqpiYjLA"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "https://localhost:8443/api/competiciones/1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "8443",
+							"path": [
+								"api",
+								"competiciones",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://localhost:8443/api/competiciones/filtradas",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json, text/plain, */*"
+							},
+							{
+								"key": "Referer",
+								"value": "http://localhost:4200/"
+							},
+							{
+								"key": "Origin",
+								"value": "http://localhost:4200"
+							},
+							{
+								"key": "User-Agent",
+								"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.108 Safari/537.36"
+							},
+							{
+								"key": "authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJBdXRlbnRpY2FjacOzbiBkZSB1c3VhcmlvIiwibm9tYnJlIjoiRWRnYXIiLCJyb2wiOiJBVExFVEEiLCJpYXQiOjE1NjgxNDIxNTksImV4cCI6MTU2ODc0Njk1OX0.5uk8KL6w5ciNg7sGkL8bkzcop9Sen1ejUuMN4EWa9i4"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "https://localhost:8443/api/competiciones/filtradas?ano=2019&mes=",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "8443",
+							"path": [
+								"api",
+								"competiciones",
+								"filtradas"
+							],
+							"query": [
+								{
+									"key": "ano",
+									"value": "2019"
+								},
+								{
+									"key": "mes",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://localhost:8443/api/public/competiciones/hoy",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json, text/plain, */*"
+							},
+							{
+								"key": "Referer",
+								"value": "http://localhost:4200/"
+							},
+							{
+								"key": "Origin",
+								"value": "http://localhost:4200"
+							},
+							{
+								"key": "User-Agent",
+								"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.108 Safari/537.36"
+							},
+							{
+								"key": "authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJBdXRlbnRpY2FjacOzbiBkZSB1c3VhcmlvIiwibm9tYnJlIjoiRWRnYXIiLCJyb2wiOiJBVExFVEEiLCJpYXQiOjE1NjgxNDIxNTksImV4cCI6MTU2ODc0Njk1OX0.5uk8KL6w5ciNg7sGkL8bkzcop9Sen1ejUuMN4EWa9i4"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "https://localhost:8443/api/competiciones/hoy",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "8443",
+							"path": [
+								"api",
+								"competiciones",
+								"hoy"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "clubes",
+			"item": [
+				{
+					"name": "https://localhost:8443/api/clubes",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "",
+								"type": "text",
+								"value": ""
+							}
+						],
+						"url": {
+							"raw": "https://localhost:8443/api/clubes",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "8443",
+							"path": [
+								"api",
+								"clubes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://localhost:8443/api/clubes/73551JTW",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:8443/api/clubes/73551JTW",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "8443",
+							"path": [
+								"api",
+								"clubes",
+								"73551JTW"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://localhost:8443/api/clubes",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n        \"licencia\": \"73551JTX\",\n        \"nombre\": \"Atletismo Marrón\"\n    }"
+						},
+						"url": {
+							"raw": "https://localhost:8443/api/clubes/73551JTW",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "8443",
+							"path": [
+								"api",
+								"clubes",
+								"73551JTW"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://localhost:8443/api/clubes",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "",
+								"type": "text",
+								"value": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n        \"licencia\": \"73551JTW\",\n        \"nombre\": \"Atletismo Naróns\"\n    }"
+						},
+						"url": {
+							"raw": "https://localhost:8443/api/clubes",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "8443",
+							"path": [
+								"api",
+								"clubes"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "atletas",
+			"item": [
+				{
+					"name": "https://localhost:8443/api/atletas",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "",
+								"type": "text",
+								"value": ""
+							}
+						],
+						"url": {
+							"raw": "https://localhost:8443/api/atletas",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "8443",
+							"path": [
+								"api",
+								"atletas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://localhost:8443/api/atletas/APF100379",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:8443/api/atletas/APF100379",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "8443",
+							"path": [
+								"api",
+								"atletas",
+								"APF100379"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://localhost:8443/api/atletas/APF100379",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\n        \"licencia\": \"APF100379\",\n        \"password\": \"admin000\",\n        \"nombre\": \"Adolfo\",\n        \"apellidos\": \"Pérez González\",\n        \"dni\": \"14567789B\",\n        \"telefono\": \"663344981\",\n        \"club_licencia\": \"73551JTN\"\n    }"
+						},
+						"url": {
+							"raw": "https://localhost:8443/api/atletas/APF100379",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "8443",
+							"path": [
+								"api",
+								"atletas",
+								"APF100379"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://localhost:8443/api/atletas",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\n        \"licencia\": \"APF100379\",\n        \"password\": \"admin000\",\n        \"nombre\": \"Adolfo\",\n        \"apellidos\": \"Pérez Fernández\",\n        \"dni\": \"14567789B\",\n        \"telefono\": \"663344981\",\n        \"club_licencia\": \"73551JTN\"\n    }"
+						},
+						"url": {
+							"raw": "https://localhost:8443/api/atletas",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "8443",
+							"path": [
+								"api",
+								"atletas"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "usuarios",
+			"item": []
+		},
+		{
+			"name": "tipos de prueba",
+			"item": []
+		},
+		{
+			"name": "sesion",
+			"item": [
+				{
+					"name": "https://localhost:8443/api/token",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "admin@fga.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "admin000",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://localhost:8443/api/token/usuarios",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "8443",
+							"path": [
+								"api",
+								"token",
+								"usuarios"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://localhost:8443/api/token/atletas",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/x-www-form-urlencoded"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "licencia",
+									"value": "ECN160693",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "admin000",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://localhost:8443/api/token/atletas",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "8443",
+							"path": [
+								"api",
+								"token",
+								"atletas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://localhost:8443/api/password/reset/usuarios",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/x-www-form-urlencoded"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "admin@fga.com",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://localhost:8443/api/password/reset/usuarios",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "8443",
+							"path": [
+								"api",
+								"password",
+								"reset",
+								"usuarios"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://localhost:8443/api/password/reset/atletas",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/x-www-form-urlencoded"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "admin@fga.com",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://localhost:8443/api/password/reset/atletas",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "8443",
+							"path": [
+								"api",
+								"password",
+								"reset",
+								"atletas"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJBdXRlbnRpY2FjacOzbiBkZSB1c3VhcmlvIiwiZW1haWwiOiJhZG1pbkBmZ2EuY29tIiwibm9tYnJlIjoiQWRtaW4iLCJyb2wiOiJBRE1JTiIsImlkdXN1YXJpbyI6MiwiaWF0IjoxNTcxMTY0Njk2LCJleHAiOjE1NzE3Njk0OTZ9.1zVBhLrrefmyatLLM8UlN4QMnlPbWmJnILl1-To1RGw",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "bb48099b-2c40-42db-ac7c-19751d7d5641",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "aba7dfec-9a86-4102-a746-d589f965c1ee",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"protocolProfileBehavior": {}
+}

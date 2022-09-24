@@ -1,0 +1,20 @@
+<div class="emptyState">
+  <div class="emptyState-content">
+    <mat-icon class="emptyIcon">{{ displayedIcon }}</mat-icon>
+    <div>
+      <span class="message"> {{ displayedMessage }}</span>
+    </div>
+    <p *ngIf="detailedMessage" class="detailed-message">
+      {{ detailedMessage }}
+    </p>
+    <button
+      mat-raised-button
+      class="retry-button"
+      *ngIf="retryButton"
+      (click)="askForRetry()"
+    >
+      <mat-icon color="primary" class="retry-icon">refresh</mat-icon>
+      Reintentar
+    </button>
+  </div>
+</div>

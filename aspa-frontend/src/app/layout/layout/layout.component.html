@@ -1,0 +1,14 @@
+<div class="aspa-container">
+  <aspa-toolbar [isMobile]="mobileQuery.matches" (clickMenuButton)="snav.toggle()"></aspa-toolbar>
+
+  <mat-sidenav-container class="aspa-sidenav-container">
+    <mat-sidenav class="mat-elevation-z3" #snav [mode]="mobileQuery.matches ? 'over' : 'side'" [fixedInViewport]="true"
+      fixedTopGap="56">
+      <aspa-sidenav [isMobile]="mobileQuery.matches" (clickSidenavItem)="setSidebarStatus()"></aspa-sidenav>
+    </mat-sidenav>
+
+    <mat-sidenav-content class="sidenav-content">
+      <router-outlet></router-outlet>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>

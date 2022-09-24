@@ -1,0 +1,62 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>
+      Atletas
+    </ion-title>
+  </ion-toolbar>
+  <ion-title>
+    Iniciar sesión
+  </ion-title>
+</ion-header>
+
+<ion-content *ngIf="!isLoggedIn()">
+  <ion-text
+    ><h4 class="title">¿Eres atleta?</h4>
+    <h5 class="subtitle">
+      Inicia sesión e inscríbete en pruebas.
+    </h5></ion-text
+  >
+
+  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+    <ion-item>
+      <ion-label position="floating">Email</ion-label>
+      <ion-input
+        placeholder="Ej: abc@fga.com"
+        type="email"
+        color="primary"
+        autofocus="true"
+        formControlName="email"
+        required
+      ></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Contraseña</ion-label>
+      <ion-input
+        placeholder="********"
+        type="password"
+        color="primary"
+        formControlName="password"
+        required
+      ></ion-input>
+    </ion-item>
+    <ion-button type="submit" expand="block">Iniciar sesión</ion-button>
+  </form>
+  <span *ngIf="loginForm.get('email').valid" class="forgot-password"
+    >¿Has olvidado tu contraseña?
+    <a (click)="resetPasswordAlert()">Te enviamos otra</a></span
+  >
+</ion-content>
+
+<ion-content *ngIf="isLoggedIn()">
+  <ion-text
+    ><h4 class="title">Hola, {{ getUsername() }}!</h4>
+    <h5 class="subtitle">
+      Pronto podrás disfrutar de más funcionalidades en esta app. Por ahora,
+      consulta los resultados de las pruebas, inscríbete en ellas o síguelas en
+      directo!
+    </h5></ion-text
+  >
+  <ion-button (click)="logout()" expand="block" color="danger"
+    >Cerrar sesión</ion-button
+  >
+</ion-content>

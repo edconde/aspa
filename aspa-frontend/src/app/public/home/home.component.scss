@@ -1,0 +1,93 @@
+.container {
+  display: flex;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  text-align: center;
+  background-image: url(../../../assets/img/background.jpg);
+}
+
+.form-container {
+  margin: auto auto;
+  padding: 36px;
+  width: 380px;
+  height: 280px;
+  background-color: #ffffff;
+}
+
+.mat-card-header-icon-container {
+  position: absolute;
+  top: -36px;
+  width: inherit;
+  height: auto;
+  .mat-card-header-icon {
+    height: 48px;
+    width: 48px;
+    font-size: 48px;
+    padding: 12px;
+    border-radius: 50%;
+    border: 4px solid #f44336;
+    background-color: #ffffff;
+    color: #cccccc;
+  }
+}
+
+.mat-card-header {
+  justify-content: center;
+  padding-top: 20px;
+  .mat-card-title {
+    font-size: 22px;
+    margin-bottom: 0px;
+    color: #f44336;
+    .abanca-logo {
+      height: 24px;
+    }
+  }
+  .mat-card-subtitle {
+    font-size: 15px;
+    color: #aaaaaa;
+    font-weight: 300;
+  }
+}
+
+.mat-card-content {
+  padding-right: 8px;
+  margin-bottom: 0px;
+  .field-wrapper {
+    width: 100%;
+    .field {
+      margin-left: 8px;
+      width: calc(100% - 32px);
+      font-size: 14px;
+    }
+  }
+  .forgot-password {
+    position: relative;
+    top: -16px;
+    font-size: 12px;
+    a {
+      cursor: pointer;
+      color: #f44336;
+      text-decoration: underline;
+    }
+  }
+}
+
+.mat-card-actions {
+  margin: auto 32px -4px 32px !important;
+  .login-button {
+    width: 100%;
+    border-radius: 8px;
+  }
+}
+.mat-card-footer {
+  position: relative;
+  top: 28px;
+  margin: -16px -40px -32px -40px;
+  span {
+    font-size: 11px;
+    color: #cccccc;
+  }
+}

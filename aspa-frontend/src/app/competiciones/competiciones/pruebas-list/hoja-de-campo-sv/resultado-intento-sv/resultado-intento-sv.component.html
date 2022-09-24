@@ -1,0 +1,16 @@
+<div class="row">
+  <button mat-raised-button color="primary" (click)="updateIntento()">Actualizar intento</button>
+</div>
+<div class="row">
+  <mat-button-toggle-group #group="matButtonToggleGroup" [(ngModel)]="marca.resultado" class="toggle-group">
+    <mat-button-toggle value="VALIDO" class="valido" [ngClass]="{'not-selected':group.value!='VALIDO'}">
+      <mat-icon>panorama_fish_eye</mat-icon>
+    </mat-button-toggle>
+    <mat-button-toggle value="PASA" class="pasa" [ngClass]="{'not-selected':group.value!='PASA'}">
+      <mat-icon>remove</mat-icon>
+    </mat-button-toggle>
+    <mat-button-toggle value="NULO" class="nulo" [ngClass]="{'not-selected':group.value!='NULO'}">
+      <mat-icon>clear</mat-icon>
+    </mat-button-toggle>
+  </mat-button-toggle-group>
+</div>

@@ -1,0 +1,26 @@
+<form [formGroup]="campoForm" autocomplete="off">
+  <h1 mat-dialog-title>{{ title }}</h1>
+  <p mat-dialog-subtitle>{{ message }}</p>
+  <div mat-dialog-content>
+    <mat-form-field class="full-width">
+      <input
+        matInput
+        formControlName="campo"
+        type="email"
+        autofocus
+        appearance="outline"
+      />
+    </mat-form-field>
+  </div>
+  <div mat-dialog-actions>
+    <button mat-raised-button (click)="onNoClick()">Cancelar</button>
+    <button
+      mat-raised-button
+      color="primary"
+      [mat-dialog-close]="campoForm.get('campo').value"
+      [disabled]="!campoForm.valid"
+    >
+      {{ action }}
+    </button>
+  </div>
+</form>

@@ -1,0 +1,14 @@
+<mat-form-field class="chip-list">
+  <mat-chip-list #chipList [aria-orientation]="'vertical'">
+    <mat-chip *ngFor="let altura of newAlturas" [selectable]="selectable" [removable]="removable"
+      (removed)="remove(altura)">
+      {{altura}}
+      <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
+    </mat-chip>
+    <input placeholder="Nuevas alturas" [matChipInputFor]="chipList" [(ngModel)]="altura" autofocus #alturasInput
+      [matChipInputSeparatorKeyCodes]="separatorKeysCodes" [matChipInputAddOnBlur]="addOnBlur"
+      (matChipInputTokenEnd)="add($event)" type="number" autocomplete="off" min="0.00" step="0.01">
+  </mat-chip-list>
+</mat-form-field>
+<button mat-raised-button color="primary" class="full-width" [disabled]="newAlturas.length === 0"
+  (click)="saveAlturas()">Guardar</button>

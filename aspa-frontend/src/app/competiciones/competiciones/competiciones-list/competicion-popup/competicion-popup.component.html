@@ -1,0 +1,35 @@
+<form [formGroup]="competicionForm" autocomplete="off" (ngSubmit)="onSubmit()">
+  <h1 mat-dialog-title>{{action}} competición</h1>
+  <div mat-dialog-content>
+    <ul class="fields-list">
+      <li class="field">
+        <mat-form-field class="field-item">
+          <input matInput placeholder="Nombre" type="text" formControlName="nombre">
+          <mat-icon matPrefix>edit</mat-icon>
+          <mat-error *ngIf="competicionForm.get('nombre').hasError('required')">Rellena este campo</mat-error>
+        </mat-form-field>
+      </li>
+      <li class="field">
+        <mat-form-field class="field-item">
+          <input matInput [matDatepicker]="fecha" placeholder="Fecha" readonly formControlName="fecha">
+          <mat-datepicker-toggle matPrefix [for]="fecha">
+            <mat-icon matDatepickerToggleIcon>today</mat-icon>
+          </mat-datepicker-toggle>
+          <mat-datepicker #fecha touchUi></mat-datepicker>
+          <mat-error *ngIf="competicionForm.get('fecha').hasError('required')">Selecciona una fecha</mat-error>
+        </mat-form-field>
+      </li>
+      <li class="field">
+        <mat-form-field class="field-item">
+          <input matInput placeholder="Lugar" type="text" formControlName="lugar">
+          <mat-icon matPrefix>room</mat-icon>
+          <mat-error *ngIf="competicionForm.get('lugar').hasError('required')">Rellena este campo</mat-error>
+        </mat-form-field>
+      </li>
+    </ul>
+  </div>
+  <div mat-dialog-actions>
+    <button mat-raised-button color="primary" type="submit" [disabled]="!competicionForm.valid">GUARDAR</button>
+    <button mat-button color="primary" type="button" [mat-dialog-close]>VOLVER</button>
+  </div>
+</form>

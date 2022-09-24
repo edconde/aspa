@@ -1,0 +1,145 @@
+<mat-card class="card">
+  <mat-card-header>
+    <mat-card-title>{{ title }}</mat-card-title>
+  </mat-card-header>
+  <form [formGroup]="usuarioForm" autocomplete="off" (ngSubmit)="onSubmit()">
+    <ul class="fields-list">
+      <li class="field">
+        <mat-form-field class="field-item">
+          <input
+            matInput
+            placeholder="Email"
+            type="email"
+            formControlName="email"
+          />
+          <mat-icon matPrefix>email</mat-icon>
+          <mat-error
+            *ngIf="
+              usuarioForm.get('email').hasError('email') &&
+              !usuarioForm.get('email').hasError('required')
+            "
+            >Formato incorrecto</mat-error
+          >
+          <mat-error *ngIf="usuarioForm.get('email').hasError('required')"
+            >Rellena este campo</mat-error
+          >
+        </mat-form-field>
+      </li>
+      <li class="field">
+        <mat-form-field class="field-item">
+          <input
+            matInput
+            placeholder="Nombre"
+            type="text"
+            formControlName="nombre"
+          />
+          <mat-icon matPrefix>person</mat-icon>
+          <mat-error *ngIf="usuarioForm.get('nombre').hasError('required')"
+            >Rellena este campo</mat-error
+          >
+        </mat-form-field>
+      </li>
+      <li class="field">
+        <mat-form-field class="field-item">
+          <input
+            matInput
+            placeholder="Apellidos"
+            type="text"
+            formControlName="apellidos"
+          />
+          <mat-icon matPrefix>group</mat-icon>
+          <mat-error *ngIf="usuarioForm.get('apellidos').hasError('required')"
+            >Rellena este campo</mat-error
+          >
+        </mat-form-field>
+      </li>
+      <li class="field">
+        <mat-form-field class="field-item">
+          <input
+            matInput
+            placeholder="DNI"
+            type="text"
+            formControlName="dni"
+            autocomplete="off"
+          />
+          <mat-icon matPrefix>call_to_action</mat-icon>
+          <mat-error *ngIf="usuarioForm.get('dni').hasError('required')"
+            >Rellena este campo</mat-error
+          >
+        </mat-form-field>
+      </li>
+      <li class="field">
+        <mat-form-field class="field-item">
+          <input
+            matInput
+            placeholder="Teléfono"
+            type="tel"
+            formControlName="telefono"
+            autocomplete="off"
+          />
+          <mat-icon matPrefix>phone</mat-icon>
+          <mat-error *ngIf="usuarioForm.get('telefono').hasError('required')"
+            >Rellena este campo</mat-error
+          >
+        </mat-form-field>
+      </li>
+      <li class="field">
+        <mat-form-field class="field-item">
+          <mat-select placeholder="Rol" formControlName="rol">
+            <mat-option *ngFor="let r of roles" [value]="r.value">{{
+              r.label
+            }}</mat-option>
+          </mat-select>
+          <mat-icon matPrefix>security</mat-icon>
+          <mat-error *ngIf="usuarioForm.get('rol').hasError('required')"
+            >Selecciona un rol</mat-error
+          >
+        </mat-form-field>
+      </li>
+      <li class="field">
+        <mat-form-field class="field-item">
+          <mat-select placeholder="Categoría" formControlName="categoria">
+            <mat-option *ngFor="let c of categorias" [value]="c.value">{{
+              c.label
+            }}</mat-option>
+          </mat-select>
+          <mat-icon matPrefix>format_list_numbered</mat-icon>
+          <mat-error *ngIf="usuarioForm.get('categoria').hasError('required')"
+            >Selecciona una categoría</mat-error
+          >
+        </mat-form-field>
+      </li>
+      <li class="field">
+        <mat-form-field class="field-item">
+          <input
+            matInput
+            placeholder="Licencia"
+            type="text"
+            formControlName="licencia"
+            autocomplete="off"
+          />
+          <mat-icon matPrefix>ballot</mat-icon>
+          <mat-error *ngIf="usuarioForm.get('licencia').hasError('required')"
+            >Rellena este campo</mat-error
+          >
+        </mat-form-field>
+      </li>
+    </ul>
+    <mat-card-actions class="actions">
+      <button
+        mat-raised-button
+        color="primary"
+        type="submit"
+        [disabled]="!usuarioForm.valid"
+      >
+        GUARDAR
+      </button>
+    </mat-card-actions>
+  </form>
+</mat-card>
+
+<aspa-actions-footer>
+  <button mat-icon-button color="primary" (click)="goBack()">
+    <mat-icon>keyboard_backspace</mat-icon>
+  </button>
+</aspa-actions-footer>

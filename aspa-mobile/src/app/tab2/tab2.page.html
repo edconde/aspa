@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar color="primary"
+    ><ion-title>Competiciones</ion-title></ion-toolbar
+  >
+</ion-header>
+
+<ion-content>
+  <ion-list *ngIf="competiciones.length > 0">
+    <ion-item
+      *ngFor="let c of competiciones"
+      [routerLink]="'/fga/directo/' + c.idcompeticion"
+      routerDirection="forward"
+    >
+      <ion-note>{{ getDiaMes(c.fecha) }}</ion-note>
+      <ion-label class="ion-text-wrap">&nbsp;{{ c.nombre }}</ion-label>
+    </ion-item>
+  </ion-list>
+  <ion-item *ngIf="competiciones.length === 0">
+    <ion-label class="ion-text-wrap">Hoy no hay competiciones!</ion-label>
+  </ion-item>
+</ion-content>

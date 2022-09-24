@@ -1,0 +1,13 @@
+.aspa-toolbar {
+  position: fixed;
+  /* Make sure the toolbar will stay on top of the content as it scrolls past. */
+  z-index: 2;
+}
+
+.fill-remaining-space {
+  flex: 1 1 auto;
+}
+
+h1.aspa-app-name {
+  margin-left: 8px;
+}
