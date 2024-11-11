@@ -1,28 +1,94 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es">
 <head>
-  <meta charset="utf-8" />
-  <title>Aspa</title>
-  <base href="https://edconde.github.io/aspa/">
-
-  <!-- icons-->
-  <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicon_io/apple-touch-icon.png" />
-  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon_io/favicon-32x32.png" />
-  <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon_io/favicon-16x16.png" />
-  <link rel="manifest" href="assets/img/favicon_io/site.webmanifest" />
-  <!-- end icons-->
-
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <!--display ass native app on mobile device-->
-  <meta name="mobile-web-app-capable" content="yes" />
-
-  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
-<link rel="stylesheet" href="styles.221bc0367455faf36e66.css"></head>
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ASPA - Aplicación para el Seguimiento de Pruebas de Atletismo</title>
+  <link rel="icon" href="assets/img/favicon.ico" type="image/x-icon">
+  <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+</head>
 <body>
-  <aspa-root></aspa-root>
-<script type="text/javascript" src="runtime.b4016a1b4077910e4ede.js"></script><script type="text/javascript" src="polyfills.36e2aaafeb18c414100f.js"></script><script type="text/javascript" src="main.eb8ee31428b65692afbe.js"></script></body>
 
+  <!-- Encabezado -->
+  <header class="bg-primary text-white text-center py-5">
+    <h1>Proyecto: ASPA</h1>
+    <p class="lead">Aplicación para el Seguimiento de Pruebas de Atletismo</p>
+    <button onclick="window.location.href='./en/index.html'" class="btn btn-light">Ver en inglés</button>
+  </header>
+
+  <!-- Sección de Información del Proyecto -->
+  <section class="container my-5">
+    <div class="row">
+      <div class="col-md-6">
+        <h2 class="text-center text-md-start">Sobre el Proyecto</h2>
+        <p class="text-center text-md-start">Proyecto que consiste principalmente en una aplicación web optimizada para tabletas, destinada a ser utilizada por jueces de atletismo para cubrir las hojas de campo de las pruebas, gestionar competiciones, inscripciones, etc.
+        Además, como parte del proyecto, también hay una pequeña aplicación móvil que permite a los usuarios atletas inscribirse en competiciones y consultar sus resultados.
+        <br><br>Tecnologías utilizadas:</p>
+        <ul class="text-center text-md-start" style="list-style-position: inside;">
+          <li>MySQL</li>
+          <li>Spring Boot</li>
+          <li>Angular</li>
+          <li>Ionic</li>
+        </ul>
+      </div>
+      <div class="col-md-6">
+        <img src="assets/img/background.jpg" class="img-fluid rounded" alt="Imagen del proyecto">
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección de Videos Web -->
+  <section class="container my-5">
+    <h3 class="text-center mb-4">Funcionalidades Web</h3>
+        <h4 class="text-center mb-4 mt-5">Inicio de sesión y crear competición</h4>
+      <div class="ratio ratio-16x9">
+        <iframe src="assets/video/web/1-inicio_sesion_crear_competicion.mp4" title="Inicio de sesión y crear competición" allowfullscreen></iframe>
+      </div>
+        <h4 class="text-center mb-4 mt-5">Crear pruebas de una competición</h4>
+      <div class="ratio ratio-16x9">
+        <iframe src="assets/video/web/2-crear_pruebas_competicion.mp4" title="Crear pruebas de una competición" allowfullscreen></iframe>
+    </div>
+            <h4 class="text-center mb-4 mt-5">Inscribir atletas y cámara llamadas</h4>
+          <div class="ratio ratio-16x9">
+        <iframe src="assets/video/web/3-inscribir_atletas_camara_llamadas.mp4" title="Inscribir atletas y cámara llamadas" allowfullscreen></iframe>
+    </div>
+            <h4 class="text-center mb-4 mt-5">Hoja de campo de una prueba (para todas las disciplinas excepto salto vertical)</h4>
+          <div class="ratio ratio-16x9">
+        <iframe src="assets/video/web/4-hoja_campo_prueba_no_vertical.mp4" title="Hoja de campo de una prueba (para todas las disciplinas excepto salto vertical)" allowfullscreen></iframe>
+    </div>
+            <h4 class="text-center mb-4 mt-5">Hoja de campo de prueba de tipo salto vertical</h4>
+          <div class="ratio ratio-16x9">
+        <iframe src="assets/video/web/5-hoja_campo_prueba_vertical.mp4" title="Hoja de campo de prueba de tipo salto vertical" allowfullscreen></iframe>
+    </div>
+            <h4 class="text-center mb-4 mt-5">Control de descalificaciones</h4>
+          <div class="ratio ratio-16x9">
+        <iframe src="assets/video/web/6-control_descalificaciones.mp4" title="Control de descalificaciones" allowfullscreen></iframe>
+    </div>
+            <h4 class="text-center mb-4 mt-5">Panel de ayuda al usuario</h4>
+          <div class="ratio ratio-16x9">
+        <iframe src="assets/video/web/7-panel_ayuda_usuario.mp4" title="Panel de ayuda al usuario" allowfullscreen></iframe>
+    </div>
+  </section>
+
+  <!-- Sección de Videos Mobile -->
+  <section class="container my-5">
+    <h3 class="text-center mb-4">Funcionalidades Mobile</h3>
+      <h4 class="text-center mb-2">Inscripción a pruebas y consulta de resultados</h4>
+    <div class="ratio ratio-16x9">
+      <iframe src="assets/video/mobile/demo-mobile.mp4" title="Inscripción a pruebas y consulta de resultados" allowfullscreen></iframe>
+    </div>
+  </section>
+
+  <!-- Sección de Contacto -->
+  <section class="bg-light py-5">
+    <div class="container">
+      <h2 class="text-center mb-4">Más información</h2>
+      <p class="text-center">&#128071;&#128071; Para más información sobre este y otros proyectos o de su autor, haz click aquí &#128071;&#128071;</p>
+      <div class="text-center">
+        <a href="https://edconde.github.io" target="_blank" class="btn btn-primary">+ info</a>
+      </div>
+    </div>
+  </section>
+
+</body>
 </html>
