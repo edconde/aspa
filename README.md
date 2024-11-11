@@ -19,7 +19,19 @@
         -   npm install
         -   ng serve --o
         
-### Pasos para desplegar el proyecto:
+### Pasos para desplegar en Github Pages la página web estática de información sobre el proyecto:
+- Front end:
+    -   Requisitos: NodeJs y npm    
+    -   Despliegue en GitHub Pages (https://edconde.github.io/aspa):
+        -   Desde la ruta /aspa-app, Ejecutar los comandos 'npm install' y 'npm run deploy-github-pages'.
+        -   Habilitar GitHub Pages para el repositorio en GitHub, configurando el despliegue desde la carpeta '/docs' de la rama 'main':
+        ![image](https://user-images.githubusercontent.com/15130843/192157557-1882fde0-79dc-45af-83e1-a6ba57c3f059.png)
+
+    -   Despliegue en un servidor:
+        -   Desde la ruta /aspa-frontend, Ejecutar los comandos 'npm install' y 'npm run production'.
+        -   Subir los ficheros que se han generado en el directorio /dist/aspa al servidor web de turno (por ejemplo, Apache).
+        
+### Pasos para desplegar el proyecto (producción, con base de datos y api):
 - Back end:
     -   Requisitos: Maven, Java 8 y Docker
     -   Desde la ruta /aspa-backend, compilar el proyecto Spring Boot pasando el siguiente argumento:
